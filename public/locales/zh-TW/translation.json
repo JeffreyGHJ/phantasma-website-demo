@@ -1,0 +1,944 @@
+{
+	"Navbar": {
+		"NavItems": {
+			"wiki": "維基",
+			"market": "NFT 商場",
+			"dao": "DAO",
+			"nft_bridge": "NFT 跨鏈橋",
+			"collection": "個人收藏",
+			"community": "社區",
+			"forums": "論壇",
+			"mint": "Mint"
+		},
+		"buttons": {
+			"ConnectButton": {
+				"connect_wallet": "連接錢包"
+			},
+			"BuyEcto": {
+				"buy": "購買"
+			}
+		},
+		"SettingDialog": {
+			"languages": "語言",
+			"image_size": "圖片尺寸",
+			"nfts_per_page": "NFTs 頁顯示數",
+			"alert_display_position": "提示顯示位置",
+			"quick_spin": "秒開寶箱"
+		}
+	},
+	"Home": {
+		"Hero": {
+			"title": {
+				"the_spookiest": "最陰森的",
+				"mmorpg": "大型多人在線RPG",
+				"is_here": "已來臨"
+			},
+			"subtitle": {
+				"earn_explore_make_new_friends": "盈利, 探險, 結交新朋友",
+				"and_play_together": "和組隊做任務"
+			},
+			"marketplace": "商場",
+			"learn_more": "了解更多"
+		},
+		"PlayAndEarn": {
+			"title": "邊玩邊賺",
+			"subtitle": "享受真正獨特的 MMO 體驗。在玩遊戲的同時賺取代幣,  以法師、戰士或弓箭手的身份加入團隊，進入黑暗地牢與首領戰鬥獲得豐富的獎勵，包括裝備、物品和代幣。"
+		},
+		"Blockchains": {
+			"title": "穿梭於區塊鏈",
+			"subtitle": "不受大多數加密項目常規慣例的限制, 小幽靈漂浮在8個區塊鏈上。 雖然我們目前主要的中心是 Solana 和幣安鏈，但您可以將幽靈移到任何你想要的區塊鏈。"
+		},
+		"Devices": {
+			"title": "享受跨平台社交",
+			"subtitle": "小幽靈 MMO 在電腦端首發，其次在任天堂 Switch 和移動端上發布。 小幽靈網游在 Unity 引擎上構建，運用 Unity 跨平台的技術讓玩家們的互動不限制於設備的不同。"
+		},
+		"MuggleFriendly": {
+			"title": "資深玩家與否",
+			"subtitle": "在第一次構思遊戲時，我們牢記著這一點。 即使您不是一位遊戲玩家，您仍然會喜歡我們悠閒的對戰機制。 我們還專注於遊戲的社交，所以不要被對戰嚇到。"
+		}
+	},
+	"Mint": {
+		"mint_started": "鑄造進行中!",
+		"mint_starts_soon": "鑄造即將開始!",
+		"mint_incentive": "鑄造創始者寶箱獲得專屬NFT裝備、物資。並且有機會獲得蘋果Macbook Pro和任天堂 Switch!",
+		"price_to_mint": "鑄造價格",
+		"mint_boxes": "鑄造寶箱",
+		"wallet_not_connected": "未連接錢包",
+		"you_have_minted": "您鑄造了",
+		"lootboxes": "創始者寶箱"
+	},
+	"Footer": {
+		"privacy_policy": "隱私政策",
+		"term_and_conditions": "使用條款"
+	},
+	"MarketplaceNavbar": {
+		"dashboard": "數據看板",
+		"marketplace": "商場",
+		"my_account": "我的賬號",
+		"login": "登錄",
+		"vault": "保險庫"
+	},
+	"CommunityNavbar": {
+		"vault": "保險庫",
+		"dao": "DAO",
+		"forums": "論壇",
+		"my_account": "我的賬號",
+		"login": "登錄"
+	},
+	"CommunityLayoutSidebar": {
+		"vault": "保險庫",
+		"dao": "DAO",
+		"forums": "論壇",
+		"connected": "已連接",
+		"not_connected": "未連接",
+		"not_signed_in": "未登錄",
+		"account": "賬號",
+		"inventory": "庫存",
+		"offers": "報價",
+		"claim_rewards": "領取分紅",
+		"account_settings": "賬號設置",
+		"dashboard": "數據看板",
+		"marketplace": "商場",
+		"login": "登錄",
+		"my_account": "我的賬號"
+	},
+	"AssetCategories": {
+		"ghosts": "小幽靈",
+		"skeletons": "骷髏",
+		"pets": "寵物",
+		"armory": "兵器",
+		"supplies": "資源",
+		"multipliers": "倍增",
+		"overview": "概述"
+	},
+	"FilterSidebar": {
+		"filter": "過濾",
+		"filters": "過濾",
+		"marketplaceDropdown": {
+			"label": "商場",
+			"selections": {
+				"lg": "官方市場",
+				"pancakeSwap": "薄餅市場"
+			}
+		},
+		"petsDropdown": {
+			"label": "寵物",
+			"selections": {
+				"EctoSkeletons": "骷髏"
+			}
+		},
+		"suppliesDropdown": {
+			"label": "資源",
+			"selections": {
+				"Lootboxes": "創始者寶箱",
+				"Gems": "創始者寶石",
+				"Potions": "創始者藥水",
+				"Rare_Drop": "創始者稀有物品",
+				"Ultra_Rare_Drop": "創始者超稀有物品"
+			}
+		},
+		"armoriesDropdown": {
+			"label": "创始者裝備",
+			"selections": {
+				"founders_armory": "創始者裝備"
+			}
+		}
+	},
+	"NftTraits": {
+		"Background": "背景",
+		"Body": "身體",
+		"Eyes": "眼睛",
+		"Hat": "帽子",
+		"Item": "物品",
+		"Mouth": "嘴巴",
+		"Prop": "道具",
+		"Buffs": "屬性加值",
+		"Buff #1": "加值 #1",
+		"Buff #2": "加值 #2",
+		"Buff #3": "加值 #3",
+		"Buff #4": "加值 #4",
+		"Buff #5": "加值 #5",
+		"Top": "穿著",
+		"All": "全選",
+		"Asagi": "Asagi (淺黃)",
+		"Cool Magenta": "Cool Magenta (涼洋紫)",
+		"Cyan": "Cyan (藍綠)",
+		"Dark Mustard": "Dark Mustard (黑芥末)",
+		"Emperor": "Emperor (帝王灰)",
+		"Epic Blue": "Epic Blue (史詩藍)",
+		"Foggy Grey": "Foggy Grey (霧蒙灰)",
+		"Ghost Green": "Ghost Green (幽靈綠)",
+		"Gravel Grey": "Gravel Grey (礫石灰)",
+		"Haunted Plum": "Haunted Plum (幽靈紫)",
+		"Lava Red": "Lava Red (熔岩紅)",
+		"Maximum Yellow": "Maximum Yellow (滿值黃)",
+		"Midnight Blue": "Midnight Blue (午夜藍)",
+		"Midnight Green": "Midnight Green (午夜綠)",
+		"Moss Green": "Moss Green (苔蘚綠)",
+		"Pale Berry": "Pale Berry (漿果白)",
+		"Pale Orange": "Pale Orange (暗淡橙)",
+		"Pumpkin Orange": "Pumpkin Orange (南瓜橙)",
+		"Punk Blue": "Punk Blue (朋克藍)",
+		"Razzmic Berry": "Razzmic Berry (拉茲紫)",
+		"Silk Blue": "Silk Blue (絲綢藍)",
+		"Silk Bulk": "Silk Bulk (絲綢深藍)",
+		"Slate Blue": "Slate Blue (石板藍)",
+		"Wageningen Green": "Wageningen Green (瓦赫綠)",
+		"Alien Ghost": "Alien Ghost (外星人)",
+		"Baby Ghost Alien": "Baby Ghost Alien (尤達外星人)",
+		"Beetle Ghost": "Beetle Ghost (陰間大法師)",
+		"Black Ghost": "Black Ghost (暗黑幽靈)",
+		"Blue Alien Ghost": "Blue Alien Ghost (藍色外星人)",
+		"Blue Ghost": "Blue Ghost (藍色幽靈)",
+		"Dark Purple Ghost": "Dark Purple Ghost (暗紫幽靈)",
+		"Doge Ghost": "Doge Ghost (Doge 幽靈)",
+		"Friendly Ghost": "Friendly Ghost (友善幽靈)",
+		"Ghost Rick": "Ghost Rick (瑞克幽靈)",
+		"Ghostdu": "Ghostdu (溫杜幽靈)",
+		"Ghostface Ghost": "Ghostface Ghost (鬼臉幽靈)",
+		"Ghostie Wan": "Ghostie Wan (鬼旺幽靈)",
+		"Green Glowing Ghost": "Green Glowing Ghost (綠光幽靈)",
+		"Grey Ghost": "Grey Ghost (灰色幽靈)",
+		"Hades": "Hades (哈得斯)",
+		"Lime Green Ghost": "Lime Green Ghost (酸橙綠幽靈)",
+		"Pancake Ghost": "Pancake Ghost (薄餅幽靈)",
+		"Purple Ghost": "Purple Ghost (紫色幽靈)",
+		"Red Ghost": "Red Ghost (紅色幽靈)",
+		"Scary Ghost": "Scary Ghost (駭人幽靈)",
+		"Shiba Ghost": "Shiba Ghost (Shib 幽靈)",
+		"Super Shy Ghost": "Super Shy Ghost (害羞幽靈)",
+		"Transparent Ghost": "Transparent Ghost (透明幽靈)",
+		"White Ghost": "White Ghost (白色幽靈)",
+		"Alien Eyes": "Alien Eyes (外星人眼)",
+		"Anime Black Eyes": "Anime Black Eyes (黑動漫眼)",
+		"Anime Red Eyes": "Anime Red Eyes (紅動漫眼)",
+		"Baby Ghost Alien Eyes": "Baby Ghost Alien Eyes (尤達外星眼)",
+		"Beetle Eyes": "Beetle Eyes (陰間大法師眼)",
+		"Bubble Eyes": "Bubble Eyes (氣泡眼)",
+		"Cross Eyes": "Cross Eyes (交叉眼)",
+		"Evil Eyes": "Evil Eyes (邪惡眼)",
+		"Friendly Eyes": "Friendly Eyes (友善眼)",
+		"Ghost Sith Eyes": "Ghost Sith Eyes (鬼西斯眼)",
+		"Ghostdu Eyes": "Ghostdu Eyes (溫杜眼)",
+		"Ghostface Eyes": "Ghostface Eyes (鬼臉眼)",
+		"Ghostie Wan Eyes": "Ghostie Wan Eyes (鬼旺眼)",
+		"Girly Eyes": "Girly Eyes (女孩眼)",
+		"Green Ghost Eyes": "Green Ghost Eyes (綠光幽靈眼)",
+		"Happy Eyes": "Happy Eyes (開心眼)",
+		"Heart Eyes": "Heart Eyes (愛心眼)",
+		"Jawa Eyes": "Jawa Eyes (賈瓦眼)",
+		"Money Sign Eyes": "Money Sign Eyes (錢眼)",
+		"Pancake Eyes": "Pancake Eyes (薄餅幽靈眼)",
+		"Rick Eyes": "Rick Eyes (瑞克眼)",
+		"Right Look": "Right Look (右視眼)",
+		"Scary Eyes": "Scary Eyes (駭人眼)",
+		"Squint Eyes": "Squint Eyes (斜視眼)",
+		"Stare Eyes": "Stare Eyes (凝視眼)",
+		"Stoned Eyes": "Stoned Eyes (陶醉眼)",
+		"Super Shy Eyes": "Super Shy Eyes (害羞眼)",
+		"Uninterested Look": "Uninterested Look (冷淡眼)",
+		"Vampire Eyes": "Vampire Eyes (吸血鬼之眼)",
+		"Baby Ghost Alien Hoodie": "Baby Ghost Alien Hoodie (尤達外星人連帽衫)",
+		"Backwards Red Hat": "Backwards Red Hat (向後紅色帽)",
+		"Beetle Hair": "Beetle Hair (陰間大法師頭髮)",
+		"Black Backwards ERTH Cap": "Black Backwards ERTH Cap (向後黑色 ERTH 帽)",
+		"Black Backwards ERTH Hat": "Black Backwards ERTH Hat (向後黑色 ERTH 帽)",
+		"Black Backwards Hat": "Black Backwards Hat (向後黑色帽)",
+		"Black Baseball Cap": "Black Baseball Cap (黑色棒球帽)",
+		"Black Beanie": "Black Beanie (黑色冷帽)",
+		"Black ERTH Baseball Cap": "Black ERTH Baseball Cap (黑色 ERTH 棒球帽)",
+		"Black Hoodie": "Black Hoodie (黑色連帽衫)",
+		"Blue Flames": "Blue Flames (藍色火焰)",
+		"Blue Wizard Hat": "Blue Wizard Hat (藍色巫師帽)",
+		"Construction Hat": "Construction Hat (建築帽)",
+		"Ghost Sith Hoodie": "Ghost Sith Hoodie (鬼西斯連帽衫)",
+		"Ghostdu Hoodie": "Ghostdu Hoodie (溫杜連帽衫)",
+		"Ghostface Hoodie": "Ghostface Hoodie (鬼臉連帽衫)",
+		"Ghostie Wan Hoodie": "Ghostie Wan Hoodie (鬼旺連帽衫)",
+		"Green Backwards Hat": "Green Backwards Hat (向後綠色帽)",
+		"Green Baseball Cap": "Green Baseball Cap (綠色棒球帽)",
+		"Green Beanie": "Green Beanie (綠色冷帽)",
+		"Hoodie": "Hoodie (連帽衫)",
+		"Jawa Hoodie": "Jawa Hoodie (賈瓦連帽衫)",
+		"None": "None (無)",
+		"Orange Beanie": "Orange Beanie (橙色冷帽)",
+		"Pancake Ears": "Pancake Ears (薄餅耳朵)",
+		"Purple Backwards Hat": "Purple Backwards Hat (向後紫色帽)",
+		"Purple Baseball Cap": "Purple Baseball Cap (紫色棒球帽)",
+		"Purple Beanie": "Purple Beanie (紫色冷帽)",
+		"Purple Wizard Hat": "Purple Wizard Hat (紫色巫師帽)",
+		"Red Backwards Hat": "Red Backwards Hat (向後紅色帽)",
+		"Red Baseball Cap": "Red Baseball Cap (紅色棒球帽)",
+		"Rick Hair": "Rick Hair (瑞克頭髮)",
+		"Santa Hat": "Santa Hat (聖誕帽)",
+		"Super Shy Hoodie": "Super Shy Hoodie (害羞連帽衫)",
+		"Teal Beanie": "Teal Beanie (藍綠色冷帽)",
+		"Top Hat": "Top Hat (禮帽)",
+		"Bloody Knife": "Bloody Knife (血腥匕首)",
+		"Blue Lightsaber": "Blue Lightsaber (藍色激光劍)",
+		"Bnb Coin": "Bnb Coin (幣安硬幣)",
+		"Dripping Soul Knife": "Dripping Soul Knife (滴魂刀)",
+		"ERTH": "ERTH (ERTH)",
+		"Green Lightsaber": "Green Lightsaber (綠色激光劍)",
+		"Hanging Chain": "Hanging Chain (絞刑鏈)",
+		"Jawa Gun": "Jawa Gun (賈瓦槍)",
+		"Knife": "Knife (匕首)",
+		"Money": "Money (錢)",
+		"Purple Lightsaber": "Purple Lightsaber (紫色激光劍)",
+		"Red Lightsaber": "Red Lightsaber (紅色激光劍)",
+		"Ricks Laser Gun": "Ricks Laser Gun (瑞克斯激光槍)",
+		"Trick Or Treat Bag": "Trick Or Treat Bag (萬聖糖果包)",
+		"Alien Mouth": "Alien Mouth (外星人嘴)",
+		"Baby Ghost Alien Mouth": "Baby Ghost Alien Mouth (尤達外星人嘴)",
+		"Beetle Mouth": "Beetle Mouth (陰間大法師嘴)",
+		"Big Smile": "Big Smile (咧嘴笑)",
+		"Cigarette": "Cigarette (香煙)",
+		"Cigarette Smoke": "Cigarette Smoke (香煙煙霧)",
+		"Face Mask": "Face Mask (口罩)",
+		"Friendly Mouth": "Friendly Mouth (友善嘴)",
+		"Frown": "Frown (皺眉)",
+		"Ghost Sith Smile": "Ghost Sith Smile (鬼西斯微笑)",
+		"Ghostdu Mouth": "Ghostdu Mouth (溫杜嘴)",
+		"Ghostface Mouth": "Ghostface Mouth (鬼臉嘴)",
+		"Ghostie Wan Mouth": "Ghostie Wan Mouth (鬼旺)",
+		"Green Ghost Mouth": "Green Ghost Mouth (綠光幽靈嘴)",
+		"Grill": "Grill (大金牙)",
+		"Rick Mouth": "Rick Mouth (瑞克嘴)",
+		"Scary Mouth": "Scary Mouth (駭人嘴)",
+		"Scary Tounge Flick": "Scary Tounge Flick (駭人搖曳舌)",
+		"Smirk": "Smirk (得意著笑)",
+		"Stiches": "Stiches (縫嘴)",
+		"Straight": "Straight (抿嘴)",
+		"Super Shy Mouth": "Super Shy Mouth (害羞嘴)",
+		"Vampire Teeth": "Vampire Teeth (吸血鬼牙齒)",
+		"Wiggle Mouth": "Wiggle Mouth (波浪嘴)",
+		"3D Glasses": "3D Glasses (3D眼鏡)",
+		"Blue Lasers": "Blue Lasers (藍色激光)",
+		"Earrings": "Earrings (耳環)",
+		"Eye Patch": "Eye Patch (眼罩)",
+		"Gold Chain": "Gold Chain (金項鍊)",
+		"Green Lasers": "Green Lasers (綠色激光)",
+		"Halo": "Halo (光環)",
+		"Heart Bubble": "Heart Bubble (心形泡泡)",
+		"Horns": "Horns (魔鬼角)",
+		"Red Lasers": "Red Lasers (紅色激光)",
+		"Silver Chain": "Silver Chain (銀項鍊)",
+		"Sunglasses": "Sunglasses (墨鏡)",
+		"Underworld Robe": "Underworld Robe (冥界長袍)",
+		"Broomstick Brown": "Broomstick Brown (掃帚棕)",
+		"Bunny Cloud": "Bunny Cloud (兔子云)",
+		"Cold Ice": "Cold Ice (寒冰)",
+		"Cotton Candy": "Cotton Candy (棉花糖)",
+		"Ghastly Grey": "Ghastly Grey (恐怖灰)",
+		"Ghost Blue": "Ghost Blue (幽靈藍)",
+		"Gravestone Grey": "Gravestone Grey (墓碑灰)",
+		"Grim Grey": "Grim Grey (陰森灰)",
+		"Halloween punch": "Halloween punch (萬聖噴趣)",
+		"Hydra gray": "Hydra gray (九頭蛇灰)",
+		"Jade": "Jade (翡翠)",
+		"Lagoon": "Lagoon (環礁湖)",
+		"Luxor gold": "Luxor gold (盧克索金)",
+		"Midnight Magic": "Midnight Magic (午夜魔幻)",
+		"Moonscape": "Moonscape (月景)",
+		"Muted green": "Muted green (柔和綠)",
+		"Nautical": "Nautical (航海)",
+		"Nebulous": "Nebulous (朦朧)",
+		"Neon blue": "Neon blue (霓虹藍)",
+		"Pastel red": "Pastel red (淡紅色)",
+		"Peach fury": "Peach fury (桃之怒)",
+		"Phantom ship": "Phantom ship (幻影船)",
+		"Pink floyd": "Pink floyd (弗洛伊德粉)",
+		"Pisco sour": "Pisco sour (皮斯科酸)",
+		"Purple Potion": "Purple Potion (紫色藥水)",
+		"Vanilla": "Vanilla (香草)",
+		"Vineyard": "Vineyard (葡萄園)",
+		"Whales tale": "Whales tale (鯨魚傳說)",
+		"Wicked green": "Wicked green (邪惡綠)",
+		"Green Skeleton": "Green Skeleton (綠色骷髏)",
+		"Ice King Skeleton": "Ice King Skeleton (冰王骷髏)",
+		"Purple Skeleton": "Purple Skeleton (紫色骷髏)",
+		"Red Skeleton": "Red Skeleton (紅色骷髏)",
+		"Tan Skeleton": "Tan Skeleton (棕褐色骷髏)",
+		"White Skeleton": "White Skeleton (白色骷髏)",
+		"Angry Blue Jewel Eyes": "Angry Blue Jewel Eyes (憤怒藍寶石眼)",
+		"Angry Blue Retro Sunglasses": "Angry Blue Retro Sunglasses (憤怒藍色復古墨鏡)",
+		"Angry Eyes": "Angry Eyes (憤怒眼)",
+		"Angry Gold Jewel Eyes": "Angry Gold Jewel Eyes (憤怒黃金寶石眼)",
+		"Angry Green Jewel Eyes": "Angry Green Jewel Eyes (憤怒綠色寶石眼)",
+		"Angry Hallow Eyes": "Angry Hallow Eyes (憤怒聖眼)",
+		"Angry Ice Jewel Eyes": "Angry Ice Jewel Eyes (憤怒冰珠眼)",
+		"Angry Pink Retro Sunglasses": "Angry Pink Retro Sunglasses (憤怒的粉色復古墨鏡)",
+		"Angry Purple Jewel Eyes": "Angry Purple Jewel Eyes (憤怒紫色寶石眼)",
+		"Angry Purple Jewel Mascara Eyes": "Angry Purple Jewel Mascara Eyes (憤怒紫色寶石煙熏眼)",
+		"Angry Red Jewel Eyes": "Angry Red Jewel Eyes (憤怒紅寶石眼)",
+		"Normal Blue Jewel Eyes": "Normal Blue Jewel Eyes (普通藍寶石眼)",
+		"Normal Eyes": "Normal Eyes (正常眼)",
+		"Normal Gold Jewel Eyes": "Normal Gold Jewel Eyes (普通黃金寶石眼)",
+		"Normal Green Jewel Eyes": "Normal Green Jewel Eyes (普通綠色寶石眼)",
+		"Normal Purple Jewel Eyes": "Normal Purple Jewel Eyes (普通紫寶石眼)",
+		"Normal Red Jewel Eyes": "Normal Red Jewel Eyes (普通紅寶石眼)",
+		"Regular Hallow Eyes": "Regular Hallow Eyes (普通聖眼)",
+		"Sad Eyes": "Sad Eyes (悲傷眼)",
+		"Sad Hallow Eyes": "Sad Hallow Eyes (悲傷聖眼)",
+		"Beanie": "Beanie (冷帽)",
+		"Black Cap": "Black Cap (黑色帽子)",
+		"Blue Flaming Head": "Blue Flaming Head (藍色火焰頭)",
+		"Bucket Hat Black": "Bucket Hat Black (黑色漁夫帽)",
+		"Bucket Hat Grey": "Bucket Hat Grey (灰色漁夫帽)",
+		"Bunny Ears": "Bunny Ears (兔子耳朵)",
+		"Clown": "Clown (小丑)",
+		"Cowboy Hat": "Cowboy Hat (牛仔帽)",
+		"Diamond Mask": "Diamond Mask (鑽石面具)",
+		"Evil Beetle Wig": "Evil Beetle Wig (邪惡陰間大法師假髮)",
+		"Evil Horns": "Evil Horns (惡魔角)",
+		"Fish Bowel": "Fish Bowel (魚缸)",
+		"Flaming Head": "Flaming Head (火焰頭)",
+		"Gold Crown": "Gold Crown (金冠)",
+		"Green Cap": "Green Cap (綠帽)",
+		"Green Flaming Head": "Green Flaming Head (綠色火焰頭)",
+		"Grey Cap": "Grey Cap (灰色帽子)",
+		"Jewel Crown": "Jewel Crown (寶石皇冠)",
+		"Red Cap": "Red Cap (紅色帽子)",
+		"Silver Crown": "Silver Crown (銀冠)",
+		"Skii Mask": "Skii Mask (滑雪面具)",
+		"Blue Balloon": "Blue Balloon (藍色氣球)",
+		"Blunt": "Blunt (大麻雪茄)",
+		"Bubble Stick": "Bubble Stick (泡泡棒)",
+		"Glock": "Glock (格洛克手槍)",
+		"Green Balloon": "Green Balloon (綠色氣球)",
+		"Pink Balloon": "Pink Balloon (粉紅氣球)",
+		"Purple Balloon": "Purple Balloon (紫色氣球)",
+		"Red Balloon": "Red Balloon (紅色氣球)",
+		"Rose": "Rose (玫瑰)",
+		"Scythe": "Scythe (鐮刀)",
+		"Slendy Tentacles": "Slendy Tentacles (妖瘦暗鬼觸手)",
+		"Ye Mic": "Ye Mic (麥克風)",
+		"Yellow Balloon": "Yellow Balloon (黃色氣球)",
+		"Laughing Gold Grill Mouth": "Laughing Gold Grill Mouth (大笑金牙嘴)",
+		"Laughing Green Grill Mouth": "Laughing Green Grill Mouth (大笑綠牙嘴)",
+		"Laughing Mouth": "Laughing Mouth (大笑嘴)",
+		"Laughing Rainbow Grill Mouth": "Laughing Rainbow Grill Mouth (大笑彩虹牙嘴)",
+		"Normal Mouth": "Normal Mouth (正常嘴)",
+		"Sad Mouth": "Sad Mouth (悲傷嘴)",
+		"Shocked Mouth": "Shocked Mouth (震驚嘴)",
+		"Shocked Mouth Tongue": "Shocked Mouth Tongue (震驚口舌)",
+		"Slightly Open Mouth": "Slightly Open Mouth (微張嘴)",
+		"Black Hoodie Down": "Black Hoodie Down (黑色連帽衫)",
+		"Black Hoodie Up": "Black Hoodie Up (黑色連帽衫 - 戴帽)",
+		"Black Hoodie Up Red Tie": "Black Hoodie Up Red Tie (黑色連帽衫 - 戴帽*紅色領帶)",
+		"Black T-shirt": "Black T-shirt (黑色 T卹)",
+		"Evil Beetle Suit": "Evil Beetle Suit (邪惡陰間大法師套裝)",
+		"Gold Chain on Pink Hoodie": "Gold Chain on Pink Hoodie (粉色連帽衫*金項鍊)",
+		"Grey Hoodie Down": "Grey Hoodie Down (灰色絨毛連帽衫)",
+		"Grey Hoodie Up": "Grey Hoodie Up (灰色連帽衫 - 戴帽)",
+		"Grey T-shirt": "Grey T-shirt (灰色 T卹)",
+		"Jack Suit": "Jack Suit (傑克套裝)",
+		"Pink Hoodie": "Pink Hoodie (粉色連帽衫)",
+		"Reaper Black Hoodie Up": "Reaper Black Hoodie Up (死神黑色連帽衫 - 戴帽)",
+		"White Shirt": "White Shirt (白襯衫)",
+		"+4 Every Bonus": "+4 全數值",
+		"+5 Every Bonus": "+5 全數值",
+		"+6 Every Bonus": "+6 全數值",
+		"+8 Every Bonus": "+8 全數值"
+	},
+	"CollectionNames": {
+		"LittleGhosts": "小幽灵",
+		"EctoSkeletons": "骷髅",
+		"Founder's Lootboxes": "創始者寶箱",
+		"Founder's Items": "創始者物品",
+		"Founder's Gems": "創始者寶石",
+		"Founder's Potions": "創始者藥水",
+		"Founder's Armory": "創始者裝備",
+		"Founder's Rare Drops": "創始者稀有物品",
+		"Founder's Ultra Rare Drops": "創始者超稀有物品"
+	},
+	"widgets": {
+		"BackButton": {
+			"back": "返回"
+		},
+		"WebShareDialog": {
+			"copy_link": "複製鏈接",
+			"share": "分享"
+		},
+		"SaleTypeDropdown": {
+			"all": "全選",
+			"for_sale": "出售",
+			"not_for_sale": "非賣品",
+			"auction": "拍賣"
+		},
+		"SortTypeDropdown": {
+			"lowest_price": "最低價格",
+			"highest_price": "最高價格",
+			"lowest_id": "最低 ID",
+			"highest_id": "最高 ID",
+			"lowest_rank": "最低排名",
+			"highest_rank": "最高排名",
+			"lowest_bid": "最低競標",
+			"highest_bid": "最高競標",
+			"expire_desc": "最晚過期",
+			"expire_asc": "最快過期",
+			"latest": "最新上架"
+		},
+		"NftCard": {
+			"rank": "排名",
+			"expires": "過期",
+			"expired": "已過期",
+			"buyout": "買斷",
+			"current_bid": "競標",
+			"hrs": "小時",
+			"min_bid": "起標價",
+			"top_bid": "最高競標",
+			"wk": "週前",
+			"yr": "年前",
+			"mo": "月前",
+			"days": "天前",
+			"day": "天前",
+			"hr": "小時前",
+			"min": "分鐘前",
+			"status": "狀態"
+		},
+		"JumpablePagination": {
+			"page": "頁",
+			"of": "總"
+		},
+		"FilterButton": {
+			"filter": "過濾"
+		},
+		"DisconnectButton": {
+			"disconnect": "斷開連接"
+		},
+		"LogoutButton": {
+			"logout": "註銷"
+		},
+		"LoginButton": {
+			"signin": "登錄"
+		},
+		"TokenOfferCard": {
+			"rank": "排名",
+			"offer": "報價",
+			"view": "詳情"
+		},
+		"NftOfferCard": {
+			"rank": "排名",
+			"view": "詳情"
+		},
+		"CollectionStatTabs": {
+			"all": "全部",
+			"last_24_h": "24小時",
+			"7_days": "7天",
+			"30_days": "30天"
+		},
+		"PasswordStrengthMeter": {
+			"password_strength": "密碼強度",
+			"strength": {
+				"strong": "強",
+				"poor": "弱",
+				"average": "中"
+			},
+			"suggestions": {
+				"Your password is too short": "密碼太短",
+				"Your password could be longer": "密碼可以再長一點",
+				"Your password has no lowercase characters": "密碼未包含任何小寫字母",
+				"Your password has no uppercase characters": "密碼未包含任何大寫字母",
+				"Your password has no numbers": "密碼未包含任何數字",
+				"Your password has no special characters": "密碼未包含任何特殊符號",
+				"Your password has repeat characters": "密碼含有重複的字符",
+				"Your password could use more uppercase characters": "密碼可以再加一些大寫字母",
+				"Your password could use more special characters": "密碼可以再加一些特殊字符",
+				"Looks good!": "看上去不錯!"
+			}
+		},
+		"AlertDisplayPositionSelect": {
+			"Top left": "左上",
+			"Top center": "中上",
+			"Top right": "右上",
+			"Bottom left": "左下",
+			"Bottom center": "中下",
+			"Bottom right": "右下"
+		},
+		"NoWalletAlert": {
+			"alert": "未連接錢包"
+		},
+		"NotSignInAlert": {
+			"alert": "未登錄"
+		},
+		"MintLootboxAlert": {
+			"alert": "創始者寶箱鑄造已開始!"
+		},
+		"MarketplaceSelect": {
+			"all": "全部",
+			"littleghosts": "小幽靈商場",
+			"pancakeswap": "薄餅商場"
+		},
+		"NftSelect": {
+			"ghosts": "小幽靈",
+			"skeletons": "骷髏"
+		}
+	},
+	"CollectionItemDetails": {
+		"ActionButtons": {
+			"buy": "購買",
+			"sell": "出售",
+			"gift": "贈送",
+			"minimum_offer": "最低報價",
+			"buyout": "買斷",
+			"bid": "競標",
+			"finalize_auction": "成交",
+			"cancel_auction": "取消拍賣",
+			"cancel_selling": "取消出售",
+			"offer": "報價",
+			"open_lootbox": "開箱",
+			"claim_loot": "領取物品",
+			"approve_claim_loot": "批准領取物品"
+		},
+		"offerDropdown": {
+			"selections": {
+				"tokens": "代幣"
+			}
+		},
+		"sellDropdown": {
+			"selections": {
+				"lg": "小幽靈官方",
+				"pcs": "薄餅",
+				"auction": "拍賣"
+			}
+		},
+		"ItemListedPriceDetail": {
+			"edit_price": "編輯售價"
+		},
+		"BuyoutDisplay": {
+			"buyout": "買斷"
+		},
+		"ItemAuctionPriceDetail": {
+			"current_bid": "目前競標"
+		},
+		"ItemBiddings": {
+			"expired": "已過期",
+			"hrs_left": "小時剩餘",
+			"biddings": "競標",
+			"BiddingList": {
+				"bid_index": "競標指數",
+				"bid_amount": "競標價",
+				"no_biddings_found": "目前還沒有競標"
+			}
+		},
+		"TokenOffers": {
+			"token_offer_id": "代幣報價 ID",
+			"payment_token": "支付代幣",
+			"amount": "報價",
+			"view_offer": "詳情",
+			"no_offers_found": "目前還沒有報價"
+		},
+		"NftOffers": {
+			"offer_id": "NFT報價 ID",
+			"collection": "系列",
+			"view_offer": "詳情",
+			"no_offers_found": "目前還沒有報價"
+		},
+		"rank": "排名",
+		"owner": "持有地址",
+		"token_offers": "代幣報價",
+		"nft_offers": "NFT 報價",
+		"ERROR_MESSAGES": {
+			"You_are_already_here": "您已在此頁面"
+		}
+	},
+	"Login": {
+		"login_with_wallet": "錢包登錄",
+		"login_with_email_password": "郵箱",
+		"connect_wallet": "連接錢包",
+		"by_continue_you_agree_to_our": "繼續之前, 您已查看並同意我們的",
+		"terms_of_use": "服務使用條款",
+		"sign_in": "登錄",
+		"sign_up": "註冊",
+		"invalid_email": "郵箱格式錯誤",
+		"invalid_username": "用戶名格式錯誤。只允許小寫字母和數字。2-14個字符",
+		"email": "郵箱",
+		"username": "用戶名",
+		"email_or_username": "郵箱 / 用戶名",
+		"password": "密碼",
+		"remember_me": "自動登錄",
+		"forget_password": "忘記密碼",
+		"do_not_have_account": "沒有賬號?",
+        "register_here": "註冊",
+		"passwords_not_match": "密碼不一致",
+		"password_confirmation": "確認密碼",
+		"back_to_login": "返回登錄界面",
+		"reset_password": "重設密碼"
+	},
+	"PasswordReset": {
+		"password_reset": "重設密碼",
+		"confirm_reset": "確認重設",
+		"invalid_email": "郵箱格式錯誤",
+		"email": "郵箱",
+		"new_password": "新密碼",
+		"passwords_not_match": "密碼不一致",
+		"password_confirmation": "確認密碼",
+		"back_to_login": "返回登錄界面"
+	},
+	"Modals": {
+		"ListItemDialog": {
+			"title": "出售",
+			"description": "在以下輸入框裡輸入您的BNB標價。請在出售前重複確認。",
+			"sell": "出售",
+			"approve": "批准"
+		},
+		"NftOfferDialog": {
+			"rank": "排名",
+			"selected_nfts": "已選擇",
+			"offer_now": "報價",
+			"approve": "批准"
+		},
+		"AuctionDialog": {
+			"title": "拍賣",
+			"payment_token": "支付代幣",
+			"duration": "持續",
+			"day": "天",
+			"days": "天",
+			"bid_only": "只允許競標",
+			"buyout_amount": "買斷價格",
+			"starting_bid": "起拍價",
+			"create_auction": "創建拍賣",
+			"approve": "批准",
+			"ERROR_MESSAGES": {
+				"INVALID_BUYOUT_PRICE": "請輸入有效的買斷價格",
+				"BUYTOUT_LESS_THAN_STARTING_BID": "買斷金額必須大於起拍價"
+			}
+		},
+		"BiddingDialog": {
+			"bid": "競標",
+			"payment_token": "支付代幣",
+			"bid_amount": "競標價",
+			"submit_bid": "提交",
+			"approve": "批准"
+		},
+		"BuyoutDialog": {
+			"buyout": "買斷",
+			"approve": "批准"
+		},
+		"TokenOfferDialog": {
+			"title": "報價",
+			"min": "最低",
+			"payment_token": "支付代幣",
+			"offer_amount": "支付數量",
+			"create_offer": "創建報價",
+			"approve": "批准"
+		},
+		"MinimumOfferDialog": {
+			"title": "最低報價",
+			"min": "最低",
+			"payment_token": "支付代幣",
+			"minimum_offer": "最低報價",
+			"set_min_offer": "確認"
+		},
+		"SendNftDialog": {
+			"title": "發送 NFT",
+			"description": "在以下輸入框裡輸入您想要發送到的地址。請在發送前重複確認。",
+			"send": "發送"
+		},
+		"NftsOfferDetailDialog": {
+			"rank": "排名",
+			"cancel": "取消",
+			"reject": "拒絕",
+			"approved": "已批准",
+			"approve": "批准",
+			"accept": "接受"
+		},
+		"TokenOfferDetailDialog": {
+			"offer": "報價",
+			"payment_token": "支付代幣",
+			"offer_amount": "報價",
+			"cancel": "取消",
+			"reject": "拒絕",
+			"approved": "已批准",
+			"approve": "批准",
+			"accept": "接受"
+		},
+		"WalletModal": {
+			"connect_to_a_wallet": "連接錢包"
+		}
+	},
+	"ProfileLayoutSidebar": {
+		"connected": "已連接",
+		"not_signed_in": "未登錄",
+		"account": "賬號",
+		"inventory": "庫存",
+		"offers": "報價",
+		"claim_rewards": "領取分紅",
+		"account_settings": "賬號設置",
+		"favorites": "收藏",
+		"dashboard": "數據看板",
+		"marketplace": "商場",
+		"login": "登錄",
+		"my_account": "我的賬號",
+		"vault": "保險庫",
+		"connect_wallet": "連接錢包",
+		"welcome": "歡迎",
+		"earning_calculator": "收入計算器",
+		"nft_bridge": "NFT 跨鏈橋",
+		"tools": "工具"
+	},
+	"ProfileSections": {
+		"Dashboard": {
+			"wallets": "錢包",
+			"acquire": "獲取",
+			"purchase": "購買",
+			"migrate": "遷移",
+			"approve_to_migrate": "批准遷移"
+		},
+		"Offers": {
+			"received": "收到",
+			"created": "創建",
+			"token_offers": "代幣報價",
+			"nft_offers": "NFT 報價",
+			"no_offers_found": "未找到已創建的報價"
+		},
+		"ClaimRewards": {
+			"wallets": "錢包",
+			"rewards": "分紅",
+			"official_marketplace": "官方商場",
+			"third_party_sales": "第三方銷售",
+			"ectoplasm": "ECTO 代幣分紅",
+			"claim": "領取"
+		},
+		"AccountSetting": {
+			"account_settings": "賬號設置",
+			"information": "信息",
+			"email": "郵箱",
+			"save": "保存",
+			"update_email": "更新郵箱",
+			"username": "用戶名",
+			"password": "密碼",
+			"update_password": "更新密碼",
+			"wallet_addresses": "錢包地址",
+			"preferences": "預置",
+			"language": "語言",
+			"view": "預覽",
+			"image_size": "圖片尺寸",
+			"nfts_per_page": "NFT 頁顯示數",
+			"alert_display_position": "提示顯示位置",
+			"nft_offer_notification": "NFT 報價提示",
+			"quick_spin": "秒開寶箱",
+			"successMessages": {
+				"sync_user_settings": "成功同步設置"
+			},
+			"errorMessages": {
+				"Preferences update failed": "設置同步失敗"
+			},
+			"invalid_username": "用戶名格式錯誤。只允許小寫字母和數字。2-14個字符"
+		},
+		"EarningCalculator": {
+			"earning_calculator": "收入計算器",
+			"24hr_ecto_volume": "24小時$ECTO美元交易量",
+			"xecto_multiplier": "xECTO倍增",
+			"24hr_microtransaction_volume": "24小時微交易交易量",
+			"circulating_supplay": "流通量",
+			"estimated_hourly_earning": "小時收入預計"
+		}
+	},
+	"Dao": {
+		"Proposals": {
+			"proposals": "提案",
+			"status_selections": {
+				"all": "全選",
+				"active": "投票中",
+				"pending": "待定",
+				"closed": "已結束",
+				"core": "核心"
+			},
+			"new_proposal": "新提案",
+			"proposed_by": "提案人地址",
+			"core": "核心"
+		},
+		"ProposalDetails": {
+			"ProposalCard": {
+				"duplicate_proposal": "複製提案",
+				"delete_proposal": "刪除提案"
+			},
+			"InformationCard": {
+				"title": "信息",
+				"strategies": "策略",
+				"author": "提案發起人",
+				"ipfs": "星際文件",
+				"voting_system": "投票系統",
+				"start_date": "開始日期",
+				"end_date": "結束日期",
+				"snapshot": "快照"
+			},
+			"PendingResultCard": {
+				"title": "投票結果"
+			},
+			"ResultCard": {
+				"title": "投票结果"
+			},
+			"VoteCard": {
+				"title": "投票",
+				"vote": "投票"
+			},
+			"VotesCard": {
+				"title": "票數",
+				"you": "您"
+			}
+		},
+		"voting_systems": {
+			"Single choice voting": "單項選擇投票",
+			"Approval voting": "批准投票",
+			"Quadratic voting": "二次投票",
+			"Ranked choice voting": "排名投票",
+			"Weighted voting": "衡量投票",
+			"Basic voting": "簡易投票"
+		},
+		"statuses": {
+			"active": "投票中",
+			"pending": "待定",
+			"closed": "已結束"
+		}
+	},
+	"LookaheadPagination": {
+		"go": "翻頁"
+	},
+
+	"NftBridge": {
+		"title": "NFT 跨鏈橋 BETA",
+		"selected_blockchain": "區塊鏈",
+		"nft_collection": "NFT 系列",
+		"rank": "排名",
+		"destination": "跨鏈到",
+		"recipient": "收取地址",
+		"selected_nfts": "已選擇的 NFT",
+		"none_selected": "未選擇",
+		"fees": "費用",
+		"approval": "未批准",
+		"approve": "批准",
+		"swap": "跨鏈",
+		"swap_history": "跨鏈歷史",
+		"from": "來自鏈",
+		"from_tx": "來自鏈交易",
+		"to": "目的鏈",
+		"to_tx": "目的鏈交易",
+		"status": "狀態",
+		"statuses": {
+			"Completed": "已完成",
+			"Pending": "待定中",
+			"Swapping": "跨鏈中"
+		}
+	},
+	"blockchains": {
+		"Binance Smart Chain": "幣安鏈",
+		"BSC": "幣安鏈",
+		"Ethereum": "以太坊",
+		"Cronos": "Cronos",
+		"Fantom": "Fantom",
+		"Avalanche": "雪崩鏈",
+		"Polygon": "Polygon",
+		"Harmony": "Harmony"
+	},
+	"MarketplaceDashboard": {
+		"dashboard": "數據看板",
+		"marketplace": "商場",
+		"total_sale": "總銷售",
+		"total_volume": "總交易量",
+		"average_price": "平均售價",
+		"recently_sold": "最新交易"
+	}
+}

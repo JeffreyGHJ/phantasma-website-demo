@@ -1,0 +1,149 @@
+#Dashboard {
+    .wallet-section {
+        .widget.NoWalletAlert {
+            margin-bottom: 2rem;
+        }
+        .section-title {
+            color: var(--color-text-secondary);
+            font-size: 2.5rem;
+            font-family: var(--font-family);
+        }
+
+        .section-content {
+            margin-top: 2rem;
+            display: flex;
+            gap: 2rem;
+            .wallet-balance {
+                border: 1px solid var(--border-color-divider);
+                border-radius: var(--border-radius-card);
+                padding: 2rem;
+                background-color: var(--color-card-background);
+                max-width: 650px;
+
+                .balance-wrapper {
+                    .bnb-balance {
+                        font-size: 3rem;
+                        font-family: var(--font-family);
+                        color: white;
+                        line-height: 1;
+                    }
+
+                    .bnb-balance-in-usd {
+                        margin-top: 0.5rem;
+                        color: var(--color-text-secondary);
+                        font-size: 1.3rem;
+                        font-family: var(--font-family);
+                    }
+                }
+
+                .button-group {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 1.5rem;
+                    margin-top: 6rem;
+
+                    .purchase-ecto {
+                        // display
+                        display: inline-block;
+
+                        // spacing
+                        padding: 0.8rem 4rem;
+                        max-width: 200px;
+                        width: max-content;
+                        font-family: var(--font-family);
+
+                        // font
+                        color: white;
+                        text-decoration: none;
+                        font-size: 1.4rem;
+                        background-color: var(--background-color-btn-outline);
+
+                        // borders
+                        border: 1px solid var(--border-color-btn-outline);
+                        border-radius: var(--border-radius);
+
+                        &:hover {
+                            border-color: var(--border-color-btn-outline-hover);
+                        }
+                    }
+                    a.purchase-nft {
+                        // display
+                        display: inline-block;
+
+                        // spacing
+                        padding: 0.8rem 4rem;
+                        max-width: 200px;
+                        width: max-content;
+                        font-family: var(--font-family);
+
+                        // font
+                        color: white;
+                        text-decoration: none;
+                        font-size: 1.4rem;
+                        background-color: var(--background-color-btn-outline);
+
+                        // borders
+                        border: 1px solid var(--border-color-btn-outline);
+                        border-radius: var(--border-radius);
+
+                        &:hover {
+                            border-color: var(--border-color-btn-outline-hover);
+                        }
+                    }
+                }
+            }
+
+            .wallet-holdings {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                gap: 2rem;
+                max-width: 650px;
+
+                .holding {
+                    font-family: var(--font-family);
+                    background-color: var(--color-card-background);
+                    border: 1px solid var(--border-color-divider);
+                    border-radius: var(--border-radius-card);
+
+                    width: 150px;
+                    height: 100px;
+                    text-align: center;
+                    position: relative;
+                    flex: 1 1 auto;
+
+                    cursor: pointer;
+
+                    .wrapper {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translateX(-50%) translateY(-50%);
+
+                        .label {
+                            margin-top: 1rem;
+                            font-size: 1.5rem;
+                            white-space: nowrap;
+                            .migrate-ecto {
+                                cursor: pointer;
+                                color: var(--color-text-link-highlight);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// X-Large devices (large desktops, 1200px and down)
+@media (max-width: 1200px) {
+    .section-content {
+        flex-direction: column;
+
+        .wallet-holdings {
+            justify-content: space-around !important;
+        }
+    }
+}

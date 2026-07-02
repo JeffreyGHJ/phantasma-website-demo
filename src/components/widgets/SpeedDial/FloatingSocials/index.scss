@@ -1,0 +1,22 @@
+.widget.FloatingSocials {
+	position: fixed;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+
+	background-color: rgba(0, 0, 0, 0.6);
+	padding-left: 1rem;
+	padding-right: 0.5rem;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+
+	.socials {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+}

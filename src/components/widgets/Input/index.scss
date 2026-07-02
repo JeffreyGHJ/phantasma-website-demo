@@ -1,0 +1,27 @@
+.widget.Input {
+    // Border
+    border: 1px solid dimgrey;
+    border-radius: 5px;
+
+    // Background
+    background-color: black;
+
+    // Spacing
+    padding: 1rem;
+
+    // Typography
+    font-family: var(--font-family);
+    color: white;
+    font-size: 1.3rem;
+
+    &:focus,
+    &:focus-visible {
+        border-color: var(--color-input-border-focused);
+        outline: var(--color-input-border-focused);
+        transition: all ease-in-out 0.2s;
+    }
+
+    &:disabled {
+        opacity: 0.7;
+    }
+}

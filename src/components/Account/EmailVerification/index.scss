@@ -1,0 +1,17 @@
+#EmailVerification {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background-color: var(--main-background);
+
+	.container {
+		margin-top: 5rem;
+
+		.MuiAlert-root {
+			margin-top: 2rem;
+			.MuiAlert-message {
+				font-size: 1.5rem;
+			}
+		}
+	}
+}

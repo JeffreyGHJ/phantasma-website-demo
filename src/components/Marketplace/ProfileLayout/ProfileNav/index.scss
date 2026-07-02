@@ -1,0 +1,58 @@
+#ProfileNav {
+    flex-direction: column;
+    display: flex;
+    height: calc(100% - 105.5px); //105.5px is the height of the profile box
+
+    .wrapper-item {
+        flex-grow: 1;
+    }
+
+    .widget.DisconnectButton,
+    .widget.LogoutButton,
+    .widget.LoginButton {
+        padding: 1.25rem 1rem;
+        border-top: 1px solid var(--border-color-divider);
+    }
+
+    .nav-items {
+        margin-top: 3rem;
+
+        .nav-item {
+            width: 100%;
+            border-radius: var(--border-radius);
+
+            &.active {
+                background-color: var(--main-background-light);
+            }
+
+            .widget.InternalLink {
+                padding: 1.25rem 1rem;
+                display: inline-block;
+                width: 100%;
+
+                svg {
+                    vertical-align: middle;
+                    font-size: 2rem;
+                }
+
+                .label {
+                    font-size: 1.4rem;
+                    font-family: var(--font-family);
+                    vertical-align: middle;
+                    margin-left: 0.5rem;
+                }
+            }
+
+            .nav-label {
+                padding-top: 2rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                font-size: 1.2rem;
+                font-weight: 900;
+                text-transform: uppercase;
+                font-family: var(--font-family);
+                color: var(--color-text-subtitle);
+            }
+        }
+    }
+}

@@ -1,0 +1,388 @@
+// This file will be used as a new global css file
+
+@import "./style/Mui.scss";
+@import "./style/NotifStack.scss";
+@import "./style/Recaptcha.scss";
+@import "./style/LittleGhosts.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600;700;900&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+@font-face {
+    font-family: "Berlin Sans FB Demi Bold";
+    src: url("../public/fonts/berlin_sans_fb_demi_bold-webfont.woff2")
+            format("woff2"),
+        url("../public/fonts/berlin_sans_fb_demi_bold-webfont.woff")
+            format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    /* Color */
+    --color-blue: #046cfc;
+    --color-blue-dark-100: #3082f2;
+    --color-blue-dark-200: #0066f4;
+    --color-blue-dark-300: #1c2f50;
+    --color-grey-light-300: #a1a6b6;
+    --color-grey-light-200: #6b7185;
+    --color-grey-light-100: #3a3f50;
+    --color-grey: #242735;
+    --color-grey-dark-100: #282b39;
+    --color-grey-dark-200: #11131b;
+    --color-grey-dark-300: #1c1f25;
+    --color-grey-dark-400: #13161b;
+    --color-purple: #5e5df0;
+    --color-black: #0d0e12;
+    --color-danger: #fe383f;
+    --color-warning: #f8bc3b;
+    --color-success: #10c274;
+    // updated colors 2023
+    --color-dark-primary: #101010;
+    --color-dark-secondary: #2b2b2b;
+    --color-dark-1: #3a3a3a;
+    --color-dark-2: #4e4e4e;
+    --color-darkblack: #090909;
+    --color-lightblack: #171717;
+
+    // Background - Marketplace
+    --main-background-light: var(--color-grey-light-100);
+    // --main-background: var(--color-dark-secondary);
+    --main-background: var(--color-black);
+    // --main-background: black;
+    --main-background-dark: var(--color-black);
+    // --main-background: var(--color-grey);
+    // --main-background-dark: var(--color-grey-dark-200);
+
+    // Background - Community
+    --main-background-2: var(--color-grey-dark-400);
+    --main-background-dark-2: var(--color-black);
+
+    // Divider
+    // --border-color-divider: var(--color-dark-2);
+    --border-color-divider-2: var(--color-grey-dark-100);
+    // --border-color-divider: var(--color-grey-light-100);
+
+    // Buttons
+    --color-btn-primary: var(--color-blue);
+    --color-btn-primary-dark: var(--color-blue-dark-100);
+    --background-color-btn-outline: var(--main-background-light);
+    --background-color-btn-outline-2: var(--color-grey-dark-400);
+    --border-color-btn-outline: var(--color-grey-light-200);
+    --border-color-btn-outline-hover: var(--color-grey-light-300);
+    --border-color-btn-outlined-selected: var(--color-blue);
+    --background-color-btn-outlined-selected: var(--color-blue-dark-300);
+    --font-size-btn-outlined: 1.5rem;
+    // --background-color-btn-outline: var(--color-grey-dark-100);
+
+    // Texts
+    --color-text-secondary: var(--color-grey-light-300);
+    --color-text-subtitle: var(--color-grey-light-200);
+    --color-text-link-highlight: var(--color-blue);
+    --color-text-link: var(--color-blue-dark-100);
+    --color-text-link-dark: var(--color-blue-dark-200);
+
+    // Forms
+    --color-form-background: var(--color-darkblack);
+
+    // Cards
+    // --color-card-background: var(--color-dark-1);
+    --color-card-background: var(--color-grey-dark-300);
+    --color-card-background-2: var(--color-grey-dark-300);
+    // --color-card-background: var(--color-grey-dark-100);
+
+    // Inputs
+    --color-input-border: var(--color-lightblack);
+    --color-input-border-focused: var(--color-blue);
+
+    /* Space */
+    --navbar-height: 54px;
+
+    /* Border */
+    --border-radius: 5px;
+    --border-radius-card: 8px;
+
+    /* Font Family */
+    --font-family: "Montserrat", sans-serif, "Noto Serif SC", "Noto Serif TC",
+        serif;
+
+    --tg-barlow: "Barlow", sans-serif;
+    --tg-berlin-font-family: "Berlin Sans FB Demi Bold", sans-serif;
+    --font-family-landing: "Barlow", sans-serif;
+    --font-family-open-sans: "Open Sans", sans-serif, "Noto Serif SC",
+        "Noto Serif TC", serif;
+    --font-family-josefin: "Josefin Sans", sans-serif, "Noto Serif SC",
+        "Noto Serif TC", serif;
+
+    --content-padding-top-bottom: 2rem;
+    --category-mui-tabs-height: 49px;
+
+    //Bootstrap
+    --bs-breakpoint-md: 768px;
+
+    --sidebar-width: 280px;
+
+    --transition: all 0.3s linear;
+
+    //Helio Overrides
+    --helio-button-primary: #00ffff !important;
+    --helio-background-primary-hover: #02bcbc !important;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    line-height: normal;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: #fff !important;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: var(
+        /*--color-dark-primary*/ --main-background
+    ) !important; //override bootstrap default background color
+
+    &::-webkit-scrollbar-track {
+        background-color: #101010;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: var(--color-dark-secondary);
+    }
+}
+
+.scrollbar {
+    overflow-y: auto;
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        // background-color: var(--main-background-dark);
+        background-color: var(--color-dark-secondary);
+    }
+}
+
+.scrollbar-2 {
+    overflow-y: auto;
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: var(--main-background-dark-2);
+    }
+}
+
+.scrollbar-3 {
+    overflow-y: auto;
+    &::-webkit-scrollbar-track {
+        background-color: #101010;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: var(--main-background);
+    }
+}
+
+.pill {
+    border-radius: 9999px;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.button-wrapper {
+    text-transform: uppercase;
+    padding: 0.9rem !important;
+    font-family: "Butter Haunted";
+    width: fit-content;
+    word-break: break-word;
+    display: inline-block;
+    cursor: pointer;
+
+    &.pill {
+        border-radius: 9999px;
+    }
+
+    &.primary {
+        background: var(--color-purple);
+        &:hover {
+            opacity: 0.8;
+            transition: all ease 0.5s;
+        }
+
+        &.shadow {
+            box-shadow: var(--color-purple) 0 10px 20px -10px !important;
+        }
+    }
+
+    button {
+        background-color: transparent;
+        font-size: 16px;
+        color: #fff;
+        border: 0;
+    }
+}
+
+.MuiTooltip-tooltip {
+    font-size: 1.2rem !important;
+}
+
+.w-md-editor {
+    color: white;
+    background-color: transparent;
+    box-shadow: unset !important;
+    .w-md-editor-toolbar {
+        background-color: unset;
+        border-bottom: unset;
+
+        li {
+            &.active {
+                button {
+                    background-color: black;
+                }
+            }
+
+            &.w-md-editor-toolbar-divider {
+                display: none;
+            }
+
+            button[data-name="fullscreen"] {
+                display: none;
+            }
+        }
+
+        svg {
+            color: white;
+        }
+    }
+    .w-md-editor-content {
+        .w-md-editor-aree.w-md-editor-input {
+            .w-md-editor-text {
+                font-size: 20px !important;
+                line-height: unset;
+                .wmde-markdown-color {
+                    pre {
+                        code {
+                            color: white;
+                            span.token.title.important {
+                                color: white !important;
+                            }
+
+                            span.table {
+                                .token.table-data-rows {
+                                    .token.table-data {
+                                        color: white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .wmde-markdown.wmde-markdown-color.w-md-editor-preview {
+            font-size: 20px;
+
+            table {
+                thead {
+                    tr {
+                        th {
+                            background-color: #1b1b1c;
+                        }
+
+                        tr {
+                            background-color: #1b1b1c;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.wmde-markdown {
+    background-color: transparent !important;
+}
+
+.wmde-markdown.wmde-markdown-color {
+    table {
+        tr {
+            background-color: #1b1b1c;
+        }
+    }
+}
+
+Link {
+    text-decoration: none;
+}
+/*  global css */
+
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1500px !important;
+    }
+}
+
+.h-full {
+    height: 100%;
+}
+
+.invisible {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.SnackbarContainer-root {
+    margin-top: 4rem;
+}

@@ -1,0 +1,224 @@
+.widget.RewardSpinDialog {
+	background-image: url(../../../../public/assets/lootbox_backgrounds/500x500.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-blend-mode: hard-light;
+	background-position: center;
+
+	padding: 4rem 3rem;
+	&::-webkit-scrollbar:horizontal {
+		display: none;
+	}
+
+	.RewardSpinDialog--title {
+		text-align: center;
+		font-size: 2.5rem;
+		font-family: var(--font-family);
+		font-weight: bold;
+	}
+
+	.spin-section {
+		overflow-x: hidden;
+		border-radius: 10px;
+		border: 3px solid var(--border-color-divider);
+		margin-top: 40px;
+
+		.pointer-wrapper {
+			position: relative;
+			display: flex;
+			justify-content: center;
+
+			.pointer {
+				height: 50px;
+				width: 50px;
+				position: fixed;
+				left: 50%;
+				transform: translateX(-50%) translateY(-30px);
+				z-index: 1;
+			}
+
+			@keyframes spinning {
+				0% {
+					transform: rotate(0deg);
+				}
+				50% {
+					transform: rotate(-50deg);
+				}
+				100% {
+					transform: rotate(0deg);
+				}
+			}
+		}
+
+		.spin-container {
+			display: flex;
+			position: relative;
+
+			/* Hide scrollbar */
+			-ms-overflow-style: none; /* IE and Edge */
+			scrollbar-width: none; /* Firefox */
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
+
+			.reward-to-spin {
+				border: 1px solid #8e98bb;
+				border-radius: 0.25rem;
+				padding: 0.15rem;
+				min-width: 60px;
+				display: inline-block;
+			}
+		}
+	}
+
+	.vid {
+		width: auto;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		transition: visibility 0s linear 0s, opacity 500ms;
+	}
+
+	.rewards-and-claim {
+		width: auto;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+
+		transition: visibility 0s linear 0s, opacity 1000ms;
+
+		.reward {
+			font-size: 1.5rem;
+			font-family: var(--font-family);
+			margin-top: 1rem;
+			text-align: center;
+		}
+
+		.title {
+			font-size: 2.5rem;
+			font-family: var(--font-family);
+			font-weight: bold;
+			text-align: center;
+		}
+
+		.claim-button-wrapper {
+			margin-top: 2rem;
+			text-align: center;
+		}
+	}
+
+	.PossibleRewards {
+		.possible-rewards-text {
+			font-size: 2rem;
+			font-family: var(--font-family);
+		}
+
+		.possible-rewards-container {
+			border-radius: 10px;
+			max-height: 200px;
+			overflow-y: auto;
+			border: 3px solid var(--border-color-divider);
+			background-color: var(--border-color-divider);
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+
+			img {
+				border: 1px solid #8e98bb;
+				border-radius: 0.25rem;
+				padding: 0.15rem;
+				display: block;
+			}
+		}
+	}
+
+	.AcquiredRewards {
+		.acquired-rewards-text {
+			font-size: 2rem;
+			font-family: var(--font-family);
+		}
+
+		.acquired-rewards-container {
+			border-radius: 10px;
+			max-height: 200px;
+			overflow-y: auto;
+			border: 3px solid var(--border-color-divider);
+			background-color: var(--border-color-divider);
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+
+			img {
+				border: 1px solid #8e98bb;
+				border-radius: 0.25rem;
+				padding: 0.15rem;
+				display: block;
+			}
+		}
+	}
+	.footer {
+		margin-top: 3rem;
+		position: relative;
+
+		.skip {
+			cursor: pointer;
+			position: absolute;
+			right: 0;
+			bottom: 50%;
+			transform: translateY(50%);
+
+			display: flex;
+			align-items: center;
+			gap: 0.2rem;
+			flex-wrap: wrap;
+		}
+	}
+
+	.remaining {
+		p {
+			font-family: var(font-family);
+		}
+	}
+}
+
+.widget.RewardSpinDialog.mobile {
+	background-image: url(../../../../public/assets/lootbox_backgrounds/300x300.png);
+	padding: 4rem 2rem;
+	.PossibleRewards {
+		margin-top: 2rem;
+		.possible-rewards-text {
+			font-size: 1.8rem;
+			margin-bottom: 0.5rem;
+		}
+
+		.possible-rewards-container {
+			max-height: 150px;
+			flex-wrap: unset;
+			justify-content: unset;
+		}
+	}
+
+	.AcquiredRewards {
+		margin-top: 2rem;
+		width: 100%;
+		.acquired-rewards-text {
+			font-size: 1.8rem;
+			margin-bottom: 0.5rem;
+		}
+
+		.acquired-rewards-container {
+			max-height: 150px;
+			flex-wrap: unset;
+			justify-content: unset;
+			width: 100%;
+		}
+	}
+
+	.spin-section {
+		margin-top: 5rem;
+	}
+}

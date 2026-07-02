@@ -1,0 +1,12 @@
+.widget.CheckboxGroup {
+	.searchbar {
+		.widget.Input {
+			width: 100%;
+			padding-top: 1rem;
+			padding-bottom: 1rem;
+		}
+	}
+	.CheckboxItem:not(:last-child) {
+		margin-bottom: 1rem;
+	}
+}

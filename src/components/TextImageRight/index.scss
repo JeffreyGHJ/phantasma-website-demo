@@ -1,0 +1,80 @@
+.text-image-container-right {
+    display: flex;
+    width: 100vw;
+    height: 50vh;
+    background-color: #090909;
+    color: #ffffff;
+
+    .text-section-right,
+    .image-section-right {
+        display: flex;
+        flex: 1;
+        align-items: center; // Vertically center content
+        justify-content: center; // Horizontally center content
+    }
+
+    .text-section-right {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 4em;
+        margin-bottom : 20px;
+        font-family: var(--font-family);
+        font-weight: bold;
+        justify-content: start;
+    }
+
+    p {
+        font-size: 3em;
+        font-family: var(--font-family);
+        font-weight: 300;
+        max-width: 800px;
+    }
+
+    img {
+        max-width: 60%;
+        max-height: 60%;
+    }
+
+
+
+    // Media query for mobile devices
+    @media (max-width: 820px) {
+        flex-direction: column; // Stack content vertically
+        height: auto; // Adjust the height to be automatic based on content
+        padding: 2rem 0rem; // Add some padding around the content
+
+        .text-section-right {
+            order: -1; // This will make the text section appear before the image section
+        }
+
+        .text-section-right,
+        .image-section-right {
+            width: 100%;
+            align-items: center;
+            margin-bottom: 4rem;
+            justify-content: center; /* Center content horizontally */
+            padding: 2rem 0; // Add some vertical padding between the text and image sections
+        }
+
+        h1 {
+            font-size: 2.5em; // Reduce the font size
+            margin-bottom: 10px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.5em; // Reduce the font size
+            margin-top: 10px;
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+
+        img {
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+    }
+}

@@ -1,0 +1,139 @@
+#MuggleFriendly {
+	background-color: #101010;
+
+	.row {
+		display: block;
+
+		.right-col {
+			.character {
+				text-align: center;
+
+				img {
+					width: 150px;
+					height: auto;
+				}
+			}
+		}
+
+		.left {
+			.title {
+				/* Display */
+				text-align: center;
+
+				/* Spacing */
+				margin-top: 3rem;
+
+				/* Typography */
+				font-family: var(--font-family-landing);
+				font-style: normal;
+				font-weight: bold;
+				line-height: 100%;
+				letter-spacing: -0.04em;
+				text-transform: uppercase;
+				color: #ffffff;
+				font-size: 30px; //Screen size dependent
+			}
+
+			.subtitle {
+				/* Display */
+				text-align: center;
+
+				/* Spacing */
+				margin-top: 1rem;
+
+				/* Typography */
+				font-family: var(--font-family-open-sans);
+				font-style: normal;
+				font-weight: 400;
+				line-height: 139.5%;
+				letter-spacing: -0.04em;
+				color: #dad7d7;
+				font-size: 15px; //Screen size dependent
+			}
+		}
+	}
+}
+
+// Small devices
+@media (min-width: 576px) {
+	#MuggleFriendly {
+		.row {
+			.right-col {
+				.character {
+					img {
+						width: 200px;
+					}
+				}
+			}
+
+			.left {
+				.title {
+					/* Typography */
+					font-size: 40px; //screen size dependent
+				}
+
+				.subtitle {
+					/* Typography*/
+					font-size: 20px; //screen size dependent
+				}
+			}
+		}
+	}
+}
+
+// Large devices
+@media (min-width: 992px) {
+	#MuggleFriendly {
+		.row {
+			display: flex;
+			align-items: center;
+
+			.right-col {
+				.character {
+					text-align: start;
+					margin-left: 10rem;
+
+					img {
+						width: 250px;
+					}
+				}
+			}
+
+			.left-col {
+				order: -1;
+
+				.left {
+					.title {
+						text-align: start;
+						margin-left: auto;
+						max-width: 450px;
+					}
+
+					.subtitle {
+						text-align: start;
+						margin-left: auto;
+						max-width: 450px;
+					}
+				}
+			}
+		}
+	}
+}
+
+// X-Large devices
+@media (min-width: 1200px) {
+	#MuggleFriendly {
+		.row {
+			--bs-gutter-x: 5rem;
+		}
+	}
+}
+
+// XX-Large devices
+@media (min-width: 1400px) {
+	#MuggleFriendly {
+		.row {
+			--bs-gutter-x: 9rem;
+		}
+	}
+}

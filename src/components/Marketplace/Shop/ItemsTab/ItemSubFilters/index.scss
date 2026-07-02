@@ -1,0 +1,52 @@
+#sub-filters {
+    height: 5rem;
+    max-height: 5rem;
+    min-height: 5rem;
+    .tab {
+        font-family: var(--font-family-josefin) !important;
+        font-size: 16px;
+        color: dimgray;
+        border: 1px solid var(--color-black);
+        width: max-content + 0.2rem;
+        min-width: 94px;
+    }
+    .MuiTabs-indicator {
+        display: none;
+    }
+    .active {
+        color: white;
+        border: 1px solid rgb(120, 117, 117);
+    }
+    .MuiTabs-flexContainer {
+        height: 100%;
+    }
+    .MuiTabScrollButton-horizontal {
+        height: 100%;
+        border: 1px solid #69696969;
+        transition: all;
+        transition-duration: 0.3s;
+        overflow: hidden;
+        &.Mui-disabled {
+            width: 0px;
+            border: none;
+        }
+        .MuiSvgIcon-root {
+            width: 24px;
+            height: 24px;
+            stroke: white;
+            stroke-width: 1px;
+        }
+    }
+}
+
+#sub-filter-container {
+    display: flex;
+    justify-content: center;
+}
+
+// @media (max-width: 590px) {
+//     #sub-filters {
+//         padding-left: 1rem;
+//         padding-right: 1rem;
+//     }
+// }

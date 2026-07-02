@@ -1,0 +1,943 @@
+{
+    "Navbar": {
+        "NavItems": {
+            "wiki": "wiki",
+            "market": "marketplace",
+            "dao": "dao",
+            "nft_bridge": "bridge",
+            "collection": "collection",
+            "community": "community",
+            "forums": "Forums",
+            "mint": "Mint",
+            "shop": "Shop"
+        },
+        "buttons": {
+            "ConnectButton": {
+                "connect_wallet": "Connect"
+            },
+            "BuyEcto": {
+                "buy": "Buy"
+            }
+        },
+        "SettingDialog": {
+            "languages": "Languages",
+            "image_size": "Image Size",
+            "nfts_per_page": "NFTs Per Page",
+            "alert_display_position": "Alert Display Position",
+            "quick_spin": "Quick Spin"
+        }
+    },
+    "Home": {
+        "Hero": {
+            "title": {
+                "the_spookiest": "The spookiest",
+                "mmorpg": "mmorpg",
+                "is_here": "is here"
+            },
+            "subtitle": {
+                "earn_explore_make_new_friends": "Earn, explore, make new friends",
+                "and_play_together": "and play together"
+            },
+            "marketplace": "Marketplace",
+            "learn_more": "Learn More"
+        },
+        "PlayAndEarn": {
+            "title": "play and earn",
+            "subtitle": "Enjoy a truly unique MMO experience and earn crypto while playing. Join up in a group as a Mage, Warrior, or Archer and head into the Dark Dungeon to fight bosses for many rewards including items and crypto."
+        },
+        "Blockchains": {
+            "title": "float through blockchains",
+            "subtitle": "Unbounded by normal conventions of most crypto projects, LittleGhosts can exist on 8 blockchains. Although the main focus is Solana and BNBChain, you can move your ghosts wherever you wish."
+        },
+        "Devices": {
+            "title": "enjoy cross-play with your friends",
+            "subtitle": "Releasing first on the computer, LittleGhosts MMO plans on releasing on nintendo switch and mobile next. Since we are building the MMO using Unity, they offer us instant access to export the MMO to several different devices in the future."
+        },
+        "MuggleFriendly": {
+            "title": "experienced gamer or not",
+            "subtitle": "We kept this in mind when first conceptualizing the game. Even if you are not a gamer you will still enjoy our laid back target based combat mechanics. We also are focusing on the social aspects of the game, so don't get intimidated by the combat side."
+        }
+    },
+    "Mint": {
+        "mint_started": "Mint started!",
+        "mint_starts_soon": "Mint starts soon!",
+        "mint_incentive": "Mint Founder's boxes to get exclusive rewards and for a chance to win a Macbook Pro and Nintendo Switches!",
+        "price_to_mint": "Price to mint",
+        "mint_boxes": "Mint Lootboxes",
+        "wallet_not_connected": "Wallet not connected",
+        "you_have_minted": "You have minted",
+        "lootboxes": "lootboxes"
+    },
+    "Footer": {
+        "privacy_policy": "Privacy Policy",
+        "term_and_conditions": "Term & Conditions"
+    },
+    "MarketplaceNavbar": {
+        "dashboard": "Dashboard",
+        "marketplace": "Marketplace",
+        "my_account": "My Account",
+        "login": "Login",
+        "vault": "Vault"
+    },
+    "CommunityNavbar": {
+        "vault": "Vault",
+        "dao": "DAO",
+        "forums": "Forums",
+        "my_account": "My Account",
+        "login": "Login"
+    },
+    "CommunityLayoutSidebar": {
+        "vault": "Treasury",
+        "dao": "DAO",
+        "forums": "Forums",
+        "connected": "Connected",
+        "not_connected": "Not connected",
+        "not_signed_in": "Not signed in",
+        "account": "Account",
+        "inventory": "Vault",
+        "offers": "Offers",
+        "claim_rewards": "Claim Rewards",
+        "account_settings": "Account Settings",
+        "dashboard": "Dashboard",
+        "marketplace": "Marketplace",
+        "login": "Login",
+        "my_account": "MY ACCOUNT"
+    },
+    "AssetCategories": {
+        "ghosts": "Ghosts",
+        "skeletons": "Skeletons",
+        "pets": "Pets",
+        "armory": "Armory",
+        "supplies": "Supplies",
+        "multipliers": "Multipliers",
+        "overview": "Overview"
+    },
+    "FilterSidebar": {
+        "filter": "Filter",
+        "filters": "Filters",
+        "marketplaceDropdown": {
+            "label": "Marketplace",
+            "selections": {
+                "lg": "LittleGhosts",
+                "pancakeSwap": "PancakeSwap"
+            }
+        },
+        "petsDropdown": {
+            "label": "Pets",
+            "selections": {
+                "EctoSkeletons": "EctoSkeletons"
+            }
+        },
+        "suppliesDropdown": {
+            "label": "Supplies",
+            "selections": {
+                "Lootboxes": "Founder's Lootboxes",
+                "Gems": "Founder's Gems",
+                "Potions": "Founder's Potions",
+                "Rare_Drop": "Founder's Rare Drop",
+                "Ultra_Rare_Drop": "Founder's Ultra Rare Drop"
+            }
+        },
+        "armoriesDropdown": {
+            "label": "Founder's Armory",
+            "selections": {
+                "founders_armory": "Founder's Armory"
+            }
+        }
+    },
+    "NftTraits": {
+        "Background": "Background",
+        "Body": "Body",
+        "Eyes": "Eyes",
+        "Hat": "Hat",
+        "Item": "Item",
+        "Mouth": "Mouth",
+        "Prop": "Prop",
+        "Buffs": "Buffs",
+        "Buff #1": "Buff #1",
+        "Buff #2": "Buff #2",
+        "Buff #3": "Buff #3",
+        "Buff #4": "Buff #4",
+        "Buff #5": "Buff #5",
+        "Top": "Top",
+        "All": "All",
+        "Asagi": "Asagi",
+        "Cool Magenta": "Cool Magenta",
+        "Cyan": "Cyan",
+        "Dark Mustard": "Dark Mustard",
+        "Emperor": "Emperor",
+        "Epic Blue": "Epic Blue",
+        "Foggy Grey": "Foggy Grey",
+        "Ghost Green": "Ghost Green",
+        "Gravel Grey": "Gravel Grey",
+        "Haunted Plum": "Haunted Plum",
+        "Lava Red": "Lava Red",
+        "Maximum Yellow": "Maximum Yellow",
+        "Midnight Blue": "Midnight Blue",
+        "Midnight Green": "Midnight Green",
+        "Moss Green": "Moss Green",
+        "Pale Berry": "Pale Berry",
+        "Pale Orange": "Pale Orange",
+        "Pumpkin Orange": "Pumpkin Orange",
+        "Punk Blue": "Punk Blue",
+        "Razzmic Berry": "Razzmic Berry",
+        "Silk Blue": "Silk Blue",
+        "Silk Bulk": "Silk Bulk",
+        "Slate Blue": "Slate Blue",
+        "Wageningen Green": "Wageningen Green",
+        "Alien Ghost": "Alien Ghost",
+        "Baby Ghost Alien": "Baby Ghost Alien",
+        "Beetle Ghost": "Beetle Ghost",
+        "Black Ghost": "Black Ghost",
+        "Blue Alien Ghost": "Blue Alien Ghost",
+        "Blue Ghost": "Blue Ghost",
+        "Dark Purple Ghost": "Dark Purple Ghost",
+        "Doge Ghost": "Doge Ghost",
+        "Friendly Ghost": "Friendly Ghost",
+        "Ghost Rick": "Ghost Rick",
+        "Ghostdu": "Ghostdu",
+        "Ghostface Ghost": "Ghostface Ghost",
+        "Ghostie Wan": "Ghostie Wan",
+        "Green Glowing Ghost": "Green Glowing Ghost",
+        "Grey Ghost": "Grey Ghost",
+        "Hades": "Hades",
+        "Lime Green Ghost": "Lime Green Ghost",
+        "Pancake Ghost": "Pancake Ghost",
+        "Purple Ghost": "Purple Ghost",
+        "Red Ghost": "Red Ghost",
+        "Scary Ghost": "Scary Ghost",
+        "Shiba Ghost": "Shiba Ghost",
+        "Super Shy Ghost": "Super Shy Ghost",
+        "Transparent Ghost": "Transparent Ghost",
+        "White Ghost": "White Ghost",
+        "Alien Eyes": "Alien Eyes",
+        "Anime Black Eyes": "Anime Black Eyes",
+        "Anime Red Eyes": "Anime Red Eyes",
+        "Baby Ghost Alien Eyes": "Baby Ghost Alien Eyes",
+        "Beetle Eyes": "Beetle Eyes",
+        "Bubble Eyes": "Bubble Eyes",
+        "Cross Eyes": "Cross Eyes",
+        "Evil Eyes": "Evil Eyes",
+        "Friendly Eyes": "Friendly Eyes",
+        "Ghost Sith Eyes": "Ghost Sith Eyes",
+        "Ghostdu Eyes": "Ghostdu Eyes",
+        "Ghostface Eyes": "Ghostface Eyes",
+        "Ghostie Wan Eyes": "Ghostie Wan Eyes",
+        "Girly Eyes": "Girly Eyes",
+        "Green Ghost Eyes": "Green Ghost Eyes",
+        "Happy Eyes": "Happy Eyes",
+        "Heart Eyes": "Heart Eyes",
+        "Jawa Eyes": "Jawa Eyes",
+        "Money Sign Eyes": "Money Sign Eyes",
+        "Pancake Eyes": "Pancake Eyes",
+        "Rick Eyes": "Rick Eyes",
+        "Right Look": "Right Look",
+        "Scary Eyes": "Scary Eyes",
+        "Squint Eyes": "Squint Eyes",
+        "Stare Eyes": "Stare Eyes",
+        "Stoned Eyes": "Stoned Eyes",
+        "Super Shy Eyes": "Super Shy Eyes",
+        "Uninterested Look": "Uninterested Look",
+        "Vampire Eyes": "Vampire Eyes",
+        "Baby Ghost Alien Hoodie": "Baby Ghost Alien Hoodie",
+        "Backwards Red Hat": "Backwards Red Hat",
+        "Beetle Hair": "Beetle Hair",
+        "Black Backwards ERTH Cap": "Black Backwards ERTH Cap",
+        "Black Backwards ERTH Hat": "Black Backwards ERTH Hat",
+        "Black Backwards Hat": "Black Backwards Hat",
+        "Black Baseball Cap": "Black Baseball Cap",
+        "Black Beanie": "Black Beanie",
+        "Black ERTH Baseball Cap": "Black ERTH Baseball Cap",
+        "Black Hoodie": "Black Hoodie",
+        "Blue Flames": "Blue Flames",
+        "Blue Wizard Hat": "Blue Wizard Hat",
+        "Construction Hat": "Construction Hat",
+        "Ghost Sith Hoodie": "Ghost Sith Hoodie",
+        "Ghostdu Hoodie": "Ghostdu Hoodie",
+        "Ghostface Hoodie": "Ghostface Hoodie",
+        "Ghostie Wan Hoodie": "Ghostie Wan Hoodie",
+        "Green Backwards Hat": "Green Backwards Hat",
+        "Green Baseball Cap": "Green Baseball Cap",
+        "Green Beanie": "Green Beanie",
+        "Hoodie": "Hoodie",
+        "Jawa Hoodie": "Jawa Hoodie",
+        "None": "None",
+        "Orange Beanie": "Orange Beanie",
+        "Pancake Ears": "Pancake Ears",
+        "Purple Backwards Hat": "Purple Backwards Hat",
+        "Purple Baseball Cap": "Purple Baseball Cap",
+        "Purple Beanie": "Purple Beanie",
+        "Purple Wizard Hat": "Purple Wizard Hat",
+        "Red Backwards Hat": "Red Backwards Hat",
+        "Red Baseball Cap": "Red Baseball Cap",
+        "Rick Hair": "Rick Hair",
+        "Santa Hat": "Santa Hat",
+        "Super Shy Hoodie": "Super Shy Hoodie",
+        "Teal Beanie": "Teal Beanie",
+        "Top Hat": "Top Hat",
+        "Bloody Knife": "Bloody Knife",
+        "Blue Lightsaber": "Blue Lightsaber",
+        "Bnb Coin": "Bnb Coin",
+        "Dripping Soul Knife": "Dripping Soul Knife",
+        "ERTH": "ERTH",
+        "Green Lightsaber": "Green Lightsaber",
+        "Hanging Chain": "Hanging Chain",
+        "Jawa Gun": "Jawa Gun",
+        "Knife": "Knife",
+        "Money": "Money",
+        "Purple Lightsaber": "Purple Lightsaber",
+        "Red Lightsaber": "Red Lightsaber",
+        "Ricks Laser Gun": "Ricks Laser Gun",
+        "Trick Or Treat Bag": "Trick Or Treat Bag",
+        "Alien Mouth": "Alien Mouth",
+        "Baby Ghost Alien Mouth": "Baby Ghost Alien Mouth",
+        "Beetle Mouth": "Beetle Mouth",
+        "Big Smile": "Big Smile",
+        "Cigarette": "Cigarette",
+        "Cigarette Smoke": "Cigarette Smoke",
+        "Face Mask": "Face Mask",
+        "Friendly Mouth": "Friendly Mouth",
+        "Frown": "Frown",
+        "Ghost Sith Smile": "Ghost Sith Smile",
+        "Ghostdu Mouth": "Ghostdu Mouth",
+        "Ghostface Mouth": "Ghostface Mouth",
+        "Ghostie Wan Mouth": "Ghostie Wan Mouth",
+        "Green Ghost Mouth": "Green Ghost Mouth",
+        "Grill": "Grill",
+        "Rick Mouth": "Rick Mouth",
+        "Scary Mouth": "Scary Mouth",
+        "Scary Tounge Flick": "Scary Tounge Flick",
+        "Smirk": "Smirk",
+        "Stiches": "Stiches",
+        "Straight": "Straight",
+        "Super Shy Mouth": "Super Shy Mouth",
+        "Vampire Teeth": "Vampire Teeth",
+        "Wiggle Mouth": "Wiggle Mouth",
+        "3D Glasses": "3D Glasses",
+        "Blue Lasers": "Blue Lasers",
+        "Earrings": "Earrings",
+        "Eye Patch": "Eye Patch",
+        "Gold Chain": "Gold Chain",
+        "Green Lasers": "Green Lasers",
+        "Halo": "Halo",
+        "Heart Bubble": "Heart Bubble",
+        "Horns": "Horns",
+        "Red Lasers": "Red Lasers",
+        "Silver Chain": "Silver Chain",
+        "Sunglasses": "Sunglasses",
+        "Underworld Robe": "Underworld Robe",
+        "Broomstick Brown": "Broomstick Brown",
+        "Bunny Cloud": "Bunny Cloud",
+        "Cold Ice": "Cold Ice",
+        "Cotton Candy": "Cotton Candy",
+        "Ghastly Grey": "Ghastly Grey",
+        "Ghost Blue": "Ghost Blue",
+        "Gravestone Grey": "Gravestone Grey",
+        "Grim Grey": "Grim Grey",
+        "Halloween punch": "Halloween punch",
+        "Hydra gray": "Hydra gray",
+        "Jade": "Jade",
+        "Lagoon": "Lagoon",
+        "Luxor gold": "Luxor gold",
+        "Midnight Magic": "Midnight Magic",
+        "Moonscape": "Moonscape",
+        "Muted green": "Muted green",
+        "Nautical": "Nautical",
+        "Nebulous": "Nebulous",
+        "Neon blue": "Neon blue",
+        "Pastel red": "Pastel red",
+        "Peach fury": "Peach fury",
+        "Phantom ship": "Phantom ship",
+        "Pink floyd": "Pink floyd",
+        "Pisco sour": "Pisco sour",
+        "Purple Potion": "Purple Potion",
+        "Vanilla": "Vanilla",
+        "Vineyard": "Vineyard",
+        "Whales tale": "Whales tale",
+        "Wicked green": "Wicked green",
+        "Green Skeleton": "Green Skeleton",
+        "Ice King Skeleton": "Ice King Skeleton",
+        "Purple Skeleton": "Purple Skeleton",
+        "Red Skeleton": "Red Skeleton",
+        "Tan Skeleton": "Tan Skeleton",
+        "White Skeleton": "White Skeleton",
+        "Angry Blue Jewel Eyes": "Angry Blue Jewel Eyes",
+        "Angry Blue Retro Sunglasses": "Angry Blue Retro Sunglasses",
+        "Angry Eyes": "Angry Eyes",
+        "Angry Gold Jewel Eyes": "Angry Gold Jewel Eyes",
+        "Angry Green Jewel Eyes": "Angry Green Jewel Eyes",
+        "Angry Hallow Eyes": "Angry Hallow Eyes",
+        "Angry Ice Jewel Eyes": "Angry Ice Jewel Eyes",
+        "Angry Pink Retro Sunglasses": "Angry Pink Retro Sunglasses",
+        "Angry Purple Jewel Eyes": "Angry Purple Jewel Eyes",
+        "Angry Purple Jewel Mascara Eyes": "Angry Purple Jewel Mascara Eyes",
+        "Angry Red Jewel Eyes": "Angry Red Jewel Eyes",
+        "Normal Blue Jewel Eyes": "Normal Blue Jewel Eyes",
+        "Normal Eyes": "Normal Eyes",
+        "Normal Gold Jewel Eyes": "Normal Gold Jewel Eyes",
+        "Normal Green Jewel Eyes": "Normal Green Jewel Eyes",
+        "Normal Purple Jewel Eyes": "Normal Purple Jewel Eyes",
+        "Normal Red Jewel Eyes": "Normal Red Jewel Eyes",
+        "Regular Hallow Eyes": "Regular Hallow Eyes",
+        "Sad Eyes": "Sad Eyes",
+        "Sad Hallow Eyes": "Sad Hallow Eyes",
+        "Beanie": "Beanie",
+        "Black Cap": "Black Cap",
+        "Blue Flaming Head": "Blue Flaming Head",
+        "Bucket Hat Black": "Bucket Hat Black",
+        "Bucket Hat Grey": "Bucket Hat Grey",
+        "Bunny Ears": "Bunny Ears",
+        "Clown": "Clown",
+        "Cowboy Hat": "Cowboy Hat",
+        "Diamond Mask": "Diamond Mask",
+        "Evil Beetle Wig": "Evil Beetle Wig",
+        "Evil Horns": "Evil Horns",
+        "Fish Bowel": "Fish Bowel",
+        "Flaming Head": "Flaming Head",
+        "Gold Crown": "Gold Crown",
+        "Green Cap": "Green Cap",
+        "Green Flaming Head": "Green Flaming Head",
+        "Grey Cap": "Grey Cap",
+        "Jewel Crown": "Jewel Crown",
+        "Red Cap": "Red Cap",
+        "Silver Crown": "Silver Crown",
+        "Skii Mask": "Skii Mask",
+        "Blue Balloon": "Blue Balloon",
+        "Blunt": "Blunt",
+        "Bubble Stick": "Bubble Stick",
+        "Glock": "Glock",
+        "Green Balloon": "Green Balloon",
+        "Pink Balloon": "Pink Balloon",
+        "Purple Balloon": "Purple Balloon",
+        "Red Balloon": "Red Balloon",
+        "Rose": "Rose",
+        "Scythe": "Scythe",
+        "Slendy Tentacles": "Slendy Tentacles",
+        "Ye Mic": "Ye Mic",
+        "Yellow Balloon": "Yellow Balloon",
+        "Laughing Gold Grill Mouth": "Laughing Gold Grill Mouth",
+        "Laughing Green Grill Mouth": "Laughing Green Grill Mouth",
+        "Laughing Mouth": "Laughing Mouth",
+        "Laughing Rainbow Grill Mouth": "Laughing Rainbow Grill Mouth",
+        "Normal Mouth": "Normal Mouth",
+        "Sad Mouth": "Sad Mouth",
+        "Shocked Mouth": "Shocked Mouth",
+        "Shocked Mouth Tongue": "Shocked Mouth Tongue",
+        "Slightly Open Mouth": "Slightly Open Mouth",
+        "Black Hoodie Down": "Black Hoodie Down",
+        "Black Hoodie Up": "Black Hoodie Up",
+        "Black Hoodie Up Red Tie": "Black Hoodie Up Red Tie",
+        "Black T-shirt": "Black T-shirt",
+        "Evil Beetle Suit": "Evil Beetle Suit",
+        "Gold Chain on Pink Hoodie": "Gold Chain on Pink Hoodie",
+        "Grey Hoodie Down": "Grey Hoodie Down",
+        "Grey Hoodie Up": "Grey Hoodie Up",
+        "Grey T-shirt": "Grey T-shirt",
+        "Jack Suit": "Jack Suit",
+        "Pink Hoodie": "Pink Hoodie",
+        "Reaper Black Hoodie Up": "Reaper Black Hoodie Up",
+        "White Shirt": "White Shirt",
+        "+4 Every Bonus": "+4 Every Bonus",
+        "+5 Every Bonus": "+5 Every Bonus",
+        "+6 Every Bonus": "+6 Every Bonus",
+        "+8 Every Bonus": "+8 Every Bonus"
+    },
+    "CollectionNames": {
+        "LittleGhosts": "LittleGhosts",
+        "EctoSkeletons": "EctoSkeletons",
+        "Founder's Lootboxes": "Founder's Lootboxes",
+        "Founder's Items": "Founder's Items",
+        "Founder's Gems": "Founder's Gems",
+        "Founder's Potions": "Founder's Potions",
+        "Founder's Armory": "Founder's Armory",
+        "Founder's Rare Drops": "Founder's Rare Drop",
+        "Founder's Ultra Rare Drops": "Founder's Ultra Rare Drop"
+    },
+    "widgets": {
+        "BackButton": {
+            "back": "Back"
+        },
+        "WebShareDialog": {
+            "copy_link": "Copy Link",
+            "share": "share"
+        },
+        "SaleTypeDropdown": {
+            "all": "All",
+            "for_sale": "For Sale",
+            "not_for_sale": "Not For Sale",
+            "auction": "Auction"
+        },
+        "SortTypeDropdown": {
+            "lowest_price": "Lowest Price",
+            "highest_price": "Highest Price",
+            "lowest_id": "Lowest ID",
+            "highest_id": "Highest ID",
+            "lowest_rank": "Lowest Rank",
+            "highest_rank": "Highest Rank",
+            "lowest_bid": "Lowest Bid",
+            "highest_bid": "Bighest Bid",
+            "expire_desc": "Expire (desc)",
+            "expire_asc": "Expire (asc)",
+            "latest": "Latest"
+        },
+        "NftCard": {
+            "rank": "Rank",
+            "expires": "Expires",
+            "expired": "Expired",
+            "buyout": "Buyout",
+            "current_bid": "Current Bid",
+            "hrs": "hrs",
+            "min_bid": "Min Bid",
+            "top_bid": "Top Bid",
+            "wk": "wk ago",
+            "yr": "yr ago",
+            "mo": "mo ago",
+            "days": "days ago",
+            "day": "day ago",
+            "hr": "hr ago",
+            "min": "min ago",
+            "status": "Status"
+        },
+        "JumpablePagination": {
+            "page": "Page",
+            "of": "of"
+        },
+        "FilterButton": {
+            "filter": "Filter"
+        },
+        "DisconnectButton": {
+            "disconnect": "Disconnect"
+        },
+        "LogoutButton": {
+            "logout": "Logout"
+        },
+        "LoginButton": {
+            "signin": "Sign in"
+        },
+        "TokenOfferCard": {
+            "rank": "Rank",
+            "offer": "offer",
+            "view": "View"
+        },
+        "NftOfferCard": {
+            "rank": "Rank",
+            "view": "View"
+        },
+        "PasswordStrengthMeter": {
+            "password_strength": "Password strength",
+            "strength": {
+                "strong": "Strong",
+                "poor": "Poor",
+                "average": "Average"
+            },
+            "suggestions": {
+                "Your password is too short": "Your password is too short",
+                "Your password could be longer": "Your password could be longer",
+                "Your password has no lowercase characters": "Your password has no lowercase characters",
+                "Your password has no uppercase characters": "Your password has no uppercase characters",
+                "Your password has no numbers": "Your password has no numbers",
+                "Your password has no special characters": "Your password has no special characters",
+                "Your password has repeat characters": "Your password has repeat characters",
+                "Your password could use more uppercase characters": "Your password could use more uppercase characters",
+                "Your password could use more special characters": "Your password could use more special characters",
+                "Looks good!": "Looks good!"
+            }
+        },
+        "CollectionStatTabs": {
+            "all": "All",
+            "last_24_h": "Last 24h",
+            "7_days": "7 days",
+            "30_days": "30 days"
+        },
+        "AlertDisplayPositionSelect": {
+            "Top left": "Top left",
+            "Top center": "Top center",
+            "Top right": "Top right",
+            "Bottom left": "Bottom left",
+            "Bottom center": "Bottom center",
+            "Bottom right": "Bottom right"
+        },
+        "NoWalletAlert": {
+            "alert": "No wallet is connected"
+        },
+        "NotSignInAlert": {
+            "alert": "You are not signed in"
+        },
+        "MintLootboxAlert": {
+            "alert": "Founder's Lootboxes are now avaliable for mint!"
+        },
+        "MarketplaceSelect": {
+            "all": "All",
+            "littleghosts": "LittleGhosts",
+            "pancakeswap": "PancakeSwap"
+        },
+        "NftSelect": {
+            "ghosts": "Ghosts",
+            "skeletons": "Skeletons"
+        }
+    },
+    "CollectionItemDetails": {
+        "ActionButtons": {
+            "buy": "Buy",
+            "sell": "Sell",
+            "gift": "Gift",
+            "minimum_offer": "Minimum Offer",
+            "buyout": "Buyout",
+            "bid": "Bid",
+            "finalize_auction": "Finalize Auction",
+            "cancel_auction": "Cancel Auction",
+            "cancel_selling": "Cancel Selling",
+            "offer": "Offer",
+            "open_lootbox": "Open Lootbox",
+            "claim_loot": "Claim Loots",
+            "approve_claim_loot": "Approve Claim Loots"
+        },
+        "offerDropdown": {
+            "selections": {
+                "tokens": "Tokens"
+            }
+        },
+        "sellDropdown": {
+            "selections": {
+                "lg": "LittleGhosts Marketplace",
+                "pcs": "PancakeSwap",
+                "auction": "Auction"
+            }
+        },
+        "ItemListedPriceDetail": {
+            "edit_price": "Edit Price"
+        },
+        "BuyoutDisplay": {
+            "buyout": "Buyout"
+        },
+        "ItemAuctionPriceDetail": {
+            "current_bid": "Current bid"
+        },
+        "ItemBiddings": {
+            "expired": "Expired",
+            "hrs_left": "hrs left",
+            "biddings": "Biddings",
+            "BiddingList": {
+                "bid_index": "Bid Index",
+                "bid_amount": "Bid Amount",
+                "no_biddings_found": "No biddings found"
+            }
+        },
+        "TokenOffers": {
+            "token_offer_id": "Token Offer ID",
+            "payment_token": "Payment Token",
+            "amount": "Amount",
+            "view_offer": "View Offer",
+            "no_offers_found": "No Offers Found"
+        },
+        "NftOffers": {
+            "offer_id": "NFT Offer ID",
+            "collection": "Collection",
+            "view_offer": "View Offer",
+            "no_offers_found": "No Offers Found"
+        },
+        "rank": "Rank",
+        "owner": "Owner",
+        "token_offers": "Token Offers",
+        "nft_offers": "NFT Offers",
+        "ERROR_MESSAGES": {
+            "You_are_already_here": "You are already here"
+        }
+    },
+    "Login": {
+        "login_with_wallet": "Login With Wallet",
+        "login_with_email_password": "Login with Email",
+        "connect_wallet": "Connect Wallet",
+        "by_continue_you_agree_to_our": "By continuing, you agree to our",
+        "terms_of_use": "Terms of Use",
+        "sign_in": "Sign in",
+        "sign_up": "Sign up",
+        "invalid_email": "Invalid email",
+        "invalid_username": "Invalid username. Lowercase letters and numbers only. Must have 2-14 characters.",
+        "username": "Username",
+        "email": "Email",
+        "email_or_username": "Email / username",
+        "password": "Password",
+        "remember_me": "Remember me",
+        "forget_password": "Forget password",
+        "do_not_have_account": "Don't have an account?",
+        "register_here": "Register here",
+        "passwords_not_match": "Passwords do not match",
+        "password_confirmation": "Password confirmation",
+        "back_to_login": "Back to login",
+        "reset_password": "Reset password"
+    },
+    "PasswordReset": {
+        "password_reset": "Password Reset",
+        "confirm_reset": "Confirm Reset",
+        "invalid_email": "Invalid email",
+        "email": "Email",
+        "new_password": "Password",
+        "passwords_not_match": "Passwords do not match",
+        "password_confirmation": "Password confirmation",
+        "back_to_login": "Back to login"
+    },
+    "Modals": {
+        "ListItemDialog": {
+            "title": "Sell Now",
+            "description": "Enter BNB amount below, but make sure it is right before you list!",
+            "sell": "Sell",
+            "approve": "Approve"
+        },
+        "NftOfferDialog": {
+            "rank": "Rank",
+            "selected_nfts": "Selected NFTs",
+            "offer_now": "Offer Now",
+            "approve": "Approve"
+        },
+        "AuctionDialog": {
+            "title": "Auction",
+            "payment_token": "Payment Token",
+            "duration": "Duration",
+            "day": "Day",
+            "days": "Days",
+            "bid_only": "Bid Only",
+            "buyout_amount": "Buyout Amount",
+            "starting_bid": "Starting Bid",
+            "create_auction": "Create Auction",
+            "approve": "Approve",
+            "ERROR_MESSAGES": {
+                "INVALID_BUYOUT_PRICE": "Please enter a valid buyout price",
+                "BUYTOUT_LESS_THAN_STARTING_BID": "Buyout amount must be greater than the starting bid"
+            }
+        },
+        "BiddingDialog": {
+            "bid": "Bid",
+            "payment_token": "Payment Token",
+            "bid_amount": "Bid Amount",
+            "submit_bid": "Submit Bid",
+            "approve": "Approve"
+        },
+        "BuyoutDialog": {
+            "buyout": "Buyout",
+            "approve": "Approve"
+        },
+        "TokenOfferDialog": {
+            "title": "Offer",
+            "min": "Min",
+            "payment_token": "Payment Token",
+            "offer_amount": "Offer Amount",
+            "create_offer": "Create Offer",
+            "approve": "Approve"
+        },
+        "MinimumOfferDialog": {
+            "title": "Minimum Offer",
+            "min": "Min.",
+            "payment_token": "Payment Token",
+            "minimum_offer": "Minimum Offer",
+            "set_min_offer": "Set Min. Offer"
+        },
+        "SendNftDialog": {
+            "title": "Send Now",
+            "description": "Enter username or address below, but make sure it's right before you send!",
+            "send": "Send"
+        },
+        "NftsOfferDetailDialog": {
+            "rank": "Rank",
+            "cancel": "Cancel",
+            "reject": "Reject",
+            "approved": "Approved",
+            "approve": "Approve",
+            "accept": "Accept"
+        },
+        "TokenOfferDetailDialog": {
+            "offer": "Offer",
+            "payment_token": "Payment Token",
+            "offer_amount": "Offer Amount",
+            "cancel": "Cancel",
+            "reject": "Reject",
+            "approved": "Approved",
+            "approve": "Approve",
+            "accept": "Accept"
+        },
+        "WalletModal": {
+            "connect_to_a_wallet": "Connect to a wallet"
+        }
+    },
+    "ProfileLayoutSidebar": {
+        "connected": "Connected",
+        "not_signed_in": "Not signed in",
+        "account": "Account",
+        "inventory": "Vault",
+        "offers": "Offers",
+        "claim_rewards": "Claim Rewards",
+        "favorites": "Favorites",
+        "account_settings": "Account Settings",
+        "dashboard": "Dashboard",
+        "marketplace": "Marketplace",
+        "login": "Login",
+        "my_account": "MY ACCOUNT",
+        "vault": "Vault",
+        "connect_wallet": "Connect Wallet",
+        "welcome": "Welcome",
+        "earning_calculator": "Earning Calculator",
+        "nft_bridge": "Bridge",
+        "tools": "tools"
+    },
+    "ProfileSections": {
+        "Dashboard": {
+            "wallets": "Overview",
+            "acquire": "Acquire",
+            "purchase": "Purchase",
+            "migrate": "Migrate",
+            "approve_to_migrate": "Approve to Migrate"
+        },
+        "Offers": {
+            "received": "Received",
+            "created": "Created",
+            "token_offers": "Token Offers",
+            "nft_offers": "NFT Offers",
+            "no_offers_found": "No Offers Found"
+        },
+        "ClaimRewards": {
+            "wallets": "Overview",
+            "rewards": "Rewards",
+            "official_marketplace": "Official Marketplace",
+            "third_party_sales": "Third Party Sales",
+            "ectoplasm": "EctoPlasm",
+            "claim": "Claim"
+        },
+        "AccountSetting": {
+            "account_settings": "Account Settings",
+            "information": "Information",
+            "email": "Email",
+            "save": "Save",
+            "username": "Username",
+            "password": "Password",
+            "update_password": "Update Password",
+            "wallet_addresses": "Wallet Address",
+            "preferences": "Preferences",
+            "language": "Language",
+            "view": "View",
+            "image_size": "Image Size",
+            "nfts_per_page": "NFTs Per Page",
+            "alert_display_position": "Alert Display Position",
+            "nft_offer_notification": "NFT Offer Notification",
+            "quick_spin": "Quick Spin",
+            "successMessages": {
+                "sync_user_settings": "Settings synced successfully"
+            },
+            "errorMessages": {
+                "Preferences update failed": "Settings failed to sync"
+            },
+            "invalid_username": "Invalid username. Lowercase letters and numbers only. Must have 2-14 characters."
+        },
+        "EarningCalculator": {
+            "earning_calculator": "Earning Calculator",
+            "24hr_ecto_volume": "24hr $ecto USD Volume",
+            "xecto_multiplier": "xECTO Multiplier",
+            "24hr_microtransaction_volume": "24hr Micro Tx USD Volume",
+            "circulating_supplay": "Circulating Supply",
+            "estimated_hourly_earning": "Estimated Hourly Earning"
+        }
+    },
+    "Dao": {
+        "Proposals": {
+            "proposals": "proposals",
+            "status_selections": {
+                "all": "All",
+                "active": "Active",
+                "pending": "Pending",
+                "closed": "Closed",
+                "core": "Core"
+            },
+            "new_proposal": "New Proposal",
+            "proposed_by": "Proposed by",
+            "core": "Core"
+        },
+        "ProposalDetails": {
+            "ProposalCard": {
+                "duplicate_proposal": "Duplicate Proposal",
+                "delete_proposal": "Delete Proposal"
+            },
+            "InformationCard": {
+                "title": "Information",
+                "strategies": "Strategie(s)",
+                "author": "Author",
+                "ipfs": "IPFS",
+                "voting_system": "Voting system",
+                "start_date": "Start date",
+                "end_date": "End date",
+                "snapshot": "Snapshot"
+            },
+            "PendingResultCard": {
+                "title": "Current Results"
+            },
+            "ResultCard": {
+                "title": "Results"
+            },
+            "VoteCard": {
+                "title": "Cast your vote",
+                "vote": "Vote"
+            },
+            "VotesCard": {
+                "title": "Votes",
+                "you": "You"
+            }
+        },
+        "voting_systems": {
+            "Single choice voting": "Single choice voting",
+            "Approval voting": "Approval voting",
+            "Quadratic voting": "Quadratic voting",
+            "Ranked choice voting": "Ranked choice voting",
+            "Weighted voting": "Weighted voting",
+            "Basic voting": "Basic voting"
+        },
+        "statuses": {
+            "active": "Active",
+            "pending": "Pending",
+            "closed": "Closed"
+        }
+    },
+    "LookaheadPagination": {
+        "go": "Go"
+    },
+    "NftBridge": {
+        "title": "Bridge v1 (Beta)",
+        "selected_blockchain": "Selected Blockchain",
+        "nft_collection": "NFT Collection",
+        "rank": "Rank",
+        "destination": "Destination",
+        "recipient": "Recipient",
+        "selected_nfts": "Selected NFTs",
+        "none_selected": "None selected",
+        "fees": "Fees",
+        "approval": "Approval",
+        "approve": "Approve",
+        "swap": "Swap",
+        "swap_history": "Swap History",
+        "from": "From",
+        "from_tx": "From Tx",
+        "to": "To",
+        "to_tx": "To Tx",
+        "status": "Status",
+        "statuses": {
+            "Completed": "Completed",
+            "Pending": "Pending",
+            "Swapping": "Swapping"
+        }
+    },
+    "blockchains": {
+        "Binance Smart Chain": "Binance Smart Chain",
+        "BSC": "BSC",
+        "Ethereum": "Ethereum",
+        "Cronos": "Cronos",
+        "Fantom": "Fantom",
+        "Avalanche": "Avalanche",
+        "Polygon": "Polygon",
+        "Harmony": "Harmony"
+    },
+    "MarketplaceDashboard": {
+        "dashboard": "Dashboard",
+        "marketplace": "Marketplace",
+        "total_sale": "Total Sale",
+        "total_volume": "Total Volume",
+        "average_price": "Average Price",
+        "recently_sold": "Recently Sold"
+    }
+}

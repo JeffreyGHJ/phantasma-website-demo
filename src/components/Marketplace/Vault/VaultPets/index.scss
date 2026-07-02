@@ -1,0 +1,43 @@
+$sidebarWidth: 280px;
+#VaultPets {
+    #Sidebar {
+        position: fixed;
+        top: calc(var(--navbar-height) + var(--category-mui-tabs-height));
+        left: 0;
+        width: $sidebarWidth;
+        background-color: var(--main-background);
+        height: calc(
+            100% - var(--navbar-height) - var(--category-mui-tabs-height)
+        );
+        border-right: 1px solid var(--border-color-divider);
+    }
+    .content {
+        padding: var(--content-padding-top-bottom) 3rem;
+        padding-top: 0px;
+        background-color: var(--main-background);
+        position: fixed;
+        top: calc(var(--navbar-height) + var(--category-mui-tabs-height));
+        left: $sidebarWidth;
+        width: calc(100% - #{$sidebarWidth});
+        height: calc(
+            100% - var(--navbar-height) - var(--category-mui-tabs-height)
+        );
+        overflow-y: auto;
+
+        &.full {
+            width: 100%;
+            left: 0;
+        }
+    }
+
+    .widget.RightDrawerSidebar {
+        background-color: var(--main-background);
+        .sidebar-content {
+            margin-top: 2rem;
+        }
+    }
+
+    .widget.OutlinedButton {
+        background-color: var(--background-color-btn-outline);
+    }
+}

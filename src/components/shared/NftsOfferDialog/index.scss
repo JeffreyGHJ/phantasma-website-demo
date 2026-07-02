@@ -1,0 +1,19 @@
+.NftsOfferDialog {
+	min-width: 80% !important;
+	padding: unset !important;
+	.NftsOfferDialog-Content {
+		text-align: center;
+
+		fieldset.MuiFormControl-root {
+			.MuiFormGroup-root {
+				justify-content: space-around;
+			}
+		}
+	}
+}
+
+@media (max-width: 450px) {
+	.NftsOfferDialog {
+		min-width: 90% !important;
+	}
+}

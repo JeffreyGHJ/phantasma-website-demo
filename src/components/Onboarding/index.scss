@@ -1,0 +1,112 @@
+#Onboarding {
+    overflow-x: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    height: calc(100vh - var(--navbar-height));
+    overflow-y: auto;
+    font-family: "Montserrat", sans-serif;
+
+    //Background Image
+    background: url("/images/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        // position: absolute;
+        width: 100%;
+        // margin-top: 50px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        // margin-bottom: 10px;
+        padding-top: 50px;
+        padding-bottom: 10px;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); // Optional: Adds a soft shadow to the text for better visibility
+        border: 1px solid green;
+    }
+
+    .onboarding-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        z-index: 1;
+        background-color: #090909;
+        padding: 30px 20px;
+        border-radius: 10px;
+        max-width: 450px;
+        width: 100%;
+        font-family: "Montserrat", sans-serif;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 10rem;
+    }
+
+    .stage-content {
+        height: 100%;
+        z-index: 1;
+        position: relative;
+        padding-bottom: 10rem; //space at bottom of stage content to mirror spacing taken above by navbar and header
+    }
+
+    .heading {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .sub-heading-dark {
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+        color: var(--color-text-secondary);
+    }
+
+    .btn {
+        max-width: 250px;
+        width: 100%;
+        padding: 10px 20px;
+        border-radius: 5px;
+        z-index: 1;
+        font-size: 1.6rem;
+        transition: background-color 0.3s, transform 0.3s, border-color 0.3s,
+            color 0.3s;
+        &:hover {
+            transform: scale(1.05); // Slightly enlarges the button on hover
+            z-index: 1;
+        }
+
+        &:active {
+            transform: scale(1); // Resets the size when button is clicked
+            z-index: 1;
+        }
+    }
+
+    .btn-blue {
+        background-color: #007bff; // A shade of blue
+        border: none;
+        color: white;
+        font-size: 16px;
+        margin-top: 2rem;
+
+        &:hover {
+            background-color: #0056b3; // A darker shade of blue for hover
+        }
+    }
+
+    .btn-transparent {
+        color: var(--color-text-secondary);
+        border: 1px solid gray;
+        margin-bottom: 2rem;
+
+        &:hover {
+            color: white;
+            border: 1px solid white;
+        }
+    }
+}

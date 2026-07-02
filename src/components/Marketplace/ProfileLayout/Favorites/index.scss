@@ -1,0 +1,183 @@
+#Favorites {
+    min-height: calc(
+        100% - var(--navbar-height) - var(--content-padding-top-bottom) -
+            var(--content-padding-top-bottom)
+    );
+
+    .widget.NoWalletAlert {
+        margin-bottom: 2rem;
+    }
+
+    section.category-section {
+        .CategoryTabs {
+            border-bottom: 1px solid var(--border-color-divider);
+            .MuiTabs-flexContainer {
+                justify-content: center;
+                button.MuiButtonBase-root.MuiTab-root {
+                    opacity: 0.5;
+                    color: white;
+
+                    &.Mui-selected {
+                        opacity: 1;
+                    }
+
+                    .tab {
+                        span.label {
+                            font-size: 1.4rem;
+                            font-weight: bold;
+                            font-family: "Nunito", sans-serif, "NotoSansSC",
+                                "NotoSansTC";
+                            text-transform: none;
+                            margin-left: 0.5rem;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
+            span.MuiTabs-indicator {
+                height: 4px !important;
+            }
+
+            .MuiTabScrollButton-horizontal.Mui-disabled {
+                width: 0px;
+            }
+        }
+    }
+}
+
+#Favorites {
+    section.filter-section {
+        margin-top: 1.4rem;
+        display: flex;
+        flex-wrap: wrap;
+
+        &.small-device {
+            flex-direction: column;
+            gap: 1rem;
+            padding-right: 1rem;
+            padding-left: 1rem;
+            .etc-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            .row-center {
+                justify-content: center;
+            }
+        }
+
+        &.large-device {
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 1rem;
+            padding-left: 1rem;
+
+            .left {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                flex-wrap: wrap;
+
+                .title {
+                    font-family: var(--font-family);
+                    font-size: 2.4rem;
+                }
+            }
+
+            .right {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                flex-wrap: wrap;
+
+                .filter-btn-layout-wrapper {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: inherit;
+                }
+            }
+        }
+    }
+
+    section.nft-section {
+        display: flex;
+        flex-direction: column;
+        min-height: 50vh;
+        position: relative;
+        .nfts {
+            flex-grow: 1;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+            justify-content: center;
+
+            &.listView {
+                justify-content: center;
+                gap: 0.5rem;
+                max-width: 100%;
+                display: grid;
+                grid-template-columns: repeat(
+                    auto-fill,
+                    minmax(max-content, 313px)
+                );
+            }
+
+            .widget.NftCard {
+                margin: 4px;
+                background-color: var(--color-card-background);
+            }
+
+            .widget.NftDetailCard {
+                flex: 0 1 0;
+                // max-width: fit-content;
+            }
+        }
+        .pagination {
+            margin-top: 10rem;
+            justify-content: center;
+        }
+    }
+
+    .widget.RightDrawerSidebar {
+        .sidebar-content {
+            margin-top: 2rem;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    #Favorites {
+        section.filter-section {
+            flex-direction: row;
+            gap: 1.5rem;
+
+            &.large-device {
+                .left {
+                    width: fit-content;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+
+                .right {
+                    width: fit-content;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    align-items: flex-end;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 705px) {
+    #Favorites {
+        section.filter-section {
+            .title {
+                font-size: 2rem !important;
+            }
+        }
+    }
+}

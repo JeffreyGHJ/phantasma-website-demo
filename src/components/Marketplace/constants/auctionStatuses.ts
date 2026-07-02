@@ -1,0 +1,5 @@
+const auctionStatuses = {
+	ACTIVE: '0x4163746976650000000000000000000000000000000000000000000000000000',
+};
+
+export default auctionStatuses;

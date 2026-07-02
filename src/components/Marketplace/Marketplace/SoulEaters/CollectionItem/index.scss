@@ -1,0 +1,9 @@
+#CollectionItem {
+    .copy-btn {
+        cursor: pointer;
+        margin-left: 1rem;
+        &:hover {
+            color: white;
+        }
+    }
+}

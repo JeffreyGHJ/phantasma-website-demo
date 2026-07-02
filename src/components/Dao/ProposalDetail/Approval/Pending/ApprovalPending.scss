@@ -1,0 +1,253 @@
+#ApprovalPending {
+	* {
+		font-family: var(--font-family);
+	}
+
+	.external-link {
+		color: white;
+		text-decoration: none;
+	}
+
+	.MuiGrid-item {
+		padding-top: 0;
+	}
+
+	.card-header {
+		background-color: unset;
+		border-bottom: none;
+	}
+	.header {
+		padding-bottom: 2rem;
+		.title_wrapper {
+			#title {
+				color: white;
+				padding: 0;
+				margin-bottom: -2rem;
+				font-size: 3rem;
+				text-transform: uppercase;
+				font-family: 'Butter Haunted';
+			}
+		}
+	}
+	.body {
+		.grid-row {
+			margin-bottom: 1rem;
+			.row-item {
+				width: 100%;
+				margin-bottom: 1rem;
+
+				&.proposal-question-answer {
+					background-color: transparent;
+					border-radius: 16px;
+					margin-bottom: 0px;
+					padding-left: 24px;
+					padding-right: 24px;
+					padding-bottom: 24px;
+					border: 1px solid #2b2b2b;
+				}
+				.card {
+					border-radius: 16px;
+					background-color: transparent;
+					border-color: #2b2b2b;
+					height: 100%;
+					.card-body {
+						.card-text {
+							font-family: 'Butter Haunted';
+							font-size: 20px;
+						}
+					}
+				}
+
+				&.information {
+					.card {
+						.card-header {
+							padding-top: 2rem;
+							font-size: 20px;
+							margin-bottom: 1rem;
+							border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+							font-weight: bold;
+						}
+
+						.card-body {
+							.strategy-grid-container {
+								.right {
+									&:hover {
+										cursor: pointer;
+									}
+								}
+							}
+							.grid-row {
+								.left {
+									padding-left: 2rem;
+									font-size: 16px;
+									color: grey;
+									font-weight: bold;
+								}
+								.right {
+									padding-right: 2rem;
+									font-size: 14px;
+									font-weight: bold;
+
+									a {
+										text-decoration: none;
+										color: white;
+									}
+								}
+							}
+							.for,
+							.against {
+								margin-bottom: 2rem;
+								.result-text-wrapper {
+									margin-bottom: 1rem;
+									.result-text {
+										font-size: 16px;
+
+										&.left {
+											font-size: 18px;
+											color: grey;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&.votes {
+				padding-bottom: 5rem;
+				.card-header {
+					font-size: 25px;
+					border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+					span {
+						margin-left: 1rem;
+						padding: 0.5rem;
+						font-size: 15px;
+						background-color: grey;
+						border-radius: 10px;
+					}
+				}
+				.card-body {
+					.vote-item {
+						font-size: 20px;
+						border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+						padding-top: 1rem;
+						padding-bottom: 1.5rem;
+					}
+				}
+			}
+
+			&.cast-vote {
+				padding-top: 2rem;
+				padding-bottom: 1rem;
+				.card-header {
+					font-size: 25px;
+				}
+				.card-body {
+					padding-left: 2rem;
+					padding-right: 2rem;
+					.choice {
+						font-size: 15px;
+						padding-top: 1rem;
+						padding-bottom: 1rem;
+						border: 1px solid grey;
+						border-radius: 99px;
+						&:not(:nth-child(1)) {
+							margin-top: 2rem;
+						}
+						&:hover {
+							border-color: white;
+							cursor: pointer;
+						}
+						&.selected {
+							border-color: white;
+						}
+					}
+					#VoteBtn {
+						margin-top: 2rem;
+						font-size: 15px;
+						width: 100%;
+						padding: 1rem;
+						border-radius: 99px;
+						background-color: var(--color-purple);
+						font-weight: bold;
+						color: white;
+						border: unset;
+
+						&:disabled {
+							background-color: grey !important;
+						}
+					}
+				}
+			}
+
+			#paginationWrapper {
+				padding-top: 1rem;
+				padding-bottom: 2rem;
+
+				nav {
+					border-bottom: none;
+
+					ul {
+						justify-content: center;
+
+						li {
+							button {
+								font-size: 2rem;
+								color: unset;
+
+								&.Mui-selected,
+								&:hover {
+									background-color: rgba(255, 255, 255, 0.08);
+								}
+
+								svg {
+									font-size: inherit;
+								}
+							}
+
+							div.MuiPaginationItem-ellipsis {
+								color: unset;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		#SingleChoiceResultBox {
+			.choice {
+				padding-bottom: 2rem;
+				padding-left: 2rem;
+				padding-right: 2rem;
+				.left {
+					font-size: 15px;
+				}
+
+				.right {
+					font-size: 15px;
+				}
+
+				.MuiLinearProgress-root {
+					height: 1rem;
+					border-radius: 10px;
+					margin-top: 0.5rem;
+				}
+			}
+		}
+	}
+
+	.icon-button {
+		height: 4rem;
+		width: 4rem;
+		margin-left: 0.2rem;
+		margin-right: 0.2rem;
+		color: #d1d1d1 !important;
+
+		&:hover {
+			color: white !important;
+			background: rgba(175, 175, 175, 0.14) !important;
+		}
+	}
+}

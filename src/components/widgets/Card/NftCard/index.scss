@@ -1,0 +1,158 @@
+.widget.NftCard {
+    // padding: 16px 12px;
+    display: inline-block;
+    // background-color: var(--color-card-background);
+    text-decoration: none;
+    color: white;
+    font-family: var(--font-family);
+    font-size: 1.5rem;
+    // border: 1px solid var(--color-dark-1);
+    border-radius: var(--border-radius-card);
+    width: 150px;
+    // height: 200px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .id {
+        display: flex;
+        align-items: center;
+    }
+
+    .NftImage {
+        // border: 1px solid rgba(255, 0, 0, 0);
+        position: absolute;
+    }
+
+    .actions {
+        text-align: end;
+    }
+
+    .sold_timestamp {
+        text-align: end;
+        z-index: 1;
+        text-shadow: -1px -1px 3px black, 1px 1px 3px black, -1px 1px 3px black,
+            1px -1px 3px black;
+        margin-bottom: 0.5rem;
+        color: var(--color-text-secondary);
+    }
+
+    .nftCard-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        position: absolute;
+        top: 0;
+        height: fit-content;
+
+        font-size: 1.1rem;
+        width: 100%;
+        // padding-right: 0.25rem;
+        // padding-left: 0.5rem;
+        // padding-top: 0.25rem;
+        padding: 0.75rem;
+        padding-top: 0.3rem;
+        padding-bottom: 0;
+
+        text-shadow: -2px -2px 6px black, 2px 2px 6px black;
+
+        .marketplace-logo {
+            .image {
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+    }
+
+    .marketplace-logo-2 {
+        position: absolute;
+        bottom: 3px;
+        right: 3px;
+        .image {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
+    .nftCard-body {
+        // margin-top: 1rem;
+        // margin-bottom: 1rem;
+        margin: 0px;
+    }
+
+    .nftCard-footer {
+        padding-top: 1rem;
+        border-top: 1px solid var(--border-color-divider);
+
+        position: absolute;
+        bottom: 0;
+        text-shadow: -1px -1px 3px black, 1px 1px 3px black, -1px 1px 3px black,
+            1px -1px 3px black;
+        .on-sale {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            text-align: center;
+            font-size: 1.4rem;
+            font-family: var(--font-family);
+            padding-bottom: 0.25rem;
+
+            .usd {
+                margin-left: 1rem;
+                font-size: 1.5rem;
+                color: var(--color-text-secondary);
+            }
+
+            .bnb-icon {
+                width: 14px;
+                height: 14px;
+                border-radius: 100%;
+                // box-shadow: 0px 0px 11px -1px #111;
+                filter: drop-shadow(2px 2px 6px black);
+            }
+
+            // .price {
+            //     filter: drop-shadow(2px 2px 3px black)
+            //         drop-shadow(-2px -2px 3px black);
+            //         // drop-shadow(-2px 2px 3px black)
+            //         // drop-shadow(2px -2px 3px black);
+            // }
+        }
+
+        .auction {
+            .expires,
+            .buyout,
+            .current-bid {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+
+            .buyout {
+                .buyout-value {
+                    word-break: break-all;
+                    .usd {
+                        margin-left: 0.5rem;
+                        font-size: 1.5rem;
+                        color: var(--color-text-secondary);
+                    }
+                }
+            }
+
+            .current-bid {
+                .current-bid-value {
+                    word-break: break-all;
+                    .usd {
+                        margin-left: 0.5rem;
+                        font-size: 1.5rem;
+                        color: var(--color-text-secondary);
+                    }
+                }
+            }
+        }
+    }
+}

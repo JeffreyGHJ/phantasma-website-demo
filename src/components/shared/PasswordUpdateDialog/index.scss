@@ -1,0 +1,28 @@
+.PasswordUpdateDialog {
+	.password-update-form {
+		border-radius: 5px;
+		padding: 3rem 2rem;
+		width: 100%;
+		min-width: 330px;
+
+		.widget.Input {
+			width: 100%;
+		}
+
+		.password-confirmation-error {
+			text-align: start;
+			margin-bottom: 0.5rem;
+			color: var(--color-danger);
+			font-size: 1.2rem;
+		}
+
+		.widget.PasswordStrengthMeter {
+			margin-top: 2rem;
+		}
+
+		.recaptcha {
+			display: flex;
+			justify-content: flex-end;
+		}
+	}
+}

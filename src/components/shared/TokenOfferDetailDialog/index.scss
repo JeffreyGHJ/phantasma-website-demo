@@ -1,0 +1,46 @@
+.TokenOfferDetailDialog {
+	text-align: center;
+
+	.TokenOfferDetailDialog-Content {
+		.cancel-reject {
+			display: flex;
+			width: 100%;
+			justify-content: space-between;
+			margin-top: 1rem;
+			padding-top: 2rem;
+
+			&:not(:empty) {
+				margin-bottom: 1rem;
+				padding-bottom: 2rem;
+				border-top: 1px solid var(--border-color-divider);
+				border-bottom: 1px solid var(--border-color-divider);
+			}
+			gap: 2rem;
+			* {
+				width: 100%;
+			}
+		}
+		.MuiStepLabel-iconContainer {
+			.MuiSvgIcon-root {
+				font-size: 3.5rem;
+
+				.MuiStepIcon-text {
+					font-size: 1rem;
+				}
+			}
+		}
+		.MuiStepper-root {
+			.MuiStep-root {
+				span.MuiStepLabel-root {
+					span.MuiStepLabel-labelContainer {
+						span.MuiStepLabel-label {
+							.widget.OutlinedButton {
+								width: 100%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

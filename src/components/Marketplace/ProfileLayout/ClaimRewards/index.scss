@@ -1,0 +1,106 @@
+#ClaimRewards {
+    min-height: calc(
+        100% - var(--navbar-height) - var(--content-padding-top-bottom) -
+            var(--content-padding-top-bottom)
+    );
+
+    .widget.NoWalletAlert {
+        margin-bottom: 2rem;
+    }
+
+    section.assets-section {
+        .logo {
+            width: unset !important;
+        }
+        .title {
+            color: var(--color-text-secondary);
+            font-size: 2.5rem;
+            font-family: var(--font-family);
+        }
+        .assets {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 2rem;
+            flex-wrap: wrap;
+
+            .asset-wrapper {
+                border: 1px solid var(--border-color-divider);
+                border-radius: var(--border-radius-card);
+                height: 70px;
+                position: relative;
+                flex: 1 1 auto;
+                min-width: 200px;
+                background-color: var(--color-card-background);
+
+                .asset {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    display: flex;
+                    justify-content: flex-start;
+                    padding: 0 2rem;
+                    .logo {
+                        padding-right: 1rem;
+                        align-self: center;
+                    }
+
+                    .label {
+                        align-self: center;
+                        font-size: 2rem;
+                        font-family: var(font-family);
+                    }
+                }
+            }
+        }
+    }
+
+    section.rewards-section {
+        margin-top: 2rem;
+        .title {
+            color: var(--color-text-secondary);
+            font-size: 2.5rem;
+            font-family: var(--font-family);
+        }
+
+        .claimable-rewards {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+
+            .claimable-reward {
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+                border: 1px solid var(--border-color-divider);
+                border-radius: var(--border-radius-card);
+                padding: 2rem 0rem;
+                background-color: var(--color-card-background);
+                text-align: center;
+                gap: 2rem;
+                align-items: center;
+
+                .claimable-description {
+                    font-size: 2rem;
+                    padding-bottom: 1.5rem;
+                    width: 100%;
+                    border-bottom: 1px solid var(--border-color-divider);
+                }
+
+                .claimable-amount {
+                    font-size: 2rem;
+                    font-family: var(--font-family);
+                    color: white;
+                    line-height: 1;
+                }
+
+                .claim-btn {
+                    width: 150px;
+                }
+            }
+        }
+    }
+}

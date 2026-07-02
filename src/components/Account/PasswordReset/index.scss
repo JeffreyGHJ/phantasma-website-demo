@@ -1,0 +1,217 @@
+$footerHeight: 6rem;
+$maxWidth: 450px;
+
+#PasswordReset {
+	.MuiAlert-root {
+		margin-top: 2rem;
+		.MuiAlert-message {
+			font-size: 1.5rem;
+		}
+	}
+	.content {
+		top: 0;
+		position: fixed;
+		width: 100%;
+		background-color: var(--main-background);
+		height: calc(100% - #{$footerHeight});
+		text-align: center;
+		padding-top: 10rem;
+		padding-left: 47.5rem;
+		padding-right: 47.5rem;
+
+		overflow: auto;
+
+		.login-option {
+			display: flex;
+			justify-content: center;
+			* {
+				max-width: $maxWidth;
+			}
+
+			.password-reset-form {
+				border: 1px solid var(--border-color-divider);
+				background-color: var(--color-form-background);
+				border-radius: 5px;
+				padding: 3rem 2rem;
+				width: 100%;
+
+				.title {
+					font-size: 2rem;
+					margin-bottom: 2.5rem;
+				}
+
+				.email-error,
+				.password-confirmation-error {
+					text-align: start;
+					margin-bottom: 0.5rem;
+					color: var(--color-danger);
+					font-size: 1.2rem;
+				}
+
+				input.email,
+				input.password,
+				input.password-confirmation {
+					border-radius: 5px;
+					background-color: var(--main-background-dark);
+					border: 1px solid var(--border-color-divider);
+					width: 100%;
+					height: 40px;
+					padding-left: 1rem;
+					font-family: var(--font-family);
+					color: white;
+					font-size: 1.3rem;
+
+					&:focus,
+					&:focus-visible {
+						border-color: var(--color-input-border-focused);
+						outline: var(--color-input-border-focused);
+						transition: all ease-in-out 0.2s;
+					}
+				}
+
+				.recaptcha {
+					display: flex;
+					justify-content: flex-end;
+				}
+
+				button.sign-in,
+				button.register,
+				button.reset-password {
+					width: 100%;
+					border: 1px solid var(--border-color-divider);
+					height: 4rem;
+					font-size: 1.7rem;
+					background-color: var(--color-blue);
+					color: white;
+					font-family: var(--font-family);
+					border: none;
+					border-radius: 5px;
+
+					&:disabled {
+						opacity: 0.5;
+					}
+
+					&:hover:not(:disabled) {
+						background-color: #3187ff;
+						transition: background-color 0.15s ease-in-out;
+					}
+
+					.btn-text {
+						vertical-align: middle;
+					}
+				}
+
+				.forgot-password,
+				.go-to-register,
+				.back-to-login {
+					background-color: transparent;
+					color: white;
+					font-family: var(--font-family);
+					border: none;
+					font-size: 1.3rem;
+					padding: 0.5rem;
+				}
+
+				.widget.PasswordStrengthMeter {
+					margin-top: 2rem;
+				}
+			}
+		}
+
+		.info {
+			font-size: 1.5rem;
+			color: var(--color-text-subtitle);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			.info-text {
+				margin-left: 0.5rem;
+
+				//Override
+				.widget.InternalLink {
+					color: var(--color-text-link-dark);
+				}
+			}
+		}
+	}
+	footer {
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		position: fixed;
+		padding: 2rem 0rem;
+		font-size: 1.5rem;
+		font-family: var(--font-family);
+		background-color: var(--main-background);
+		height: $footerHeight;
+		display: flex;
+		justify-content: center;
+		gap: 5rem;
+		align-items: center;
+		flex-wrap: wrap;
+
+		.discord {
+			a {
+				text-decoration: none;
+				color: var(--color-text-link);
+			}
+		}
+
+		.terms {
+			a {
+				color: var(--color-text-link);
+			}
+		}
+	}
+}
+
+// XX-Large devices (larger desktops, 1400px and down)
+@media (max-width: 1400px) {
+	#PasswordReset {
+		.content {
+			padding-left: 30rem;
+			padding-right: 30rem;
+		}
+	}
+}
+
+// X-Large devices (large desktops, 1200px and down)
+@media (max-width: 1200px) {
+	#PasswordReset {
+		.content {
+			padding-left: 20rem;
+			padding-right: 20rem;
+		}
+	}
+}
+
+// Large devices (desktops, 992px and down)
+@media (max-width: 992px) {
+	#PasswordReset {
+		.content {
+			padding-left: 10rem;
+			padding-right: 10rem;
+		}
+	}
+}
+
+// Medium devices (tablets, 768px and down)
+@media (max-width: 768px) {
+	#PasswordReset {
+		.content {
+			padding-left: 5rem;
+			padding-right: 5rem;
+		}
+	}
+}
+
+// Small devices (landscape phones, 576px and down)
+@media (max-width: 576px) {
+	#PasswordReset {
+		.content {
+			padding-left: 2rem;
+			padding-right: 2rem;
+		}
+	}
+}

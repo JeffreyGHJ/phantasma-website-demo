@@ -1,0 +1,10 @@
+.widget.LabelInput {
+	font-family: var(--font-family);
+	.label {
+		font-size: 1rem;
+		font-weight: 900;
+		text-transform: uppercase;
+		color: var(--color-text-secondary);
+		margin-bottom: 0.5rem;
+	}
+}

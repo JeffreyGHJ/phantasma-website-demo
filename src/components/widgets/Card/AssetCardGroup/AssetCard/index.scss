@@ -1,0 +1,30 @@
+.widget.AssetCard {
+    // border: 1px solid var(--border-color-divider);
+    border-radius: var(--border-radius-card);
+    background-color: var(--color-grey-dark-300);
+    height: 70px;
+    position: relative;
+    display: flex;
+    min-width: 200px;
+
+    .asset {
+        // position: absolute;
+        // top: 50%;
+        // transform: translateY(-50%);
+        display: flex;
+        justify-content: flex-start;
+        padding: 0 2rem;
+        .logo {
+            padding-right: 1rem;
+            align-self: center;
+            width: unset !important;
+        }
+
+        .label {
+            align-self: center;
+            font-size: 2rem;
+            font-family: var(--font-family);
+            white-space: nowrap;
+        }
+    }
+}

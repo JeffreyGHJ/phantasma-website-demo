@@ -1,0 +1,145 @@
+#Dao {
+	#title {
+		color: white;
+		padding: 0;
+		margin-bottom: -2rem;
+		font-size: 3rem;
+		text-transform: capitalize;
+		font-family: var(--font-family);
+		font-weight: bold;
+	}
+	.filter {
+		display: flex;
+		justify-content: flex-end;
+		fieldset {
+			top: 1px !important;
+		}
+	}
+
+	.new-proposal {
+		button {
+			color: var(--color-purple);
+			font-family: var(--font-family);
+			svg {
+				width: 30px;
+				height: 30px;
+			}
+			span.button-text {
+				font-size: 20px;
+				margin-left: 0.5rem;
+			}
+		}
+	}
+
+	.content {
+		.row {
+			margin-bottom: 2rem;
+			.row-item {
+				padding-left: unset;
+				margin-bottom: 1rem;
+				.card {
+					border-radius: 8px;
+					padding: 1rem 2rem;
+					margin-left: 0.5rem;
+					margin-right: 0.5rem;
+					margin-top: 1rem;
+					background-color: transparent;
+					border-color: #2b2b2b;
+					width: 100%;
+					border-radius: 8px;
+					height: 100%;
+					.card-body {
+						.card-text {
+							font-size: 17px;
+							font-weight: bold;
+							font-family: var(--font-family);
+
+							.core {
+								display: inline-block;
+								padding: 0.1rem 0.5rem;
+								margin-left: 1rem;
+								border: 1px solid #8b949e;
+							}
+						}
+					}
+				}
+			}
+
+			&.proposal {
+				cursor: pointer;
+				.card-text {
+					color: #8b949e !important;
+				}
+				.status {
+					max-height: 33px;
+					padding: 0.5rem 1rem;
+					font-family: var(--font-family);
+
+					&.status-badge-closed {
+						background-color: var(--color-purple);
+					}
+					&.status-badge-pending {
+						background-color: #6c757d;
+					}
+					&.status-badge-active {
+						background-color: #28a745;
+					}
+					span {
+						font-size: 15px;
+						font-weight: bold;
+					}
+				}
+				.proposal-title {
+					font-weight: bold;
+					font-size: 22px;
+					font-family: var(--font-family);
+					color: #e0e0e0;
+				}
+				.proposal-content {
+					padding-top: 1rem;
+					font-size: 18px;
+					color: #8b949e;
+					font-family: var(--font-family);
+				}
+				.proposal-time {
+					margin-top: 2rem;
+					font-size: 16px;
+					color: #8b949e;
+					font-family: var(--font-family);
+				}
+			}
+		}
+	}
+
+	#paginationWrapper {
+		padding-top: 3rem;
+		padding-bottom: 2rem;
+		nav {
+			border-bottom: none;
+
+			ul {
+				justify-content: flex-end;
+
+				li {
+					button {
+						font-size: 2rem;
+						color: unset;
+
+						&.Mui-selected,
+						&:hover {
+							background-color: rgba(255, 255, 255, 0.08);
+						}
+
+						svg {
+							font-size: inherit;
+						}
+					}
+
+					div.MuiPaginationItem-ellipsis {
+						color: unset;
+					}
+				}
+			}
+		}
+	}
+}

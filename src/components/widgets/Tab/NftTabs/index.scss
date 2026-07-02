@@ -1,0 +1,31 @@
+.widget.NftTabs {
+	height: var(--category-mui-tabs-height);
+	.MuiTabs-flexContainer {
+		button.MuiButtonBase-root.MuiTab-root {
+			opacity: 0.5;
+			color: white;
+
+			&.Mui-selected {
+				opacity: 1;
+			}
+
+			.tab {
+				span.label {
+					font-size: 1.4rem;
+					font-weight: bold;
+					font-family: var(--font-family);
+					text-transform: none;
+					margin-left: 0.5rem;
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+	span.MuiTabs-indicator {
+		height: 4px !important;
+	}
+
+	.MuiTabScrollButton-horizontal.Mui-disabled {
+		width: 0px;
+	}
+}

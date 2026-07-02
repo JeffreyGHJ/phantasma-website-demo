@@ -1,0 +1,32 @@
+.widget.Modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: var(--main-background);
+	padding: 1rem 2rem;
+	border-radius: 8px;
+	max-width: 600px;
+	min-width: 250px;
+	max-height: 500px;
+	overflow-y: auto;
+	font-family: var(--font-family);
+
+	&:focus-visible {
+		outline: unset;
+	}
+}
+
+@media (max-width: 668px) {
+	.widget.Modal {
+		min-width: 350px;
+		max-width: 90%;
+	}
+}
+
+@media (max-width: 450px) {
+	.widget.Modal {
+		min-width: 90%;
+		max-width: 90%;
+	}
+}

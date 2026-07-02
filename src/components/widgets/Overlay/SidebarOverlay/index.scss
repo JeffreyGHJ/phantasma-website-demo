@@ -1,0 +1,10 @@
+.widget.SidebarOverlay {
+	z-index: 9999;
+	top: 0;
+	left: 0;
+	position: fixed;
+	width: 100vw;
+	height: 100%;
+	background-color: var(--main-background-dark);
+	opacity: 0.75;
+}

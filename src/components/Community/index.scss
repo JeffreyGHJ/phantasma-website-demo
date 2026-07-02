@@ -1,0 +1,58 @@
+#Community {
+    background-color: var(--main-background);
+    height: calc(100vh - var(--navbar-height));
+    overflow-y: auto;
+
+    &.community-content-wrapper {
+        position: fixed;
+        height: calc(
+            100vh - var(--navbar-height) - var(--category-mui-tabs-height)
+        );
+        top: calc(var(--navbar-height) + var(--category-mui-tabs-height));
+        width: 100%;
+    }
+
+    .CategoryTabs {
+        position: fixed;
+        height: var(--category-mui-tabs-height);
+        top: calc(var(--navbar-height));
+        left: 0;
+        width: 100%;
+        background-color: var(--main-background);
+
+        // border-bottom: 1px solid var(--border-color-divider);
+        .MuiTabs-flexContainer {
+            // justify-content: center;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+
+            button.MuiButtonBase-root.MuiTab-root {
+                opacity: 0.5;
+                color: white;
+
+                &.Mui-selected {
+                    opacity: 1;
+                }
+
+                .tab {
+                    span.label {
+                        font-size: 1.4rem;
+                        font-weight: bold;
+                        font-family: var(--font-family);
+                        text-transform: none;
+                        margin-left: 0.5rem;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+        span.MuiTabs-indicator {
+            height: 4px !important;
+        }
+
+        .MuiTabScrollButton-horizontal.Mui-disabled {
+            width: 0px;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+.vault-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.vault-title {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); // Optional: Adds a soft shadow to the text for better visibility
+}
+
+.vault-subtitle {
+    color: white;
+    font-size: 12px; // Adjust size as required
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.continue-button {
+    margin-top: 20px;
+    background-color: #007bff; // A shade of blue
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, font-size 0.3s;
+
+    &:hover {
+        background-color: #0056b3; // A darker shade of blue for hover
+        transform: scale(1.05); // Slightly enlarges the button on hover
+    }
+
+    &:active {
+        transform: scale(1); // Resets the size when button is clicked
+    }
+}

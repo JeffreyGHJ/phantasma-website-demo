@@ -1,0 +1,40 @@
+#KnowledgeTabs {
+    background-color: var(--main-background);
+
+    .MuiTabs-flexContainer {
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+
+        button.MuiButtonBase-root.MuiTab-root {
+            opacity: 0.5;
+            color: white;
+
+            &.Mui-selected {
+                opacity: 1;
+            }
+        }
+    }
+
+    .tab {
+        font-size: 1.4rem;
+        font-weight: bold;
+        font-family: var(--font-family);
+        text-transform: none;
+        margin-left: 0.5rem;
+        vertical-align: middle;
+        .inner {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+    }
+
+    span.MuiTabs-indicator {
+        height: 4px !important;
+    }
+
+    .MuiTabScrollButton-horizontal.Mui-disabled {
+        width: 0px;
+    }
+}

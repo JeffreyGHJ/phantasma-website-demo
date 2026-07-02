@@ -1,0 +1,17 @@
+.widget.SettingsDialog {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    max-height: unset !important;
+
+    .etc-item:not(.etc-first-row-item) {
+        padding-top: 2rem;
+    }
+    .label {
+        color: white !important;
+        font-size: 1.75em;
+    }
+
+    .widget.NftsPerPageSelect {
+        text-align: start;
+    }
+}

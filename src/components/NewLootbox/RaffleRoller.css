@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css?family=Arvo');
+body {
+    background: rgb(25,25,33);
+}
+.raffle-roller {
+    height: 190px;
+    position: relative;
+    margin: 60px auto 90px auto;
+    width: 900px;
+    z-index: 1; /* Ensure it's below the buttons */
+}
+
+button {
+    position: relative;
+    z-index: 100; /* Ensure the buttons are above everything else */
+}
+
+.raffle-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.items-preview {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    background-color: #171717;
+}
+
+.item-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+}
+
+.preview-image {
+    width: 60px;
+    height: 60px;
+}
+
+.item-name {
+    font-size: 12px;
+    color: white;
+    margin-bottom: 3px;
+}
+.item-probability {
+    font-size: 8px;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+
+.raffle-roller-holder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 190px;
+    width: 100%;
+}
+.raffle-roller-holder {
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid #555;
+}
+.raffle-roller-holder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 190px;
+    width: 100%;
+}
+.raffle-roller-container {
+    width: 9999999999999999999px;
+    max-width: 999999999999999999px;
+    height: 190px;
+    background: #000000;
+    margin-left: 0;
+    -webkit-transition: transform 8s cubic-bezier(.22,.61,.36,1);
+    transition: transform 8s cubic-bezier(.22,.61,.36,1);
+}
+
+.no-transition {
+    transition: 1s margin-left !important;
+}
+.winning-item {
+    border: 4px solid #3ebc55;
+    position: relative;
+    top: -4px;
+}
+#round_draw_pointer {
+    height: 100%;
+    width: 2px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    left: 50%;
+    z-index: 99;
+}
+
+.case_item.common {
+    background: linear-gradient(to left, #474747 , #474747);
+}
+
+.case_item.rare {
+    background: linear-gradient(to left, #621fff, #621fff, #621fff);
+}
+
+#round_draw_pointer_top {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 9px solid #fad733;
+    font-size: 0;
+    line-height: 0;
+    z-index: 5;
+}
+#round_draw_pointer_bot {
+    position: absolute;
+    bottom: -1px;
+    width: 0;
+    height: 0;
+    left: 50%;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 9px solid #fad733;
+    font-size: 0;
+    line-height: 0;
+    z-index: 5;
+}
+#round_draw_pointer_mid {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: 8px;
+    width: 3px;
+    height: 100%;
+    background: #fad733;
+}
+.case_item {
+    display: inline-block;
+    position: relative;
+    width: 150px;
+    overflow: hidden;
+    float: left;
+    margin: 8px 0 0 9px;
+    height: 174px;
+    border-radius: 0;
+    background: linear-gradient(to left, #136a8a , #267871);
+}
+.case_item > .bottom-skin {
+    font-family: 'Arvo', serif;
+    background: #121212;
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: 28px;
+    text-align: center;
+    color: #fff;
+    font-size: 11px;
+    bottom: 0;
+    padding: 5px 0;
+    line-height: 12px;
+}
+img {
+    border: 0;
+}
+.prize-text {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.case_item_image {
+    position: absolute;
+    z-index: 2;
+    width: 140px;
+    height: auto;
+    left: 0;
+    top: 0;
+}
+.case_item_shadow {
+    position: absolute;
+    z-index: 1;
+    width: 120px;
+    height: auto;
+    left: 0;
+    right: 0;
+    bottom: 35px;
+    margin: 0 auto;
+}

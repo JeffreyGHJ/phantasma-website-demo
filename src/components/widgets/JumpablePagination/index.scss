@@ -1,0 +1,43 @@
+.widget.JumpablePagination {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	font-family: var(--font-family);
+	font-size: 1.5rem;
+
+	.middle {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+
+		.page-input {
+			input.page {
+				width: 60px;
+				background-color: var(--main-background-dark);
+				border: 1px solid var(--color-input-border);
+				border-radius: var(--border-radius);
+				padding: 0.75rem 1rem;
+				color: white;
+				&:focus,
+				&:focus-visible {
+					border-color: var(--color-input-border-focused);
+					outline: var(--color-input-border-focused);
+					transition: all ease-in-out 0.2s;
+				}
+			}
+		}
+	}
+
+	button.navigation {
+		background-color: var(--background-color-btn-outline);
+		color: white;
+		border: 1px solid var(--border-color-btn-outline);
+		border-radius: var(--border-radius);
+		padding: 0.5rem 1.5rem;
+
+		&:hover {
+			border-color: var(--border-color-btn-outline-hover);
+			transition: border-color ease-in-out 0.3s;
+		}
+	}
+}

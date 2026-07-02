@@ -1,0 +1,114 @@
+#AccountSettings {
+    font-family: var(--font-family);
+
+    .recaptcha {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .widget.NotSignInAlert {
+        margin-bottom: 2rem;
+    }
+
+    .information-section {
+        margin-top: 2rem;
+        .section-title {
+            margin-bottom: 2rem;
+            color: var(--color-text-secondary);
+            font-size: 2.5rem;
+        }
+
+        .section-content {
+            .information {
+                padding: 1.5rem 2rem;
+                border: 1px solid var(--border-color-divider);
+                border-radius: var(--border-radius-card);
+                width: 100%;
+
+                &:not(:first-child) {
+                    margin-top: 2rem;
+                }
+
+                .information-item {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    gap: 1rem;
+
+                    .label {
+                        font-size: 1.5rem;
+                    }
+
+                    .username-error {
+                        text-align: start;
+                        margin-bottom: 0.5rem;
+                        color: var(--color-danger);
+                        font-size: 1.2rem;
+                        max-width: 200px;
+                    }
+                }
+
+                .actions {
+                    margin-top: 2rem;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .preference-section {
+        margin-top: 4rem;
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+
+            .section-title {
+                color: var(--color-text-secondary);
+                font-size: 2.5rem;
+            }
+        }
+
+        .section-content {
+            margin-top: 0.5rem;
+
+            .preference {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin-top: 2rem;
+                align-items: center;
+                padding: 1.5rem 2rem;
+                // border: 1px solid var(--border-color-divider);
+                border-radius: var(--border-radius-card);
+                gap: 1rem;
+                background-color: var(--color-grey-dark-300);
+
+                .label {
+                    font-size: 1.5rem;
+                }
+
+                .size-slider {
+                    width: 200px;
+
+                    & > div {
+                        margin-bottom: 0px;
+                    }
+
+                    .slider-label {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

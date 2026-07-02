@@ -1,0 +1,125 @@
+#NavWrapper {
+    width: 100%;
+    border-bottom: 1px solid var(--color-dark-2);
+    min-height: calc(var(--navbar-height));
+    transition: var(--transition);
+    padding-top: 9px;
+}
+
+nav#Navbar {
+    font-family: var(--font-family-josefin);
+    transition: var(--transition);
+    .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        min-height: 38px;
+        div.links-container {
+            height: 0;
+            overflow: hidden;
+            transition: var(--transition);
+            ul.links {
+                padding-left: 3rem;
+                padding-right: 3rem;
+                li {
+                    a {
+                        /* Typography */
+                        text-transform: capitalize;
+                        color: #fff;
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 18px;
+                        line-height: 100%;
+                        letter-spacing: -0.04em;
+                        text-decoration: none;
+
+                        /* Display */
+                        display: block;
+
+                        transition: var(--transition);
+
+                        &:hover {
+                            padding-left: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .right {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+        align-items: center;
+
+        .nav-toggle {
+            img {
+                transition: transform 400ms ease-in-out;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .links-container {
+        order: 1;
+        width: 100%;
+
+        ul.links {
+            padding-left: 0px !important;
+            margin-left: 0px !important;
+
+            li {
+                margin-top: 2rem;
+            }
+        }
+    }
+
+    .right {
+        .connect-button-wrapper {
+            display: none;
+        }
+
+        .nav-toggle.open {
+            img {
+                transform: rotate(90deg);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .right {
+        .nav-toggle {
+            display: none;
+        }
+    }
+
+    .links-container {
+        height: auto !important;
+
+        ul.links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1rem;
+
+            li.connect-button-wrapper {
+                display: none;
+            }
+
+            a {
+                padding: 0;
+                margin: 0 2rem;
+
+                &:hover {
+                    padding: 0;
+                    background: transparent;
+                }
+            }
+        }
+    }
+}

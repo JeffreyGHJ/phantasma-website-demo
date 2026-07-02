@@ -1,0 +1,225 @@
+#MarketplaceDashboard {
+    position: fixed;
+    top: calc(var(--navbar-height) + var(--category-mui-tabs-height));
+    height: calc(100% - var(--navbar-height) - var(--category-mui-tabs-height));
+    background-color: var(--main-background);
+    width: 100%;
+    font-family: var(--font-family);
+
+    .container {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+
+        .title-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+
+            .title {
+                font-size: 3.5rem;
+            }
+
+            .marketplace-filter {
+                .select-label {
+                    font-size: 1rem;
+                    font-weight: 900;
+                    text-transform: uppercase;
+                    color: var(--color-text-secondary);
+                    margin-bottom: 0.5rem;
+                }
+            }
+        }
+
+        section.marketplace-stat {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 2rem;
+            flex-wrap: wrap;
+
+            .stat-wrapper {
+                border: 1px solid var(--border-color-divider);
+                border-radius: var(--border-radius-card);
+                height: 70px;
+                position: relative;
+                flex: 1 1 auto;
+                min-width: 200px;
+                background-color: var(--color-grey-dark-300);
+                padding: 5rem 0;
+
+                .stat {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    display: flex;
+                    justify-content: flex-start;
+                    padding: 0 2rem;
+                    .logo {
+                        padding-right: 1rem;
+                        align-self: center;
+                    }
+
+                    .label-and-value {
+                        .label {
+                            font-size: 1rem;
+                            font-weight: 900;
+                            text-transform: uppercase;
+                            color: var(--color-text-secondary);
+                        }
+
+                        .value {
+                            // flex
+                            display: flex;
+                            flex-wrap: wrap;
+                            align-items: baseline;
+                            gap: 0.5rem;
+
+                            // font
+                            font-size: 2.5rem;
+                            font-weight: bold;
+
+                            // spacing
+                            margin-top: 0.75rem;
+
+                            .usd {
+                                font-size: 75%;
+                                color: var(--color-text-secondary);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        section.collection-stat {
+            margin-top: 2rem;
+            background-color: var(--color-grey-dark-300);
+            border: 1px solid var(--border-color-divider);
+            border-radius: var(--border-radius-card);
+
+            .collection-stat-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                border-bottom: 1px solid var(--border-color-divider);
+
+                .widget.NftSelect {
+                    padding: 1rem 1rem 1rem 0;
+                }
+            }
+
+            .stats {
+                // flex
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                align-items: center;
+
+                // spacing
+                padding: 5rem 2rem;
+
+                // Border
+                border-bottom: 1px solid var(--border-color-divider);
+
+                .stat {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    gap: 1.5rem;
+                    margin-bottom: 2rem;
+
+                    .label-and-value {
+                        .label {
+                            font-size: 1rem;
+                            font-weight: 900;
+                            text-transform: uppercase;
+                            color: var(--color-text-secondary);
+                        }
+
+                        .value {
+                            // flex
+                            display: flex;
+                            flex-wrap: wrap;
+                            align-items: baseline;
+                            gap: 0.5rem;
+
+                            // font
+                            font-size: 2.5rem;
+                            font-weight: bold;
+
+                            // spacing
+                            margin-top: 0.75rem;
+
+                            .usd {
+                                font-size: 75%;
+                                color: var(--color-text-secondary);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .RecentlySold {
+                .header {
+                    // flex
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    align-items: center;
+
+                    // spacing
+                    padding: 1rem 1rem;
+
+                    .title {
+                        font-size: 2rem;
+                        font-weight: bold;
+                    }
+                }
+
+                section.nft-section {
+                    display: flex;
+                    flex-direction: column;
+                    min-height: 50vh;
+                    // spacing
+                    margin: 0 1rem;
+                    .nfts {
+                        flex-grow: 1;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+
+                        &.listView {
+                            justify-content: center;
+                            gap: 0.5rem;
+                            max-width: 100%;
+                            display: grid;
+                            grid-template-columns: repeat(
+                                auto-fill,
+                                minmax(max-content, 330px)
+                            );
+                        }
+
+                        .widget.NftCard {
+                            margin: 4px;
+                        }
+
+                        .widget.NftCard {
+                            background-color: var(--color-grey-dark-400);
+                        }
+
+                        .widget.NftDetailCard {
+                            flex: 0 1 0;
+                            background-color: var(--color-grey-dark-400);
+                        }
+                    }
+                    .pagination {
+                        margin: 5rem 0rem;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,89 @@
+#LootboxMinting {
+	padding-top: 5rem;
+	h1 {
+		color: #8f00ff;
+		text-transform: uppercase;
+		font-family: var(--font-family);
+		font-size: 40px;
+		font-weight: 900;
+		line-height: 3rem;
+	}
+
+	h2 {
+		font-family: var(--font-family);
+		max-width: 500px;
+	}
+
+	.mint-price-info {
+		display: flex;
+		gap: 0.5rem;
+		align-items: center;
+		justify-content: center;
+		font-size: 1.5rem;
+
+		svg {
+			cursor: pointer;
+		}
+	}
+
+	.total-minted {
+		color: #8f00ff;
+		margin-top: 5rem;
+		font-size: 2rem;
+		font-weight: 900;
+		font-family: var(--font-family);
+	}
+
+	img {
+		width: 30%;
+		animation-name: floating;
+		animation-duration: 3s;
+		animation-iteration-count: infinite;
+		animation-timing-function: ease-in-out;
+	}
+
+	.dropdown-mint-wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 2rem;
+	}
+
+	.mint-count {
+		font-family: var(--font-family);
+		font-size: 2rem;
+		color: #8f00ff;
+
+		span {
+			font-weight: bold;
+		}
+	}
+
+	@keyframes floating {
+		0% {
+			transform: translate(0, 0px);
+		}
+		50% {
+			transform: translate(0, 15px);
+		}
+		100% {
+			transform: translate(0, -0px);
+		}
+	}
+
+	@media screen and (max-width: 800px) {
+		img {
+			width: 50%;
+		}
+	}
+}
+
+// Small devices (landscape phones, 576px and down)
+@media (max-width: 576px) {
+	#LootboxMinting {
+		h2 {
+			max-width: 400px;
+		}
+	}
+}

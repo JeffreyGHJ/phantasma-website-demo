@@ -1,0 +1,68 @@
+#VaultFinalized {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-family: "Montserrat", sans-serif;
+    background-color: #090909;
+    padding: 20px;
+    z-index: 1;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+
+    .heading {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .sub-title {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .reward-message {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .gift-emoji {
+        user-select: none;
+        font-size: 12rem;
+        margin-bottom: 2rem;
+    }
+
+    .btn {
+        max-width: 250px;
+        width: 100%;
+        padding: 10px 20px;
+        border-radius: 5px;
+        z-index: 1;
+        font-size: 1.6rem;
+        transition: background-color 0.3s, transform 0.3s, border-color 0.3s,
+            color 0.3s;
+        &:hover {
+            transform: scale(1.05); // Slightly enlarges the button on hover
+            z-index: 1;
+        }
+
+        &:active {
+            transform: scale(1); // Resets the size when button is clicked
+            z-index: 1;
+        }
+    }
+
+    .continue {
+        background-color: #007bff; // A shade of blue
+        border: none;
+        color: white;
+        font-size: 16px;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+
+        &:hover {
+            background-color: #0056b3; // A darker shade of blue for hover
+        }
+    }
+}

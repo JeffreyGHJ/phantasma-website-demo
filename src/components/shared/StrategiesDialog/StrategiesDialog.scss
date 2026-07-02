@@ -1,0 +1,34 @@
+.StrategiesDialog {
+	* {
+		color: white;
+	}
+
+	.title {
+		padding-bottom: 1rem;
+		border-bottom: 1px solid white;
+	}
+
+	.strategy {
+		border: 1px solid white;
+		margin: 2rem 0;
+		padding: 1rem;
+		border-radius: 8px;
+		.name {
+			text-align: start;
+			font-size: 20px;
+			font-weight: bold;
+		}
+
+		.symbol,
+		.address {
+			font-size: 15px;
+		}
+	}
+
+	a {
+		text-decoration: none;
+		&:hover {
+			color: white;
+		}
+	}
+}

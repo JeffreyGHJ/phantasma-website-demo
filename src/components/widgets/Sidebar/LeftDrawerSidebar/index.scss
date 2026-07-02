@@ -1,0 +1,20 @@
+.widget.LeftDrawerSidebar {
+    overflow-y: auto;
+    z-index: 999999;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: var(--main-background);
+
+    &.show {
+        left: 0px;
+        transition: left ease-in 0.3s;
+    }
+
+    &.clear {
+        left: -300px;
+        transition: left ease-out 0.3s;
+    }
+}

@@ -1,0 +1,24 @@
+@keyframes floatUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-1000%);
+    opacity: 0;
+  }
+}
+
+.particle {
+  position: absolute;
+  background-color: rgb(103, 58, 183);
+  box-shadow: rgb(103, 58, 183);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  animation: floatUp 5s infinite;
+  pointer-events: none; // Add this line
+}

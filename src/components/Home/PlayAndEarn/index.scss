@@ -1,0 +1,104 @@
+#PlayAndEarn {
+	background-color: #101010;
+	.content {
+		/* Display */
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		align-items: center;
+		flex-direction: column;
+
+		.icon-group {
+			/* Display */
+			display: flex;
+			align-items: center;
+			gap: 2rem;
+			flex-wrap: wrap;
+
+			img {
+				width: 50px; // Screen size dependent
+				height: auto;
+			}
+		}
+
+		.title {
+			/* Spacing */
+			margin-top: 3rem;
+
+			/* Typography */
+			font-family: var(--font-family-landing);
+			font-style: normal;
+			font-weight: bold;
+			line-height: 100%;
+			text-align: center;
+			letter-spacing: -0.04em;
+			text-transform: uppercase;
+			color: #ffffff;
+			font-size: 30px; //Screen size dependent
+		}
+
+		.subtitle {
+			/* Spacing */
+			max-width: 485px;
+			margin-top: 1rem;
+
+			/* Typography*/
+			font-family: var(--font-family-open-sans);
+			font-style: normal;
+			font-weight: 400;
+			line-height: 139.5%;
+			text-align: center;
+			letter-spacing: -0.04em;
+			color: #dad7d7;
+			font-size: 15px;
+		}
+	}
+}
+
+// Small devices
+@media (min-width: 576px) {
+	#PlayAndEarn {
+		.content {
+			.title {
+				/* Typography */
+				font-size: 40px;
+			}
+
+			.subtitle {
+				/* Typography*/
+				font-size: 20px;
+			}
+		}
+	}
+}
+
+// Medium devices
+@media (min-width: 768px) {
+	#PlayAndEarn {
+		.content {
+			.icon-group {
+				img {
+					width: 60px;
+				}
+			}
+		}
+	}
+}
+
+// Large devices
+@media (min-width: 992px) {
+	#PlayAndEarn {
+		.content {
+			.title {
+				/* Typography */
+				font-size: 48px;
+			}
+
+			.icon-group {
+				img {
+					width: 80px;
+				}
+			}
+		}
+	}
+}

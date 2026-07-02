@@ -1,0 +1,36 @@
+#Knowledge {
+    border: none;
+    .segment {
+        line-height: 1.4;
+        letter-spacing: -0.02em;
+    }
+}
+
+#RenderedTab {
+    // border: 1px solid red;
+    height: calc(100vh - var(--navbar-height) - 48px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 3rem;
+}
+
+@media (max-width: 750px) {
+    #RenderedTab {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+@media (max-width: 500px) {
+    #RenderedTab {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (max-width: 350px) {
+    #RenderedTab {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}

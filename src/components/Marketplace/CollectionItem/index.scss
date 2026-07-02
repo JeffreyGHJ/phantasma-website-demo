@@ -1,0 +1,322 @@
+$gap: 0.5rem;
+
+#CollectionItem {
+	height: calc(100% + var(--navbar-height));
+	background-color: var(--main-background);
+	position: fixed;
+	top: calc(var(--navbar-height));
+	height: calc(100% - var(--navbar-height));
+	overflow-y: auto;
+	width: 100%;
+
+	.content {
+		font-family: var(--font-family);
+
+		.actions {
+			display: flex;
+			justify-content: flex-end;
+			flex-wrap: wrap;
+			gap: 1rem;
+			align-items: center;
+		}
+
+		.action-button {
+			display: flex;
+			align-items: center;
+			svg {
+				font-size: 20px;
+			}
+		}
+		.nft-info-container {
+			align-items: end;
+
+			.nft-image {
+				text-align: center;
+
+				img {
+					height: 235px;
+					width: 235px;
+					object-fit: cover;
+					border-radius: 100%;
+				}
+			}
+
+			.nft-info-grid-wrapper {
+				.nft-info-grid {
+					border: 1px solid var(--border-color-divider);
+					background-color: var(--color-card-background);
+					border-radius: var(--border-radius-card);
+					padding: 3rem 3rem;
+					align-self: center;
+
+					.nft-info {
+						display: flex;
+						flex-direction: column;
+
+						.nft-info-wrapper {
+							display: flex;
+							justify-content: space-between;
+							flex-wrap: wrap;
+							align-items: center;
+							gap: 2rem;
+
+							.id-and-rank {
+								display: flex;
+								flex-direction: column;
+								gap: $gap;
+								font-size: 1.5rem;
+
+								.id-and-icon {
+									display: flex;
+									align-items: center;
+									flex-wrap: wrap;
+									gap: 0.5rem;
+
+									.id-search-input-wrapper {
+										.widget.Input.id-search-input {
+											width: 75px;
+											height: 3rem;
+										}
+									}
+
+									.search-icon {
+										svg {
+											font-size: 25px;
+										}
+									}
+								}
+							}
+
+							.listing-or-auction-info {
+								text-align: end;
+								.ItemListedPriceDetail {
+									display: flex;
+									align-items: center;
+									flex-wrap: wrap;
+									gap: 1rem;
+
+									.price {
+										display: flex;
+										align-items: center;
+										flex-wrap: wrap;
+										gap: 0.8rem;
+										.bnb-price {
+											font-size: 1.5rem;
+										}
+
+										.usd {
+											font-size: 1.5rem;
+											color: var(--color-text-secondary);
+										}
+									}
+								}
+								.ItemAuctionPriceDetail {
+									display: flex;
+									flex-direction: column;
+									gap: $gap;
+
+									.BuyoutDisplay {
+										font-size: 1.5rem;
+									}
+									.CurrentBid {
+										font-size: 1.5rem;
+									}
+								}
+							}
+						}
+
+						.owner-and-marketplace {
+							margin-top: 2rem;
+
+							display: flex;
+							flex-wrap: wrap;
+							justify-content: space-between;
+							align-items: center;
+							.owner {
+								font-size: 1.5rem;
+								color: var(--color-text-secondary);
+								display: flex;
+								flex-direction: column;
+								gap: 0.2rem;
+							}
+                            
+                            .owner-heading {
+                                display: flex;
+                                align-items: center;
+                            }
+						}
+					}
+
+					.nft-info.unlisted {
+						padding-top: 2rem;
+						padding-bottom: 2rem;
+						flex-direction: row;
+						justify-content: space-between;
+
+						.owner-and-marketplace {
+							margin-top: 0rem;
+						}
+					}
+				}
+			}
+		}
+
+		.attributes-bidding-offer-container {
+			.ItemAttributes-grid {
+				.ItemAttributes {
+					height: 100%;
+					font-size: 1.5rem;
+					border: 1px solid var(--border-color-divider);
+					background-color: var(--color-card-background);
+					border-radius: var(--border-radius-card);
+					padding: 3rem 3rem;
+
+					.attributes {
+						&:not(:first-child) {
+							margin-top: 1rem;
+						}
+						.attribute {
+							text-align: end;
+						}
+					}
+				}
+			}
+
+			.ItemBiddings-Offers-grid {
+				padding-top: 0px;
+				.ItemBiddings {
+					font-size: 1.5rem;
+					border: 1px solid var(--border-color-divider);
+					background-color: var(--color-card-background);
+					border-radius: var(--border-radius-card);
+					padding: 3rem 3rem;
+
+					.title {
+						font-size: 2rem;
+					}
+
+					.BiddingList {
+						margin-top: 1rem;
+
+						.BiddingList-Item {
+							padding-top: 0.5rem;
+
+							&:first-child {
+								margin-bottom: 0.5rem;
+							}
+
+							&:nth-child(2) {
+								border-top: 1px solid
+									var(--border-color-divider);
+							}
+
+							.right {
+								text-align: end;
+							}
+						}
+					}
+				}
+
+				.offers-wrapper {
+					.offers {
+						height: 100%;
+						padding-top: 2rem;
+						padding-bottom: 2rem;
+						border: 1px solid var(--border-color-divider);
+						background-color: var(--color-card-background);
+						border-radius: var(--border-radius-card);
+
+						.MuiTabs-flexContainer {
+							button.MuiButtonBase-root.MuiTab-root {
+								opacity: 0.5;
+								color: white;
+								text-transform: capitalize;
+								font-size: 1.5rem;
+								font-family: var(--font-family);
+
+								&.Mui-selected {
+									opacity: 1;
+								}
+							}
+						}
+						span.MuiTabs-indicator {
+							height: 4px !important;
+						}
+
+						.TokenOffers {
+							.token-offer {
+								margin-bottom: 1rem;
+
+								.row-item {
+									font-size: 1.5rem;
+									align-self: center;
+
+									.usd {
+										font-size: 1.2rem;
+										color: var(--color-text-secondary);
+									}
+								}
+							}
+						}
+
+						.NftOffers {
+							.nft-offer {
+								margin-bottom: 1rem;
+
+								.row-item {
+									font-size: 1.5rem;
+									align-self: center;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.scrollable {
+			max-height: 300px;
+		}
+
+		.not-found {
+			margin-top: 2rem;
+			text-align: center;
+			font-size: 1.8rem;
+		}
+
+		.nft-info-container,
+		.ItemBiddings-Offers-grid,
+		.ItemAttributes-grid,
+		.offers {
+			margin-top: 3rem;
+		}
+
+		.offers-wrapper {
+			div:first-child {
+				margin-top: 0px;
+			}
+		}
+
+		.nft-info-container > *,
+		.attributes-bidding-offer-container > * {
+			padding-right: calc(2.5rem * 0.5);
+			padding-left: calc(2.5rem * 0.5);
+		}
+
+		@media (max-width: 992px) {
+			.attributes-bidding-offer-container {
+				flex-direction: column-reverse;
+				margin-top: 0px;
+			}
+			.nft-info-grid-wrapper {
+				margin-top: 3rem;
+			}
+		}
+
+		@media (max-width: 510px) {
+			.listing-or-auction-info {
+				text-align: start !important;
+			}
+		}
+	}
+}

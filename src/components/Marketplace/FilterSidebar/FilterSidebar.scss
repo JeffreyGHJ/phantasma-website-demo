@@ -1,0 +1,112 @@
+#FilterSidebar {
+	.MuiPaper-root {
+		background-color: var(--main-background) !important;
+		border-right: 1px solid var(--border-color-divider);
+		#filterHeader {
+			padding-left: 1rem;
+			padding-right: 1rem;
+			align-items: center;
+
+			p {
+				color: white;
+				font-size: 2.6rem;
+				font-family: 'Butter Haunted';
+			}
+
+			svg {
+				color: white;
+				font-size: 2rem;
+			}
+		}
+
+		#collectionHeader,
+		#MarketplaceHeader {
+			padding-left: 1rem;
+			padding-right: 1rem;
+			align-items: center;
+			margin-bottom: 2rem;
+			p {
+				color: white;
+				font-size: 2.6rem;
+				font-family: 'Butter Haunted';
+			}
+			.MuiFormControl-root {
+				margin-top: 1rem;
+				width: 100%;
+			}
+		}
+
+		#filterContent {
+			padding-top: 2rem;
+			padding-left: 1rem;
+			padding-right: 1rem;
+
+			.filter {
+				&:not(:first-child) {
+					padding-top: 4rem;
+				}
+
+				.MuiFormControl-root.MuiTextField-root {
+					label.MuiInputLabel-root.MuiInputLabel-formControl {
+						color: white;
+						font-size: 2rem;
+						top: -0.2rem;
+						background: #1b1b1c;
+						font-family: 'Butter Haunted';
+						padding-left: 0.5rem;
+						padding-right: 0.5rem;
+					}
+
+					.MuiButtonBase-root.MuiChip-root.MuiChip-filled {
+						background-color: #808080;
+
+						span.MuiChip-label {
+							color: white;
+							font-size: 11px;
+							// font-family: 'Butter Haunted';
+						}
+					}
+					input {
+						color: white;
+					}
+					span.MuiAutocomplete-tag {
+						color: white;
+						font-size: 15px;
+					}
+
+					.MuiAutocomplete-endAdornment {
+						.MuiButtonBase-root.MuiIconButton-root {
+							span.MuiIconButton-label {
+								color: white;
+							}
+						}
+					}
+
+					fieldset {
+						legend {
+							display: inherit !important;
+						}
+					}
+				}
+			}
+		}
+
+		.MuiDrawer-paper {
+			&::-webkit-scrollbar-track {
+				-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+				box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+				background-color: #323232;
+				border-radius: 10px;
+			}
+
+			&::-webkit-scrollbar {
+				width: 10px;
+			}
+
+			&::-webkit-scrollbar-thumb {
+				border-radius: 10px;
+				background-color: #3f4042;
+			}
+		}
+	}
+}

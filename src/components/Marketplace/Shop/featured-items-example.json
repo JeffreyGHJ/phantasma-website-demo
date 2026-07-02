@@ -1,0 +1,132 @@
+{
+    "main": {
+        "0": {
+            "title": {
+                "0": "Dress up your ghost!",
+                "1": ""
+            },
+            "subtitle": "A bunch of premium items to dress up your ghost with. Shop now!",
+            "image_source": "/assets/images/tempFeatured/featured1.png",
+            "date_created": ""
+        },
+        "1": {
+            "title": {
+                "0": "Founder's Lootboxes",
+                "1": ""
+            },
+            "subtitle": "Get geared up ready for war with our first exclusive armour set!",
+            "image_source": "/assets/images/tempFeatured/featured2.png",
+            "date_created": ""
+        },
+        "2": {
+            "title": {
+                "0": "3rd Showcase",
+                "1": "Content Different"
+            },
+            "subtitle": "Hello this is another subtitle",
+            "image_source": "/assets/images/tempFeatured/coliseum.jpg",
+            "date_created": ""
+        },
+        "3": {
+            "title": "Showcase Content 4",
+            "subtitle": "Showcase Subtitle 4",
+            "image_source": "/assets/images/tempFeatured/graveyard.jpg",
+            "date_created": ""
+        },
+        "4": {
+            "title": "Showcase Content Number 5",
+            "subtitle": "Subtitle example #5",
+            "image_source": "/assets/images/tempFeatured/mansion.png",
+            "date_created": ""
+        }
+    },
+    "items1": {
+        "0": {
+            "name": "DAO Shades",
+            "price": { "currency": "bnb", "amount": 10000 },
+            "matic": 1000,
+            "bnb": 3.5,
+            "ecto": 800000,
+            "image_source": "/assets/images/tempItems/noun-shades.jpg",
+            "date_created": "",
+            "item_type": "",
+            "item_group": "",
+            "featured": true
+        },
+        "1": {
+            "name": "Backpack",
+            "price": { "currency": "matic", "amount": 40000 },
+            "ecto": 800000,
+            "image_source": "/assets/images/tempItems/backpack.png",
+            "date_created": "",
+            "item_type": "",
+            "item_group": "",
+            "featured": true
+        },
+        "2": {
+            "name": "Bucket Hat",
+            "price": { "currency": "matic", "amount": 25000 },
+            "matic": 1000,
+            "image_source": "/assets/images/tempItems/bucket-hat.jpg",
+            "date_created": "",
+            "item_type": "",
+            "item_group": "",
+            "featured": true
+        },
+        "3": {
+            "name": "Goggles",
+            "price": { "currency": "ecto", "amount": 15000 },
+            "image_source": "/assets/images/tempItems/goggles.jpg",
+            "bnb": 3.5,
+            "date_created": "",
+            "item_type": "",
+            "item_group": "",
+            "featured": true
+        },
+        "4": {
+            "name": "Springy Glasses",
+            "price": { "currency": "bnb", "amount": 20000 },
+            "image_source": "/assets/images/tempItems/springy-glasses.jpg",
+            "ecto": 800000,
+            "date_created": "",
+            "item_type": "",
+            "item_group": "",
+            "featured": true
+        }
+    },
+    "items2": {
+        "0": {
+            "name": "Exclusive Item Set 1",
+            "price": { "currency": "matic", "amount": 100000 },
+            "image_source": "/assets/images/tempFeatured/set1.jpg",
+            "bnb": 3.5,
+            "ecto": 800000,
+            "date_created": "",
+            "item_type": "",
+            "item_group": "",
+            "featured": true
+        },
+        "1": {
+            "name": "Rare Armor Set 1",
+            "price": { "currency": "ecto", "amount": 200000 },
+            "image_source": "/assets/images/tempFeatured/set2.png",
+            "matic": 1000,
+            "ecto": 800000,
+            "date_created": "",
+            "item_type": "",
+            "item_group": "",
+            "featured": true
+        },
+        "2": {
+            "name": "Limited Edition Items",
+            "price": { "currency": "bnb", "amount": 2500000 },
+            "image_source": "/assets/images/tempFeatured/set3.jpg",
+            "matic": 1000,
+            "bnb": 3.5,
+            "date_created": "",
+            "item_type": "",
+            "item_group": "",
+            "featured": true
+        }
+    }
+}

@@ -1,0 +1,27 @@
+#OffersGhostsCreated {
+	.filters {
+		margin-top: 2rem;
+	}
+
+	.offers {
+		.token-offers {
+			display: flex;
+			justify-content: space-around;
+			flex-wrap: wrap;
+
+			.widget.TokenOfferCard {
+				margin-top: 2rem;
+			}
+		}
+
+		.nft-offers {
+			display: flex;
+			justify-content: space-around;
+			flex-wrap: wrap;
+
+			.widget.NftOfferCard {
+				margin-top: 2rem;
+			}
+		}
+	}
+}

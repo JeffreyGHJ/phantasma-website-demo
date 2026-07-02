@@ -1,0 +1,39 @@
+.DaoComponent.InformationCard {
+	.card {
+		.card-header {
+			padding-top: 2rem;
+			font-size: 20px;
+			margin-bottom: 1rem;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+			font-weight: bold;
+		}
+
+		.card-body {
+			.strategy-grid-container {
+				.right {
+					&:hover {
+						cursor: pointer;
+					}
+				}
+			}
+			.grid-row {
+				.left {
+					padding-left: 2rem;
+					font-size: 16px;
+					color: grey;
+					font-weight: bold;
+				}
+				.right {
+					padding-right: 2rem;
+					font-size: 14px;
+					font-weight: bold;
+
+					a {
+						text-decoration: none;
+						color: white;
+					}
+				}
+			}
+		}
+	}
+}

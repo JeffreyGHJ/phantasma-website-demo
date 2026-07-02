@@ -1,0 +1,309 @@
+#LightRayEffect {
+    background: radial-gradient(closest-side, #00c3ffaf, #09090900);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    animation-name: spin;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    $rayThickness: 20px;
+    $rayLength: 450px;
+    $maxLength: 650px;
+
+    $rayColor: #00c3ffaf;
+
+    $thicknessOffset: -$rayThickness/2;
+    $lengthOffset: -$rayLength/2;
+    $maxLengthOffset: -$maxLength/2;
+
+    .light-rays {
+        position: absolute;
+        right: 50%;
+        top: 50%;
+
+        &:after {
+            content: "";
+            background: radial-gradient(closest-side, $rayColor, #09090900);
+            height: $rayThickness;
+            width: $rayLength;
+            position: absolute;
+            // border: 1px solid rgba(11, 252, 11, 0.206);
+            transform: translate($lengthOffset, $thicknessOffset);
+        }
+
+        &:before {
+            content: "";
+            background: radial-gradient(closest-side, $rayColor, #09090900);
+            height: $rayLength;
+            width: $rayThickness;
+            position: absolute;
+            // border: 1px solid rgba(11, 252, 11, 0.206);
+            transform: translate($thicknessOffset, $lengthOffset);
+        }
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(100deg);
+        }
+    }
+
+    @keyframes stretch {
+        0% {
+            height: $rayThickness;
+            width: $rayLength;
+            transform: translate($lengthOffset, $thicknessOffset);
+        }
+        5% {
+            height: $rayThickness;
+            width: $rayLength;
+            transform: translate($lengthOffset, $thicknessOffset);
+        }
+        45% {
+            height: $rayThickness;
+            width: $maxLength;
+            transform: translate($maxLengthOffset, $thicknessOffset);
+        }
+        55% {
+            height: $rayThickness;
+            width: $maxLength;
+            transform: translate($maxLengthOffset, $thicknessOffset);
+        }
+        95% {
+            height: $rayThickness;
+            width: $rayLength;
+            transform: translate($lengthOffset, $thicknessOffset);
+        }
+        100% {
+            height: $rayThickness;
+            width: $rayLength;
+            transform: translate($lengthOffset, $thicknessOffset);
+        }
+    }
+
+    @keyframes stretch2 {
+        0% {
+            width: $rayThickness;
+            height: $rayLength;
+            transform: translate($thicknessOffset, $lengthOffset);
+        }
+        5% {
+            width: $rayThickness;
+            height: $rayLength;
+            transform: translate($thicknessOffset, $lengthOffset);
+        }
+        45% {
+            width: $rayThickness;
+            height: $maxLength;
+            transform: translate($thicknessOffset, $maxLengthOffset);
+        }
+        55% {
+            width: $rayThickness;
+            height: $maxLength;
+            transform: translate($thicknessOffset, $maxLengthOffset);
+        }
+        95% {
+            width: $rayThickness;
+            height: $rayLength;
+            transform: translate($thicknessOffset, $lengthOffset);
+        }
+        100% {
+            width: $rayThickness;
+            height: $rayLength;
+            transform: translate($thicknessOffset, $lengthOffset);
+        }
+    }
+
+    // RANDOM ANIMATION LENGTHS
+    $randomNumber1: 2 + random(9);
+    $randomNumber2: 2 + random(9);
+    $randomNumber3: 2 + random(9);
+    $randomNumber4: 2 + random(9);
+    $randomNumber5: 2 + random(9);
+    $randomNumber6: 2 + random(9);
+    $randomNumber7: 2 + random(9);
+    $randomNumber8: 2 + random(9);
+    $randomNumber9: 2 + random(9);
+
+    // RANDOM STRETCH 1
+    .s1 {
+        &:after {
+            animation-name: stretch;
+            animation-duration: $randomNumber1 + s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        &:before {
+            animation-name: stretch2;
+            animation-duration: $randomNumber2 + s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+    }
+
+    // RANDOM STRETCH 2
+    .s2 {
+        &:after {
+            animation-name: stretch;
+            animation-duration: $randomNumber3 + s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        &:before {
+            animation-name: stretch2;
+            animation-duration: $randomNumber4 + s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+    }
+
+    // RANDOM STRETCH 3
+    .s3 {
+        &:after {
+            animation-name: stretch;
+            animation-duration: $randomNumber5 + s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        &:before {
+            animation-name: stretch2;
+            animation-duration: $randomNumber6 + s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+    }
+
+    // RANDOM STRETCH 4
+    .s4 {
+        &:after {
+            animation-name: stretch;
+            animation-duration: $randomNumber7 + s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        &:before {
+            animation-name: stretch2;
+            animation-duration: $randomNumber8 + s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+    }
+
+    // RANDOM STRETCH 5
+    .s5 {
+        &:after {
+            animation-name: stretch;
+            animation-duration: $randomNumber9 + s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        &:before {
+            animation-name: stretch2;
+            animation-duration: $randomNumber1 + s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+    }
+
+    .s6 {
+        &:after {
+            animation-name: stretch;
+            animation-duration: $randomNumber2 + s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        &:before {
+            animation-name: stretch2;
+            animation-duration: $randomNumber3 + s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+    }
+
+    .s7 {
+        &:after {
+            animation-name: stretch;
+            animation-duration: $randomNumber4 + s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        &:before {
+            animation-name: stretch2;
+            animation-duration: $randomNumber5 + s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+    }
+
+    .s8 {
+        &:after {
+            animation-name: stretch;
+            animation-duration: $randomNumber6 + s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        &:before {
+            animation-name: stretch2;
+            animation-duration: $randomNumber7 + s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+    }
+
+    .s9 {
+        &:after {
+            animation-name: stretch;
+            animation-duration: $randomNumber8 + s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        &:before {
+            animation-name: stretch2;
+            animation-duration: $randomNumber9 + s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+    }
+
+    .ray2 {
+        transform: rotate(10deg);
+    }
+
+    .ray3 {
+        transform: rotate(20deg);
+    }
+
+    .ray4 {
+        transform: rotate(30deg);
+    }
+
+    .ray5 {
+        transform: rotate(40deg);
+    }
+
+    .ray6 {
+        transform: rotate(50deg);
+    }
+
+    .ray7 {
+        transform: rotate(60deg);
+    }
+
+    .ray8 {
+        transform: rotate(70deg);
+    }
+
+    .ray9 {
+        transform: rotate(80deg);
+    }
+
+    .ray10 {
+        transform: rotate(90deg);
+    }
+}

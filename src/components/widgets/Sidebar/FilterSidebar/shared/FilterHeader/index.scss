@@ -1,0 +1,15 @@
+.FilterHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color-divider);
+
+    .left {
+        font-size: 2rem;
+        font-family: var(--font-family);
+        margin-left: 5px;
+    }
+}

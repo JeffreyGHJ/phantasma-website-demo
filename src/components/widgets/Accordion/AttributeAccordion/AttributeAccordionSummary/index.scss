@@ -1,0 +1,17 @@
+.AttributeAccordionSummary {
+    padding: 0px !important;
+    .MuiAccordionSummary-content {
+        display: flex;
+        align-items: center;
+        font-size: 1.8rem;
+        font-family: var(--font-family);
+        color: white;
+    }
+
+    .MuiAccordionSummary-expandIconWrapper {
+        svg {
+            color: white;
+            font-size: 2rem;
+        }
+    }
+}

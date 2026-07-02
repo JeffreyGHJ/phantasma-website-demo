@@ -1,0 +1,218 @@
+$heroPaddingTop: 5rem;
+$heroPaddingBottom: 45rem;
+
+#Home {
+    overflow-x: hidden;
+    position: relative;
+    height: calc(100vh - var(--navbar-height));
+    overflow-y: auto;
+
+    .substack-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto; // Change from 100vh to auto
+        padding: 6rem 0; // Add some padding to give space above and below the content
+        z-index: 1;
+        position: relative;
+    }
+
+    .landing {
+        position: relative;
+        min-height: 100vh;
+        z-index: 1;
+
+        // Video styles
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure video covers the container fully */
+            z-index: -1; /* Ensure video sits below other content */
+        }
+
+        // Black transparent overlay styles
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* Black with 60% opacity */
+            z-index: 0; /* Ensure overlay sits above video, but below other content */
+        }
+
+        #Hero {
+            padding-top: $heroPaddingTop;
+            z-index: 1;
+        }
+    }
+    .landingye {
+        // uncomment to restore blue blur on landing page
+        background: url("/images/souleater.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center bottom;
+        position: relative;
+        height: 80%;
+        padding-bottom: 75vh;
+        // Media query for smaller screens
+        @media (max-width: 767px) {
+            background-position: calc(95%) bottom;
+        }
+
+        #Hero {
+            padding-top: 30rem;
+        }
+    }
+    .widget.PurpleEllipseBlob {
+        top: 450px;
+        right: -200px;
+        transform: rotate(-60deg) scale(0.6);
+    }
+
+    .section:not(:first-child) {
+        section {
+            padding-top: 8rem; //Screen size dependent
+        }
+    }
+
+    .section:nth-last-child(2) {
+        section {
+            padding-bottom: 8rem; //Screen size dependent
+        }
+    }
+}
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(
+            -1000%
+        ); // Move up by twice the height of the particle's starting position
+        opacity: 0;
+    }
+}
+
+.particle {
+    position: absolute;
+    background-color: green;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    animation: floatUp 5s infinite;
+    z-index: 0;
+}
+
+@media (min-width: 576px) {
+    #Home {
+        .widget.PurpleEllipseBlob {
+            top: 550px;
+            transform: rotate(-60deg) scale(0.8);
+        }
+    }
+}
+
+// Medium devices
+@media (min-width: 768px) {
+    #Home {
+        .widget.PurpleEllipseBlob {
+            top: 675px;
+            transform: rotate(-60deg) scale(0.9);
+        }
+
+        .section:not(:first-child) {
+            section {
+                padding-top: 10rem;
+            }
+        }
+
+        .substack-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto; // Change from 100vh to auto
+            padding: 6rem 0; // Add some padding to give space above and below the content
+            z-index: 1;
+            position: relative;
+        }
+
+        .section:nth-last-child(2) {
+            section {
+                padding-bottom: 10rem;
+            }
+        }
+    }
+}
+
+// Large devices
+@media (min-width: 992px) {
+    #Home {
+        .widget.PurpleEllipseBlob {
+            top: 800px;
+            right: -100px;
+        }
+
+        .substack-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto; // Change from 100vh to auto
+            padding: 6rem 0; // Add some padding to give space above and below the content
+            z-index: 1;
+            position: relative;
+        }
+
+        .section:not(:first-child) {
+            section {
+                padding-top: 12.5rem;
+            }
+        }
+
+        .section:nth-last-child(2) {
+            section {
+                padding-bottom: 12.5rem;
+            }
+        }
+
+        // .landing {
+        //     #Hero {
+        //         padding-top: calc(#{$heroPaddingTop} + 5rem);
+        //         z-index: 1;
+        //     }
+        // }
+    }
+}
+
+// X-Large devices
+@media (min-width: 1200px) {
+    #Home {
+        .widget.PurpleEllipseBlob {
+            right: 0px;
+        }
+    }
+}
+
+// XX-Large devices
+@media (min-width: 1400px) {
+    #Home {
+        .landing {
+            .fade {
+                height: 42rem;
+            }
+        }
+        .widget.PurpleEllipseBlob {
+            top: 950px;
+            right: 300px;
+            transform: rotate(-70deg) scale(1);
+        }
+    }
+}

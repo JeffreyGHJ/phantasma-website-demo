@@ -1,0 +1,27 @@
+.widget.SocialSpeedDial {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+
+	.socials {
+		gap: 2rem;
+	}
+
+	.MuiSpeedDial-fab {
+		width: 45px;
+		height: 45px;
+		background-color: #8f00ff;
+		border: none;
+		border-radius: 100%;
+
+		svg {
+			font-size: 20px;
+		}
+	}
+
+	.social {
+		background-color: transparent;
+		width: 38px;
+		height: 38px;
+	}
+}

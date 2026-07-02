@@ -1,0 +1,49 @@
+#Integrations {
+    width: 100%;
+    background-color: #090909;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50vh;
+    justify-content: center;
+    padding: 8rem 0; // Increased padding above and below the logo row
+
+    .title {
+        font-size: 45px;
+        margin-bottom: 6rem; // Increased space below title
+        font-family: var(--tg-barlow);
+        font-weight: bold;
+    }
+
+    .logos-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem; // This gap will add space between the logos horizontally and vertically
+        margin-bottom: 6rem; // Increased space below title
+        .logo {
+            img {
+                width: 200px; // Set image width to 200px
+                height: auto; // Ensure the image aspect ratio is maintained
+                padding: 1rem; // Added padding around each image
+                display: block; // Ensures that the padding applies correctly
+            }
+        }
+    }
+
+    @media (max-width: 880px) {
+        height: 80vh;
+        .logos-row {
+            flex-direction: column;
+            gap: 1rem; // Adjust gap for mobile to handle stacking
+
+            .logo {
+                &:not(:last-child) {
+                    margin-bottom: 2rem; // Adds space between stacked logos except the last one
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,149 @@
+#Phrase {
+    .checkbox {
+        height: 16px;
+        width: 16px;
+        min-width: 16px;
+    }
+
+    .mnemonic-outer-card {
+        justify-content: center;
+        align-items: center;
+        background-color: #090909;
+        padding: 20px;
+        border-radius: 10px;
+        display: inline-flex;
+        flex-direction: column;
+        font-family: "Montserrat", sans-serif;
+        gap: 20px;
+        z-index: 1;
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        margin-bottom: 10rem;
+    }
+
+    .mnemonic-container {
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        width: 100%;
+        z-index: 1;
+        max-width: 500px; // Adjust according to your preference
+    }
+
+    .mnemonic-card {
+        background-color: #111111;
+        color: grey;
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        z-index: 1;
+        text-align: center;
+        position: relative; // To allow absolute positioning of the number inside it
+
+        .mnemonic-number {
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            font-size: 12px;
+            z-index: 1;
+            background-color: #171717; // Green background for the number
+            color: mediumpurple;
+            padding: 5px;
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+    }
+    .copy-button {
+        background-color: #171717; // A green shade, you can choose your preferred color
+        color: white;
+        border: none;
+        z-index: 1;
+        padding: 10px 20px;
+        border-radius: 5px;
+        width: 150px;
+        cursor: pointer;
+        font-family: "Montserrat", sans-serif;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: #212121; // Darker shade of green for hover effect
+        }
+    }
+
+    .continue-button {
+        margin-top: 1rem;
+        background-color: #007bff; // A shade of blue
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        z-index: 1;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+
+        &:hover {
+            background-color: #0056b3; // A darker shade of blue for hover
+            transform: scale(1.05); // Slightly enlarges the button on hover
+            z-index: 1;
+        }
+
+        &:active {
+            transform: scale(1); // Resets the size when button is clicked
+            z-index: 1;
+        }
+
+        &.disabled {
+            opacity: 0.4;
+            cursor: default;
+            pointer-events: none;
+            user-select: none;
+        }
+    }
+
+    .heading {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .phrase-reminder {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        font-size: 12px;
+        .phrase-reminder-text {
+            text-align: center;
+            margin-top: 1rem;
+        }
+    }
+
+    .warning {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .warning-text {
+            color: red;
+            font-size: 12px;
+            z-index: 1;
+            text-align: center;
+            max-width: 80%;
+        }
+    }
+
+    .confirmation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        font-size: 1.2rem;
+        margin-top: 0.75rem;
+    }
+}

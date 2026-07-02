@@ -1,0 +1,136 @@
+#Hero {
+    .content {
+        /* Display */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        min-height: 50vh;
+    }
+
+    a {
+        text-decoration: none;
+        color: unset;
+        z-index: 1;
+    }
+
+    .title {
+        z-index: 1;
+        /* Typography */
+        text-align: center;
+        font-style: normal;
+        font-weight: bold;
+        outline-color: black;
+        outline-width: 15px;
+        line-height: 100%;
+        letter-spacing: -0.04em;
+        text-transform: uppercase;
+        margin: 0 0 21px;
+        padding-bottom: 2vh;
+        font-family: var(--tg-barlow);
+        line-height: 0.8;
+    }
+
+    .phantasmaLogo {
+        padding-bottom: 10px;
+    }
+
+    .early-access {
+        letter-spacing: 0;
+    }
+
+    .play-now-btn {
+        background-color: cyan;
+        color: #090909;
+        font-family: var(--tg-berlin-font-family);
+        letter-spacing: 0.8px;
+        text-align: center;
+        z-index: 1;
+        text-wrap: nowrap;
+
+        &:hover {
+            background-color: white;
+        }
+    }
+}
+
+// Best support for anything smaller than X-Small
+@media (min-width: 0px) {
+    #Hero {
+        .title {
+            font-size: 22px;
+        }
+        .phantasmaLogo {
+            width: 250px;
+        }
+        .play-now-btn {
+            font-size: 20px;
+            padding: 14px 29px;
+        }
+    }
+}
+
+// X-Small devices
+@media (min-width: 330px) {
+    #Hero {
+        .title {
+            font-size: 24px;
+        }
+        .phantasmaLogo {
+            width: 300px;
+        }
+        .play-now-btn {
+            font-size: 24px;
+            padding: 14px 34px;
+        }
+    }
+}
+
+// Small devices
+@media (min-width: 576px) {
+    #Hero {
+        .title {
+            font-size: 25px;
+        }
+        .phantasmaLogo {
+            width: 400px;
+        }
+        .play-now-btn {
+            font-size: 28px;
+            padding: 14px 38px;
+        }
+    }
+}
+
+// Medium devices
+@media (min-width: 768px) {
+    #Hero {
+        .title {
+            font-size: 25px;
+        }
+        .phantasmaLogo {
+            width: 500px;
+        }
+        .play-now-btn {
+            font-size: 34px;
+            padding: 14px 42px;
+        }
+    }
+}
+
+// Large devices and Up
+@media (min-width: 992px) {
+    #Hero {
+        .title {
+            font-size: 25px;
+        }
+        .phantasmaLogo {
+            width: 600px;
+        }
+        .play-now-btn {
+            font-size: 40px;
+            padding: 14px 49px;
+        }
+    }
+}

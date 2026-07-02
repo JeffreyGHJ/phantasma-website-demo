@@ -1,0 +1,29 @@
+.widget.QuickSetting {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+
+	button {
+		width: 38px;
+		height: 38px;
+		background: linear-gradient(256.28deg, #6c8da7 0%, #395c87 100%);
+		filter: drop-shadow(0px 0px 12px rgba(26, 142, 242, 0.5));
+		border: none;
+		border-radius: 100%;
+
+		svg {
+			color: white;
+			font-size: 20px;
+			animation: spin 5000ms linear infinite;
+
+			@keyframes spin {
+				from {
+					transform: rotate(0deg);
+				}
+				to {
+					transform: rotate(360deg);
+				}
+			}
+		}
+	}
+}

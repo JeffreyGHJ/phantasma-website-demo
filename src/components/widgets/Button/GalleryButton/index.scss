@@ -1,0 +1,16 @@
+.widget.GalleryButton {
+	.icon-button {
+		margin-left: 0.2rem;
+		margin-right: 0.2rem;
+		color: #d1d1d1 !important;
+
+		&:hover {
+			color: white !important;
+			background: rgba(175, 175, 175, 0.14) !important;
+		}
+
+		svg {
+			font-size: 25px;
+		}
+	}
+}

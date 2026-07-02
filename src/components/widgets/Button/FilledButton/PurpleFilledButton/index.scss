@@ -1,0 +1,38 @@
+.widget.PurpleFilledButton {
+	/* Display */
+	display: inline-block;
+
+	/* Border */
+	border-color: transparent;
+	border: 0px;
+
+	/* Background */
+	background: linear-gradient(97.16deg, #5A5A5A 9.79%, #ffffff 236.98%);
+
+	/* Typography */
+	font-weight: 700;
+	font-family: var(--font-family-landing);
+	font-style: normal;
+	line-height: 100%;
+	color: #fff;
+	font-size: 15px;
+
+	/* Spacing */
+	letter-spacing: -0.04em;
+	padding: 1rem 2rem;
+
+	/* Animation */
+	transition: opacity 0.1s ease-in-out;
+
+	svg {
+		font-weight: 700;
+	}
+
+	&:hover:not(:disabled) {
+		opacity: 0.6;
+	}
+
+	&:disabled {
+		opacity: 0.8;
+	}
+}

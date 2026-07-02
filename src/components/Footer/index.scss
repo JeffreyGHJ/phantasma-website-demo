@@ -1,0 +1,103 @@
+#Footer {
+    /* Background */
+    background-color: var(--main-background);
+
+    /* Spacing */
+    padding-top: 2.5rem; // reduced padding for a more compact look
+    padding-bottom: 2.5rem;
+    border-top: 1px solid black;
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem; // reduced gap
+        align-items: center;
+    }
+
+    .terms-icons-container {
+        display: flex;
+        align-items: center;
+
+        .social-icons {
+            display: flex;
+            gap: 1rem; // Adjust the gap between icons as needed
+            margin-left: 1rem; // Space between the text and icons
+
+            img {
+                width: 24px; // Adjust the size of the icons as needed
+                height: 24px;
+            }
+        }
+    }
+
+    .items {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem; // reduced gap
+        align-items: center;
+        flex-wrap: wrap;
+
+        font-family: var(--font-family-josefin);
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px; // slightly reduced
+        letter-spacing: -0.04em;
+
+        color: #9f9f9f;
+    }
+
+    .copyright {
+        margin-top: 1.5rem; // reduced margin
+        font-family: var(--font-family-josefin);
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px; // slightly reduced
+        letter-spacing: -0.04em;
+
+        color: #9f9f9f;
+
+        .trademark {
+            color: white;
+        }
+    }
+}
+@media (max-width: 575px) {
+    // Adjust the breakpoint as needed
+    .terms-icons-container {
+        flex-direction: column;
+        align-items: center;
+
+        .social-icons {
+            margin-left: 0 !important;
+            margin-top: 0.5rem; // Space between the icons and text on mobile
+        }
+    }
+}
+
+// Small devices
+@media (min-width: 576px) {
+    #Footer {
+        .items {
+            flex-direction: row;
+        }
+    }
+}
+
+// Large devices
+@media (min-width: 992px) {
+    #Footer {
+        .wrapper {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .items {
+            gap: 3rem; // reduced gap
+        }
+
+        .copyright {
+            margin-top: 0rem;
+            font-size: 16px; // slight increase, not too much
+        }
+    }
+}

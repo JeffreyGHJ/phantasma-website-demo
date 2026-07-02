@@ -1,0 +1,168 @@
+#Blockchains {
+	background-color: #101010;
+
+	.row {
+		display: block; //Screen size dependent
+
+		.left {
+			.title {
+				/* Display */
+				text-align: center;
+
+				/* Spacing */
+				margin-top: 3rem;
+
+				/* Typography*/
+				font-family: var(--font-family-landing);
+				font-style: normal;
+				font-weight: bold;
+				line-height: 100%;
+				letter-spacing: -0.04em;
+				text-transform: uppercase;
+				color: #ffffff;
+				font-size: 30px; //Screen size dependent
+			}
+
+			.subtitle {
+				/* Display */
+				text-align: center;
+
+				/* Spacing*/
+				margin-top: 1rem;
+
+				/* Typography */
+				font-family: var(--font-family-open-sans);
+				font-style: normal;
+				font-weight: 400;
+				line-height: 139.5%;
+				letter-spacing: -0.04em;
+				color: #dad7d7;
+				font-size: 15px; //Screen size dependent
+			}
+		}
+
+		.blockchains {
+			display: flex;
+			justify-content: center;
+			gap: 2rem;
+
+			.group {
+				display: flex;
+				flex-direction: column;
+				gap: 2rem;
+
+				img {
+					width: 50px;
+					height: auto;
+				}
+			}
+		}
+	}
+}
+
+// Small devices
+@media (min-width: 576px) {
+	#Blockchains {
+		.row {
+			.left {
+				.title {
+					/* Typography */
+					font-size: 40px; //screen size dependent
+				}
+
+				.subtitle {
+					/* Typography*/
+					font-size: 20px; //screen size dependent
+				}
+			}
+		}
+	}
+}
+
+// Medium devices
+@media (min-width: 768px) {
+	#Blockchains {
+		.row {
+			.blockchains {
+				.group {
+					img {
+						width: 60px;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Large devices
+@media (min-width: 992px) {
+	#Blockchains {
+		.row {
+			display: flex;
+			align-items: center;
+			// gap: 5rem;
+
+			.left-col {
+				order: -1;
+
+				.title {
+					text-align: start;
+					margin-left: auto;
+					max-width: 450px;
+				}
+
+				.subtitle {
+					text-align: start;
+					margin-left: auto;
+					max-width: 450px;
+				}
+			}
+
+			.right-col {
+				.blockchains {
+					justify-content: start;
+
+					.group {
+						img {
+							width: 80px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// X-Large devices
+@media (min-width: 1200px) {
+	#Blockchains {
+		.row {
+			--bs-gutter-x: 5rem;
+			.blockchains {
+				.group {
+					img {
+						width: 90px;
+					}
+				}
+			}
+		}
+	}
+}
+
+// XX-Large devices
+@media (min-width: 1400px) {
+	#Blockchains {
+		.row {
+			--bs-gutter-x: 9rem;
+			.right-col {
+				.blockchains {
+					.group {
+						img {
+							width: 107px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

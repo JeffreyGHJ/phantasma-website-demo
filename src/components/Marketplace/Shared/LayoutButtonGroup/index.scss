@@ -1,0 +1,12 @@
+.LayoutButtonGroup {
+	button:first-child {
+		border-right-color: transparent;
+		border-top-right-radius: 0px;
+		border-bottom-right-radius: 0px;
+	}
+
+	button:nth-child(2) {
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+	}
+}

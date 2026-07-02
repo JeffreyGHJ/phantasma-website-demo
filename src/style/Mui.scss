@@ -1,0 +1,91 @@
+// import { FormControl } from '@mui/material';
+.MuiFormControl-root {
+    .MuiSelect-select.MuiSelect-outlined {
+        min-height: unset;
+        padding: 1.3rem 2rem;
+    }
+
+    .MuiOutlinedInput-root.MuiInputBase-root {
+        &:hover:not(.Mui-disabled) {
+            fieldset {
+                border-color: var(--border-color-btn-outline-hover);
+                transition: border-color ease-in-out 0.3s;
+            }
+        }
+
+        &.Mui-disabled {
+            opacity: 0.8;
+        }
+
+        div.MuiSelect-select.MuiSelect-outlined {
+            font-size: var(--font-size-btn-outlined);
+            color: white;
+            -webkit-text-fill-color: unset;
+            font-family: var(--font-family);
+        }
+
+        svg {
+            color: white;
+            height: 2em;
+            width: 2em;
+            top: calc(50% - 1em);
+        }
+
+        fieldset {
+            top: 0px;
+            border-color: var(--border-color-btn-outline);
+
+            legend {
+                display: none;
+            }
+        }
+    }
+}
+
+.MuiModal-root.MuiPopover-root.MuiMenu-root {
+    ul.MuiList-root.MuiMenu-list {
+        background-color: var(--main-background-dark);
+        color: white;
+        padding-top: 0px;
+
+        li.MuiMenuItem-root {
+            font-size: 1.2rem;
+            font-family: var(--font-family);
+            &:hover {
+                background-color: var(--color-grey-dark-100) !important;
+            }
+        }
+
+        hr.MuiDivider-root {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+    }
+    .MuiPaper-root {
+        background: transparent !important;
+    }
+
+    .Mui-selected {
+        background-color: var(--color-grey-dark-100) !important;
+    }
+}
+
+.MuiSkeleton-root.MuiSkeleton-text {
+    background-color: rgba(255, 255, 255, 0.13);
+    display: inline-block;
+    vertical-align: middle;
+
+    &::after {
+        background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(0, 0, 0, 0.2),
+            transparent
+        );
+    }
+}
+
+.MuiAlert-root {
+    align-items: center;
+    font-size: 1.5rem;
+}

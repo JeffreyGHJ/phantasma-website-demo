@@ -1,0 +1,180 @@
+.containerPhrase {
+    z-index: 1;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.verify-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-family: "Montserrat", sans-serif;
+    background-color: #090909;
+    padding: 20px;
+    z-index: 1;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+h2 {
+    color: white;
+    font-weight: bold;
+    z-index: 1;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.confirmation-boxes {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    z-index: 1;
+    justify-content: center;
+
+    &:before {
+        cursor: pointer;
+    }
+
+    .word-box {
+        background-color: #111111;
+        color: grey;
+        padding: 10px 20px;
+        border-radius: 5px;
+        z-index: 1;
+        text-align: center;
+        width: 100px;
+        position: relative;
+
+        &:before {
+            cursor: pointer;
+            content: attr(data-pos);
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            z-index: 1;
+            font-size: 12px;
+            background-color: #171717;
+            color: mediumpurple;
+            padding: 5px;
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+    }
+}
+
+.mnemonic-choices {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+    z-index: 1;
+    margin-top: 20px;
+
+    .word-choice {
+        background-color: #111111;
+        color: grey;
+        padding: 10px 20px;
+        border-radius: 5px;
+        z-index: 1;
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+        transition: background-color 0.2s;
+
+        &.selected {
+            color: mediumpurple;
+            z-index: 1;
+        }
+
+        .mnemonic-number {
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            font-size: 12px;
+            z-index: 1;
+            background-color: #171717;
+            color: mediumpurple;
+            padding: 5px;
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        &:hover {
+            background-color: #212121;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        &:active {
+            transform: scale(1.05);
+            z-index: 1;
+        }
+    }
+}
+
+.vault-subtitle {
+    color: white;
+    font-size: 12px; // Adjust size as required
+    margin-bottom: 20px;
+    text-align: center;
+    z-index: 1;
+}
+
+.button {
+    margin-top: 20px;
+    background-color: #007bff; // A shade of blue
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+
+    &:hover {
+        background-color: #0056b3; // A darker shade of blue for hover
+        transform: scale(1.05); // Slightly enlarges the button on hover
+    }
+
+    &:active {
+        transform: scale(1); // Resets the size when button is clicked
+    }
+}
+.success-message {
+    margin-top: 20px;
+    color: white;
+    font-weight: bold;
+    z-index: 1;
+    font-size: 12px;
+}
+
+#VaultLoading {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: var(--color-form-background);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    padding: 60px 20px;
+    font-family: "Montserrat", sans-serif;
+}

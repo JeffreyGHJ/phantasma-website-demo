@@ -1,0 +1,295 @@
+#PurchasePage {
+    display: flex;
+    height: calc(100vh - var(--navbar-height));
+    padding: 4rem;
+    padding-top: 6rem;
+    font-family: var(--font-family-josefin);
+    font-size: 3rem;
+    gap: 2rem;
+
+    max-width: 1000px;
+    margin: auto;
+
+    .missing-paylink {
+        font-size: 2.5rem;
+        color: rgb(255, 48, 48);
+        text-align: center;
+    }
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .item-name {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .item-info {
+        border-radius: 8px;
+        background-color: var(--color-grey-dark-300);
+        padding: 2rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        font-size: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        max-width: 320px;
+
+        .info-line {
+            display: flex;
+            gap: 1rem;
+            justify-content: space-between;
+        }
+    }
+    .address {
+        white-space: nowrap;
+        font-size: 10px;
+        color: dimgray;
+        border-radius: 6px;
+        background-color: var(--color-grey-dark-300);
+        padding: 0.25rem;
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+        margin-top: 0.5rem;
+        font-family: monospace;
+        line-height: 1;
+    }
+
+    .not-found {
+        text-align: center;
+        width: 100%;
+        margin: auto;
+    }
+
+    .button-group {
+        margin-top: 4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .vault-btn {
+        margin-bottom: unset !important;
+        max-width: 280px;
+        width: 280px;
+        text-align: center;
+        border-radius: 4px;
+        font-size: 12px;
+        padding-top: 7.5px;
+        padding-bottom: 7.5px;
+        text-transform: uppercase;
+        cursor: pointer;
+        font-weight: 700;
+        transition: none;
+        &:hover {
+            transform: none;
+        }
+    }
+
+    .option {
+        max-width: 280px;
+        width: 280px;
+        text-align: center;
+        border-radius: 4px;
+        font-size: 12px;
+        padding-top: 7.5px;
+        padding-bottom: 7.5px;
+        text-transform: uppercase;
+        cursor: pointer;
+        background-color: var(--helio-button-primary);
+        font-weight: 700;
+        line-height: 1.5 !important;
+        color: black !important;
+        &:hover {
+            background-color: var(--helio-background-primary-hover);
+        }
+    }
+
+    .item-preview {
+        display: flex;
+        width: fit-content;
+    }
+
+    .img {
+        border-radius: 1rem;
+        object-fit: cover;
+        background-color: var(--color-grey-dark-300);
+        margin-bottom: 1rem;
+        width: auto;
+        height: 320px;
+        aspect-ratio: 1/1;
+    }
+
+    .purchase-controls {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-top: 3rem;
+        // border: 1px solid red;
+    }
+
+    .helio-container {
+        display: flex;
+        justify-content: center;
+
+        font-family: var(--font-family-josefin);
+
+        max-width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+        border-radius: 4px;
+
+        // bigger font
+        .helio-preflight {
+            font-size: 1.2rem !important;
+            font-family: var(--font-family-josefin);
+        }
+
+        .helio-primary-button {
+            color: black !important;
+            letter-spacing: -0.04em;
+            span {
+                line-height: 1.5 !important;
+            }
+        }
+
+        .hel-pt-10 {
+            padding-top: 4rem !important;
+        }
+
+        // bigger font
+        .hel-text-sm {
+            font-size: 1.2rem !important;
+        }
+
+        // fix spacing of max and + - buttons
+        .hel-mr-2 {
+            gap: 1rem;
+        }
+
+        // fix height of credit card and wallet svgs
+        .hel-h-4 {
+            height: 16px !important;
+        }
+
+        // fix width of credit card and wallet svgs
+        .hel-w-4 {
+            width: 16px !important;
+        }
+
+        // fix height of credit card and wallet svgs
+        .hel-h-6 {
+            height: 20px !important;
+            // border: 1px solid red;
+        }
+
+        // fix width of credit card and wallet svgs
+        .hel-w-6 {
+            width: 20px !important;
+            // border: 1px solid red;
+        }
+
+        .helio-text-detected {
+            line-height: 1.5;
+        }
+
+        h6 {
+            font-size: 1.1rem;
+        }
+
+        h4 {
+            font-size: 1.3rem;
+        }
+
+        // fix spacing of max and + - buttons
+        .hel-select-none {
+            width: unset !important;
+        }
+
+        // remove off-colored corners of helio widget
+        .hel-bg-white {
+            background-color: unset !important;
+        }
+
+        // .helio-embed {
+        //     width: 280px !important;
+        // }
+
+        // hide box shadow
+        .embed-box-shadow {
+            box-shadow: none;
+        }
+
+        // center connect wallet button
+        .hel-relative {
+            margin-left: auto;
+            margin-right: auto;
+            // height: 100%;
+            // max-height: 56px;
+            // overflow: scroll;
+            // margin: auto;
+        }
+
+        .helio-background-modal {
+            z-index: 99999 !important;
+            backdrop-filter: unset !important;
+        }
+
+        .helio-border-input {
+            min-height: 40px;
+        }
+
+        // prevent buttons from appearing over dropdown menus
+        button {
+            z-index: 1;
+        }
+
+        .hel-border-b {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+
+        // credit card svg was too big
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    #PurchasePage {
+        padding: 2rem;
+        padding-top: 6rem;
+    }
+}
+
+@media (max-width: 640px) {
+    #PurchasePage {
+        flex-direction: column;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .item-preview {
+        width: 100% !important;
+    }
+
+    .img {
+        max-width: 400px !important;
+        width: auto !important;
+        max-height: 90vw !important;
+    }
+
+    .item-name {
+        text-align: center;
+    }
+}

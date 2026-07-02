@@ -1,0 +1,90 @@
+#OfferVault {
+    justify-content: center;
+    align-items: center;
+    background-color: #090909;
+    padding: 30px 20px;
+    border-radius: 10px;
+    display: inline-flex;
+    flex-direction: column;
+    font-family: "Montserrat", sans-serif;
+    gap: 20px;
+    z-index: 1;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    width: 100%;
+
+    .heading {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .btn {
+        max-width: 250px;
+        width: 100%;
+        padding: 10px 20px;
+        border-radius: 5px;
+        z-index: 1;
+        font-size: 1.6rem;
+        transition: background-color 0.3s, transform 0.3s, border-color 0.3s,
+            color 0.3s;
+        &:hover {
+            transform: scale(1.05); // Slightly enlarges the button on hover
+            z-index: 1;
+        }
+
+        &:active {
+            transform: scale(1); // Resets the size when button is clicked
+            z-index: 1;
+        }
+    }
+
+    .continue-create {
+        background-color: #007bff; // A shade of blue
+        border: none;
+        color: white;
+        font-size: 16px;
+        margin-top: 2rem;
+
+        &:hover {
+            background-color: #0056b3; // A darker shade of blue for hover
+        }
+    }
+
+    .next-stage {
+        color: var(--color-text-secondary);
+        border: 1px solid gray;
+        margin-bottom: 2rem;
+
+        &:hover {
+            color: white;
+            border: 1px solid white;
+        }
+    }
+
+    .image-container {
+        display: flex;
+        justify-content: center;
+        gap: 10px; /* Adjust this value to add more or less space between the images */
+        padding-bottom:25px;
+    }
+
+    .image-container img {
+        width: 100px;
+        height: 100px;
+    }
+    .skip-vault-note {
+        text-align: center;
+        color: var(--color-text-secondary);
+    }
+
+    .reward-message {
+        font-size: 1.4rem;
+        text-align: center;
+        max-width: 230px;
+        .gift-emoji {
+            user-select: none;
+            font-size: 8rem;
+        }
+    }
+}

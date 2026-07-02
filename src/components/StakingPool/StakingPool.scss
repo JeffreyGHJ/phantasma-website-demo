@@ -1,0 +1,93 @@
+#StakingPool {
+	font-family: 'Butter Haunted';
+	#title {
+		color: white;
+		padding: 0;
+		margin-bottom: -2rem;
+		font-size: 3rem;
+		text-transform: uppercase;
+		font-family: 'Butter Haunted';
+	}
+	.body {
+		.row {
+			margin-bottom: 2rem;
+			.row-item {
+				padding-left: unset;
+				margin-bottom: 1rem;
+				.card {
+					border-radius: 16px;
+					padding: 1rem 2rem;
+					margin-left: 0.5rem;
+					margin-right: 0.5rem;
+					margin-top: 1rem;
+					background-color: #1b1b1c;
+					border-color: #1b1b1c;
+					width: 100%;
+					border-radius: 5;
+					height: 100%;
+					.card-body {
+						.card-text {
+							font-family: 'Butter Haunted';
+							font-size: 20px;
+						}
+
+						.stake-unstake {
+							button {
+								font-size: 2rem;
+								background: transparent;
+								color: #fff;
+								font-family: 'Butter Haunted';
+								border: none;
+								&.active {
+									color: var(--color-purple);
+								}
+								margin-left: 1rem;
+							}
+							margin-bottom: 1rem;
+						}
+
+						.percentages {
+							button {
+								font-size: 2rem;
+								background: transparent;
+								color: #fff;
+								font-family: 'Butter Haunted';
+								border: none;
+								margin-left: 1rem;
+							}
+							margin-bottom: 1rem;
+						}
+
+						.amount {
+							input {
+								width: 100%;
+								height: 5rem;
+								border-radius: 10px;
+								background: transparent;
+								border-color: rgba(255, 255, 255, 0.4);
+								border-style: ridge;
+								color: white;
+								font-size: 2rem;
+								padding-left: 1rem;
+								padding-right: 1rem;
+							}
+							margin-bottom: 0.5rem;
+						}
+
+						.approve-stake-unstake {
+							.approve {
+								width: 100%;
+								height: 6rem;
+								font-size: 25px;
+								border-radius: 15px;
+								background: #5e5df0;
+								border-color: transparent;
+								color: white;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

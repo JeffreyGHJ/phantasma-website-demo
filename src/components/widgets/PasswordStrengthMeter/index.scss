@@ -1,0 +1,66 @@
+.widget.PasswordStrengthMeter {
+	.label {
+		// flex
+		display: flex;
+		justify-content: space-between !important;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		// typography
+		font-size: 1.5rem;
+
+		.indicator {
+			text-transform: capitalize;
+
+			&.poor {
+				color: var(--color-danger);
+			}
+
+			&.average {
+				color: var(--color-warning);
+			}
+
+			&.strong {
+				color: var(--color-success);
+			}
+		}
+	}
+
+	.progress-wrapper {
+		margin-top: 0.5rem;
+		border: 1px solid var(--border-color-divider);
+		border-radius: 20px;
+
+		.progress {
+			width: calc(1% * var(--strength, 0));
+			border-radius: inherit;
+			&.poor {
+				background-color: var(--color-danger);
+			}
+
+			&.average {
+				background-color: var(--color-warning);
+			}
+
+			&.strong {
+				background-color: var(--color-success);
+			}
+		}
+	}
+
+	.suggestion {
+		margin-top: 1rem;
+		font-size: 1.5rem;
+		&.poor {
+			color: var(--color-danger);
+		}
+
+		&.average {
+			color: var(--color-warning);
+		}
+
+		&.strong {
+			color: var(--color-success);
+		}
+	}
+}

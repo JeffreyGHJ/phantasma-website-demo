@@ -1,0 +1,7 @@
+const authErrorReasons = {
+	EMAIL_NOT_VERIFIED: 'EMAIL_NOT_VERIFIED',
+	ACCOUNT_NOT_REGISTERRED: 'ACCOUNT_NOT_REGISTERRED',
+	BIND_BY_MERGE: 'BIND_BY_MERGE',
+};
+
+export default authErrorReasons;

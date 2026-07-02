@@ -1,0 +1,17 @@
+#ProfileBox {
+    text-align: center;
+    border: 1px solid var(--border-color-divider);
+    border-radius: var(--border-radius);
+    padding: 16px;
+
+    .address {
+        font-size: 1.5rem;
+        font-family: var(--font-family);
+    }
+
+    .status {
+        font-size: 1.1rem;
+        font-family: var(--font-family);
+        color: var(--color-text-subtitle);
+    }
+}

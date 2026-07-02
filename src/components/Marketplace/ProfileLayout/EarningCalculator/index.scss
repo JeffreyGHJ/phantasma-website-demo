@@ -1,0 +1,46 @@
+#EarningCalculator {
+    font-family: var(--font-family);
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .calculation-section {
+        margin-top: 4rem;
+        // border: 1px solid var(--border-color-divider);
+        border-radius: var(--border-radius-card);
+        padding: 4rem 1rem;
+        background-color: var(--color-grey-dark-300);
+
+        .earning-input-group {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            .earning-input-item {
+                text-align: center;
+                flex: 50%;
+                margin-bottom: 3rem;
+                .widget.LabelInput {
+                    .label {
+                        font-size: 1.2rem;
+                    }
+                    .widget.Input {
+                        min-width: 300px;
+                        padding: 1.5rem;
+                        border: 1px solid var(--color-black);
+                        &:focus {
+                            border: 1px solid var(--color-blue);
+                        }
+                    }
+                }
+            }
+        }
+
+        .hourly-earning {
+            margin-top: 3rem;
+            text-align: center;
+            font-size: 2rem;
+        }
+    }
+}

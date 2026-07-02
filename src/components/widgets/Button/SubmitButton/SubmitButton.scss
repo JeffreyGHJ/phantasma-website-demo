@@ -1,0 +1,22 @@
+.widget.SubmitButton {
+	font-family: sans-serif;
+	font-weight: bold;
+	background-color: transparent;
+	border: 1px solid white;
+	color: white;
+	padding: 0.9rem;
+	border-radius: 999px;
+	font-size: 12px;
+	transition: background-color 0.2s, border-color 0.2s;
+
+	&:hover {
+		background-color: #64646473;
+		border-color: transparent;
+	}
+
+	&.disabled {
+		background-color: #797979;
+		border-color: transparent;
+		cursor: auto;
+	}
+}

@@ -1,0 +1,42 @@
+#Wallet {
+	background-color: var(--main-background);
+	// Category tabs
+	.CategoryTabs {
+		position: fixed;
+		height: var(--category-mui-tabs-height);
+		top: calc(var(--navbar-height));
+		left: 0;
+		width: 100%;
+		background-color: var(--main-background);
+
+		border-bottom: 1px solid var(--border-color-divider);
+		.MuiTabs-flexContainer {
+			button.MuiButtonBase-root.MuiTab-root {
+				opacity: 0.5;
+				color: white;
+
+				&.Mui-selected {
+					opacity: 1;
+				}
+
+				.tab {
+					span.label {
+						font-size: 1.4rem;
+						font-weight: bold;
+						font-family: var(--font-family);
+						text-transform: none;
+						margin-left: 0.5rem;
+						vertical-align: middle;
+					}
+				}
+			}
+		}
+		span.MuiTabs-indicator {
+			height: 4px !important;
+		}
+
+		.MuiTabScrollButton-horizontal.Mui-disabled {
+			width: 0px;
+		}
+	}
+}

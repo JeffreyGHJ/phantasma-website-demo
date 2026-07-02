@@ -1,0 +1,174 @@
+.item-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 3rem !important;
+    max-height: none !important;
+    background-color: var(--color-grey-dark-400) !important;
+
+    .close-btn {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        cursor: pointer;
+        color: gray;
+
+        &:hover {
+            color: white;
+        }
+
+        &.MuiSvgIcon-root {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    #modal-header {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+        font-size: 28px;
+        font-weight: bolder;
+        max-width: 300px;
+    }
+
+    #modal-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .item-name {
+            font-size: 20px;
+            font-weight: bold;
+            padding: 0.5rem;
+        }
+
+        .item-price {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            padding: 0.5rem;
+            padding-left: 1rem;
+            padding-right: 0.5rem;
+            border: 1px solid dimgray;
+            border-radius: 0.5rem;
+            user-select: none;
+            cursor: pointer;
+            .item-value {
+                font-size: 22px;
+                font-weight: bold;
+            }
+        }
+
+        .icon {
+            transition: all;
+            transition-duration: 0.1s;
+            font-size: 1.8rem;
+        }
+
+        .icon-rotate {
+            transform: rotate(90deg);
+        }
+    }
+    .quantity-selector {
+        display: flex;
+        justify-content: center; // center the label and dropdown
+        align-items: center; // vertical align if necessary
+        margin: 10px 0; // spacing above and below
+
+        label {
+            color: white; // set label text color to white
+            margin-right: 10px; // spacing between label and dropdown
+            font-size: 20px;
+            font-weight: bold;
+            padding: 0.5rem;
+        }
+
+        select {
+            color: white; // set dropdown text color to white
+            background: #171717; // set dropdown background color to dark gray
+            border: transparent; // border around the dropdown
+            padding: 5px 10px; // padding inside the dropdown
+            appearance: none; // remove default appearance
+            font-size: 20px;
+            font-weight: bold;
+
+            option {
+                background: #171717; // set option background color to dark gray
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    #currency-menu {
+        border: 1px solid blue;
+    }
+
+    #modal-footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        .btn {
+            font-size: 20px;
+            font-weight: bold;
+            // color: var(--color-text-secondary);
+            color: white;
+            background-color: var(--color-blue-dark-300);
+            border-radius: 0.5rem;
+            padding-left: 4rem;
+            padding-right: 4rem;
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+            &:hover {
+                background-color: var(--color-blue-dark-200);
+            }
+        }
+    }
+
+    .img-container {
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+        border-radius: 0.5rem;
+        .img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all;
+            transition-duration: 0.3s;
+            // &:hover {
+            //     scale: 1.1;
+            // }
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .item-modal {
+        .img-container {
+            width: 250px;
+            height: 250px;
+        }
+    }
+}
+
+.MuiPaper-root {
+    margin-top: 4px;
+    .MuiList-root {
+        padding-bottom: 0;
+    }
+    .currency-option {
+        display: flex;
+        gap: 1rem;
+        font-size: 18px !important;
+        font-weight: bold !important;
+    }
+}

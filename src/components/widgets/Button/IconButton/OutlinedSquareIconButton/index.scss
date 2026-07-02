@@ -1,0 +1,24 @@
+.widget.OutlinedSquareIconButton {
+	height: 40px;
+	width: 40px;
+
+	background-color: transparent;
+	border: 1px solid var(--border-color-btn-outline);
+	border-radius: var(--border-radius);
+
+	&.selected {
+		border-color: var(--border-color-btn-outlined-selected);
+		background-color: var(--background-color-btn-outlined-selected);
+	}
+
+	// Ccome after &.selected to override border-color
+	&:hover {
+		border-color: var(--border-color-btn-outline-hover);
+	}
+
+	svg {
+		color: white;
+		width: 90%;
+		height: auto;
+	}
+}

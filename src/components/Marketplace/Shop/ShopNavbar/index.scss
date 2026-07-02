@@ -1,0 +1,51 @@
+#ShopNavbar {
+    .MuiTabs-flexContainer {
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 2.5rem;
+
+        button.MuiButtonBase-root.MuiTab-root {
+            opacity: 0.5;
+            color: white;
+
+            &.Mui-selected {
+                opacity: 1;
+            }
+        }
+    }
+
+    .tab {
+        font-weight: bold;
+        text-transform: none;
+        margin-left: 0.5rem;
+        vertical-align: middle;
+        font-size: 19px;
+        font-family: var(--font-family-josefin);
+
+        .inner {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+    }
+
+    span.MuiTabs-indicator {
+        height: 4px !important;
+    }
+
+    .MuiTabScrollButton-horizontal.Mui-disabled {
+        width: 0px;
+    }
+}
+
+@media (max-width: 300px) {
+    #ShopNavbar {
+        .MuiTabs-flexContainer {
+            gap: 1.5rem !important;
+        }
+        .tab {
+            font-size: 18px !important;
+        }
+    }
+}

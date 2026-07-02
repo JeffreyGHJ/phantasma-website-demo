@@ -1,0 +1,53 @@
+#Shop {
+    font-family: var(--font-family-josefin);
+    width: calc(100% /*- #{$sidebarWidth}*/);
+    height: calc(
+        100vh - var(--navbar-height) /*- var(--category-mui-tabs-height)*/
+    );
+    max-height: calc(
+        100vh - var(--navbar-height) /*- var(--category-mui-tabs-height)*/
+    );
+    overflow: auto;
+    .content {
+        // padding: var(--content-padding-top-bottom) 0 /*3rem*/;
+        padding-top: 0px;
+        background-color: var(--main-background);
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .tab-content {
+            padding-bottom: 1.5rem;
+            position: relative;
+            height: 100%;
+            max-height: 100%;
+            // overflow-x: hidden;
+            // overflow-y: auto;
+            overflow: hidden;
+            // max-width: 2000px;
+        }
+    }
+}
+
+// when media is < px, what changes should be made?
+// @media (max-width: 1000px) {
+//     #featured {
+
+//         // .primary-showcase,
+//         // .secondary-showcase {
+//         //     width: 100%;
+//         //     height: 80rem;
+//         // }
+//     }
+// }
+
+// @media (max-width: 900px) {
+//     #featured {
+//         flex-direction: column;
+//         padding-right: 1rem;
+//         padding-left: 1rem;
+//     }
+// }

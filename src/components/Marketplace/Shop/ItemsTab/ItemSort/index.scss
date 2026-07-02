@@ -1,0 +1,90 @@
+.sortings-menu-button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid var(--color-dark-1);
+    height: 5rem;
+    min-height: 5rem;
+    box-shadow: inset -1px -12px 18px 0px #3139498f;
+
+    user-select: none;
+    cursor: pointer;
+
+    .MuiSvgIcon-root {
+        width: 30px;
+        height: 30px;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    &:hover {
+        background-color: #4b4e5526;
+    }
+}
+
+#sortings-menu {
+    width: 100%;
+    margin-top: 2px;
+
+    .menu-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        &:hover {
+            background-color: var(--color-grey-dark-100) !important;
+        }
+    }
+
+    .active {
+        background-color: var(--color-grey-dark-100) !important;
+    }
+
+    .check {
+        width: 22px;
+        height: 22px;
+    }
+
+    .MuiPaper-root {
+        width: 300px;
+        border: 1px solid var(--color-dark-1);
+        border-radius: 0px;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+        background-color: var(--main-background) !important;
+    }
+
+    .MuiMenuItem-root {
+        font-size: 18px;
+    }
+}
+
+.currency {
+    display: flex;
+    // font-weight: 700;
+    align-items: center;
+    gap: 1rem;
+    width: fit-content;
+}
+
+#radio-btn {
+    width: 1.6rem;
+    height: 1.6rem;
+    border: 2px solid dimgray;
+    border-radius: 100%;
+    padding: 2px;
+
+    &.r-active {
+        border: 2px solid var(--color-blue);
+    }
+
+    #radio-btn-inner {
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+
+        &.r-active-inner {
+            background-color: var(--color-blue);
+        }
+    }
+}

@@ -1,0 +1,38 @@
+.widget.PurpleOutlinedButton {
+	/* Display */
+	display: inline-block;
+	text-align: center;
+
+	/* Border */
+	border: 2px solid #8f00ff;
+
+	/* Background */
+	background: transparent;
+
+	/* Typography */
+	font-weight: 700;
+	font-family: var(--font-family-landing);
+	font-style: normal;
+	line-height: 100%;
+	color: #fff;
+	font-size: 15px;
+
+	/* Spacing */
+	letter-spacing: -0.04em;
+	padding: 1rem 2rem;
+
+	/* Animation */
+	transition: opacity 0.1s ease-in-out;
+
+	svg {
+		font-size: 20px;
+	}
+
+	&:hover:not(:disabled) {
+		opacity: 0.6;
+	}
+
+	&:disabled {
+		opacity: 0.8;
+	}
+}
