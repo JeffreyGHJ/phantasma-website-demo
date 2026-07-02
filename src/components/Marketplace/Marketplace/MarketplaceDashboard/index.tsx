@@ -1301,10 +1301,10 @@ const RecentlySold = ({
             },
         }).then((res) => {
             if (mounted) {
-                setNfts(res.data);
-                setPages(res.pages);
+                setNfts(res.data ?? []);
+                setPages(res.pages ?? 0);
             }
-        });
+        }).catch(() => {});
 
         return () => {
             mounted = false;
@@ -1328,7 +1328,7 @@ const RecentlySold = ({
             </div>
             <section className="nft-section">
                 <div className={`nfts ${viewType}`}>
-                    {nfts.map((nft) => {
+                    {(nfts ?? []).map((nft) => {
                         return viewType === viewTypes.GRID_VIEW ? (
                             <NftCard
                                 key={`${nft.blockchain_id}-${nft.transaction_hash}`}

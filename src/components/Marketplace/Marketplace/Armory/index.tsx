@@ -461,9 +461,9 @@ const MarketplaceArmories = () => {
         })
             .then((response: any) => {
                 if (mounted) {
-                    setArmories(response.data);
-                    setItemsCount(response.total_rows);
-                    setPageCount(response.pages);
+                    setArmories(response.data ?? []);
+                    setItemsCount(response.total_rows ?? 0);
+                    setPageCount(response.pages ?? 0);
                     setIsFetching(false);
                 }
             })
@@ -646,7 +646,7 @@ const MarketplaceArmories = () => {
                     <section className="nft-section">
                         <div className={`nfts ${viewType}`}>
                             <Loader show={isFetching} />
-                            {armories.map((item) => {
+                            {(armories ?? []).map((item) => {
                                 return viewType === viewTypes.GRID_VIEW ? (
                                     <NftCard
                                         key={`${item.name}-${item.token_id}`}

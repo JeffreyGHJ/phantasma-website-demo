@@ -397,9 +397,9 @@ const MarketplacePets = () => {
         })
             .then((response: any) => {
                 if (mounted) {
-                    setPets(response.data);
-                    setItemsCount(response.total_rows);
-                    setPageCount(response.pages);
+                    setPets(response.data ?? []);
+                    setItemsCount(response.total_rows ?? 0);
+                    setPageCount(response.pages ?? 0);
                     setIsFetching(false);
                 }
             })
@@ -568,7 +568,7 @@ const MarketplacePets = () => {
                     <section className="nft-section">
                         <div className={`nfts ${viewType}`}>
                             <Loader show={isFetching} />
-                            {pets.map((item) => {
+                            {(pets ?? []).map((item) => {
                                 return viewType === viewTypes.GRID_VIEW ? (
                                     <NftCard
                                         key={`${item.name}-${item.token_id}`}

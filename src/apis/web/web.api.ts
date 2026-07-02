@@ -1,5 +1,16 @@
 import axios, { AxiosResponse } from "axios";
 
+// When REACT_APP_API is not set (e.g. demo/static deployments), Webpack's
+// DefinePlugin replaces it with undefined at build time, turning every
+// template-literal URL into "undefined/endpoint". Cancel those requests before
+// they hit the network so components never receive non-JSON SPA-fallback HTML.
+axios.interceptors.request.use((config) => {
+    if (config.url?.startsWith('undefined')) {
+        throw new axios.Cancel('API base URL not configured');
+    }
+    return config;
+});
+
 import AccountItems from "../../state/application/types/AccountItems";
 import CollectionItem from "../../state/application/types/CollectionItem";
 import CommunityCollection from "../../state/community/types/CommunityCollection";

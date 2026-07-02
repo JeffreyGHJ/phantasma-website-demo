@@ -349,9 +349,9 @@ const MarketplaceGhosts = () => {
         })
             .then((response: any) => {
                 if (mounted) {
-                    setLittleGhosts(response.data);
-                    setItemsCount(response.total_rows);
-                    setPageCount(response.pages);
+                    setLittleGhosts(response.data ?? []);
+                    setItemsCount(response.total_rows ?? 0);
+                    setPageCount(response.pages ?? 0);
                     setIsFetching(false);
                 }
             })
@@ -505,7 +505,7 @@ const MarketplaceGhosts = () => {
                     <section className="nft-section">
                         <div className={`nfts ${viewType}`}>
                             <Loader show={isFetching} />
-                            {littleGhosts.map((item) => {
+                            {(littleGhosts ?? []).map((item) => {
                                 return viewType === viewTypes.GRID_VIEW ? (
                                     <NftCard
                                         key={`${item.name}-${item.token_id}`}
