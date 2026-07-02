@@ -162,7 +162,7 @@
 	},
 	"scripts": {
 		"start": "node scripts/start.js",
-		"build": "GENERATE_SOURCEMAP=false node scripts/build.js",
+		"build": "CI=false GENERATE_SOURCEMAP=false node scripts/build.js",
 		"winBuild": "set \"GENERATE_SOURCEMAP=false\" && node scripts/build.js",
 		"test": "node scripts/test.js"
 	},
