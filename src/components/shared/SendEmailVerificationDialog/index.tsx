@@ -1,7 +1,7 @@
 import './index.scss';
 
 import { FormEvent, useCallback, useEffect, useState } from 'react';
-import { RECAPTCHA_SITE_KEY_ALT } from '../../../constants/recaptchaSiteKeys';
+import { RECAPTCHA_ENABLED, RECAPTCHA_SITE_KEY_ALT } from '../../../constants/recaptchaSiteKeys';
 
 import { Grid } from '@mui/material';
 import Modal from '../../widgets/Modal';
@@ -117,23 +117,25 @@ const SendEmailVerificationDialog = ({
 							Your email is not yet verified. Please check your
 							email for an activation link.
 						</Grid>
-						<Grid
-							item
-							className={`mt-4 ${!showRecaptcha ? 'hide' : ''}`}
-						>
-							<ReCAPTCHA
-								className='recaptcha mt-4'
-								sitekey={RECAPTCHA_SITE_KEY_ALT}
-								onChange={(token) => {
-									if (token) {
-										setRecaptcha(token);
-									}
-								}}
-								onExpired={() => {
-									setRecaptcha('');
-								}}
-							/>
-						</Grid>
+						{RECAPTCHA_ENABLED && (
+							<Grid
+								item
+								className={`mt-4 ${!showRecaptcha ? 'hide' : ''}`}
+							>
+								<ReCAPTCHA
+									className='recaptcha mt-4'
+									sitekey={RECAPTCHA_SITE_KEY_ALT}
+									onChange={(token) => {
+										if (token) {
+											setRecaptcha(token);
+										}
+									}}
+									onExpired={() => {
+										setRecaptcha('');
+									}}
+								/>
+							</Grid>
+						)}
 						{timer > 0 && (
 							<Grid item className='mt-5 countdown'>
 								{timer}

@@ -10,7 +10,7 @@ import {
 import { Grid } from '@mui/material';
 import Modal from '../../widgets/Modal';
 import OutlinedButton from '../../widgets/Button/OutlinedButton';
-import { RECAPTCHA_SITE_KEY } from '../../../constants/recaptchaSiteKeys';
+import { RECAPTCHA_ENABLED, RECAPTCHA_SITE_KEY } from '../../../constants/recaptchaSiteKeys';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { mergeAccount } from '../../../apis/web/web.api';
 import { useActiveWeb3React } from '../../../hooks';
@@ -37,7 +37,7 @@ const MergeAccountConfirmationDialog = ({
 	const onConfirmAccountMerge = async (evt: FormEvent<HTMLFormElement>) => {
 		evt.preventDefault();
 
-		if (!account || !library || !recaptcha || !user) {
+		if (!account || !library || (RECAPTCHA_ENABLED && !recaptcha) || !user) {
 			return;
 		}
 
@@ -143,21 +143,23 @@ const MergeAccountConfirmationDialog = ({
 								</div>
 							)}
 						</Grid>
-						<Grid item className='mt-4'>
-							<ReCAPTCHA
-								ref={recaptchaRef}
-								className='recaptcha mt-4'
-								sitekey={RECAPTCHA_SITE_KEY}
-								onChange={(token) => {
-									if (token) {
-										setRecaptcha(token);
-									}
-								}}
-								onExpired={() => {
-									setRecaptcha('');
-								}}
-							/>
-						</Grid>
+						{RECAPTCHA_ENABLED && (
+							<Grid item className='mt-4'>
+								<ReCAPTCHA
+									ref={recaptchaRef}
+									className='recaptcha mt-4'
+									sitekey={RECAPTCHA_SITE_KEY}
+									onChange={(token) => {
+										if (token) {
+											setRecaptcha(token);
+										}
+									}}
+									onExpired={() => {
+										setRecaptcha('');
+									}}
+								/>
+							</Grid>
+						)}
 						<Grid item className='mt-5'>
 							<OutlinedButton
 								className='send'

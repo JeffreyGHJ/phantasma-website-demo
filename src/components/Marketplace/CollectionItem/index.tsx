@@ -82,7 +82,7 @@ import NftsOfferDialog from "../../shared/NftsOfferDialog/NftsOfferDialog";
 import OfferABI from "../../../constants/abis/OfferABI";
 import OutlinedButton from "../../widgets/Button/OutlinedButton";
 import QuickSetting from "../../widgets/SpeedDial/QuickSetting";
-import { RECAPTCHA_INVISIBLE_SITE_KEY } from "../../../constants/recaptchaSiteKeys";
+import { RECAPTCHA_INVISIBLE_SITE_KEY, RECAPTCHA_ENABLED } from "../../../constants/recaptchaSiteKeys";
 import ReCAPTCHA from "react-google-recaptcha";
 import RewardSpinDialog from "../../shared/RewardSpinDialog";
 import RouteUtilModel from "../../../models/util_models/RouteUtilModel";
@@ -2686,8 +2686,8 @@ const LikeButton = () => {
         if (!user || !asset || !id) {
             return;
         }
-        const recaptcha = await recaptchaRef.current.executeAsync();
-        recaptchaRef.current.reset();
+        const recaptcha = RECAPTCHA_ENABLED ? await recaptchaRef.current.executeAsync() : '';
+        if (RECAPTCHA_ENABLED) recaptchaRef.current.reset();
 
         const _modelItem = new AccountFavoredNftModel({
             nft_collection_id: NftCollectionModel.getCollectionIdByAsset({
@@ -2723,8 +2723,8 @@ const LikeButton = () => {
         if (!user || !asset || !id || !modelItem) {
             return;
         }
-        const recaptcha = await recaptchaRef.current.executeAsync();
-        recaptchaRef.current.reset();
+        const recaptcha = RECAPTCHA_ENABLED ? await recaptchaRef.current.executeAsync() : '';
+        if (RECAPTCHA_ENABLED) recaptchaRef.current.reset();
 
         updateOverlay(true);
         modelItem
@@ -2804,11 +2804,13 @@ const LikeButton = () => {
                     <FavoriteBorderIcon fontSize="large" />
                 )}
             </IconButton>
-            <ReCAPTCHA
-                ref={recaptchaRef}
-                size="invisible"
-                sitekey={RECAPTCHA_INVISIBLE_SITE_KEY}
-            />
+            {RECAPTCHA_ENABLED && (
+                <ReCAPTCHA
+                    ref={recaptchaRef}
+                    size="invisible"
+                    sitekey={RECAPTCHA_INVISIBLE_SITE_KEY}
+                />
+            )}
         </>
     ) : (
         <></>

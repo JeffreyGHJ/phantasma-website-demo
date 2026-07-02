@@ -16,7 +16,7 @@ import authErrorReasons from "../../../../constants/errorReasons/authErrorReason
 import { Grid } from "@mui/material";
 import Loading from "../../../widgets/Loading";
 import ReCAPTCHA from "react-google-recaptcha";
-import { RECAPTCHA_SITE_KEY } from "../../../../constants/recaptchaSiteKeys";
+import { RECAPTCHA_ENABLED, RECAPTCHA_SITE_KEY } from "../../../../constants/recaptchaSiteKeys";
 import SendEmailVerificationDialog from "../../../shared/SendEmailVerificationDialog";
 
 const EmailPasswordLoginForm = ({
@@ -49,12 +49,12 @@ const EmailPasswordLoginForm = ({
     const onLoginFormSubmit = async (evt: FormEvent<HTMLFormElement>) => {
         evt.preventDefault();
 
-        if (!showRecaptcha) {
+        if (RECAPTCHA_ENABLED && !showRecaptcha) {
             setShowRecaptcha(true);
             return;
         }
 
-        if (!credential || !password || !recaptcha) {
+        if (!credential || !password || (RECAPTCHA_ENABLED && !recaptcha)) {
             return;
         }
 
@@ -224,25 +224,27 @@ const EmailPasswordLoginForm = ({
                             </Grid>
                         </Grid>
                     </Grid>
-                    <Grid
-                        item
-                        className={`mt-4 ${!showRecaptcha ? "hide" : ""}`}
-                    >
-                        <ReCAPTCHA
-                            className="recaptcha"
-                            sitekey={RECAPTCHA_SITE_KEY}
-                            ref={recaptchaRef}
-                            onChange={(token) => {
-                                if (token) {
-                                    setRecaptcha(token);
-                                }
-                            }}
-                            onExpired={() => {
-                                setRecaptcha("");
-                            }}
-                            theme="dark"
-                        />
-                    </Grid>
+                    {RECAPTCHA_ENABLED && (
+                        <Grid
+                            item
+                            className={`mt-4 ${!showRecaptcha ? "hide" : ""}`}
+                        >
+                            <ReCAPTCHA
+                                className="recaptcha"
+                                sitekey={RECAPTCHA_SITE_KEY}
+                                ref={recaptchaRef}
+                                onChange={(token) => {
+                                    if (token) {
+                                        setRecaptcha(token);
+                                    }
+                                }}
+                                onExpired={() => {
+                                    setRecaptcha("");
+                                }}
+                                theme="dark"
+                            />
+                        </Grid>
+                    )}
                     <Grid item className="mt-5">
                         <button className="sign-in" disabled={disableSignIn}>
                             <span className="btn-text">

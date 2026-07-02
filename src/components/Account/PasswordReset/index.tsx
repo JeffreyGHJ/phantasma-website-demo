@@ -1,7 +1,7 @@
 import "./index.scss";
 
 import { Alert, Grid } from "@mui/material";
-import { RECAPTCHA_SITE_KEY_ALT } from "../../../constants/recaptchaSiteKeys";
+import { RECAPTCHA_ENABLED, RECAPTCHA_SITE_KEY_ALT } from "../../../constants/recaptchaSiteKeys";
 import { FormEvent, useEffect, useState } from "react";
 import {
     fetchUserEmailByPasswordResetToken,
@@ -360,20 +360,22 @@ const PasswordResetForm = ({
                         />
                     )}
                 </Grid>
-                <Grid item className={`mt-4 ${!showRecaptcha ? "hide" : ""}`}>
-                    <ReCAPTCHA
-                        className="recaptcha"
-                        sitekey={RECAPTCHA_SITE_KEY_ALT}
-                        onChange={(token) => {
-                            if (token) {
-                                setRecaptcha(token);
-                            }
-                        }}
-                        onExpired={() => {
-                            setRecaptcha("");
-                        }}
-                    />
-                </Grid>
+                {RECAPTCHA_ENABLED && (
+                    <Grid item className={`mt-4 ${!showRecaptcha ? "hide" : ""}`}>
+                        <ReCAPTCHA
+                            className="recaptcha"
+                            sitekey={RECAPTCHA_SITE_KEY_ALT}
+                            onChange={(token) => {
+                                if (token) {
+                                    setRecaptcha(token);
+                                }
+                            }}
+                            onExpired={() => {
+                                setRecaptcha("");
+                            }}
+                        />
+                    </Grid>
+                )}
                 <Grid item className="mt-5">
                     <button className="register" disabled={disableSignUp}>
                         <span className="btn-text">

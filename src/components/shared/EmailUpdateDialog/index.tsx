@@ -11,7 +11,7 @@ import { Grid } from '@mui/material';
 import Input from '../../widgets/Input';
 import Modal from '../../widgets/Modal';
 import OutlinedButton from '../../widgets/Button/OutlinedButton';
-import { RECAPTCHA_SITE_KEY } from '../../../constants/recaptchaSiteKeys';
+import { RECAPTCHA_ENABLED, RECAPTCHA_SITE_KEY } from '../../../constants/recaptchaSiteKeys';
 import ReCAPTCHA from 'react-google-recaptcha';
 import recaptchaTypes from '../../../constants/recaptchaTypes';
 import { updateEmail } from '../../../apis/web/web.api';
@@ -45,12 +45,12 @@ const EmailUpdateDialog = ({
 	const onEmailUpdateFormSubmit = async (evt: FormEvent<HTMLFormElement>) => {
 		evt.preventDefault();
 
-		if (!showRecaptcha) {
+		if (RECAPTCHA_ENABLED && !showRecaptcha) {
 			setShowRecaptcha(true);
 			return;
 		}
 
-		if (!newEmail || !isValidEmail || !emailConfirmation || !recaptcha) {
+		if (!newEmail || !isValidEmail || !emailConfirmation || (RECAPTCHA_ENABLED && !recaptcha)) {
 			return;
 		}
 
@@ -185,24 +185,26 @@ const EmailUpdateDialog = ({
 								/>
 							</div>
 						</Grid>
-						<Grid
-							item
-							className={`mt-4 ${!showRecaptcha ? 'hide' : ''}`}
-						>
-							<ReCAPTCHA
-								className='recaptcha'
-								sitekey={RECAPTCHA_SITE_KEY}
-								ref={recaptchaRef}
-								onChange={(token) => {
-									if (token) {
-										setRecaptcha(token);
-									}
-								}}
-								onExpired={() => {
-									setRecaptcha('');
-								}}
-							/>
-						</Grid>
+						{RECAPTCHA_ENABLED && (
+							<Grid
+								item
+								className={`mt-4 ${!showRecaptcha ? 'hide' : ''}`}
+							>
+								<ReCAPTCHA
+									className='recaptcha'
+									sitekey={RECAPTCHA_SITE_KEY}
+									ref={recaptchaRef}
+									onChange={(token) => {
+										if (token) {
+											setRecaptcha(token);
+										}
+									}}
+									onExpired={() => {
+										setRecaptcha('');
+									}}
+								/>
+							</Grid>
+						)}
 						<Grid item className='mt-5 text-center'>
 							<OutlinedButton disabled={disableUpdate}>
 								<span className='btn-text'>Update Email</span>

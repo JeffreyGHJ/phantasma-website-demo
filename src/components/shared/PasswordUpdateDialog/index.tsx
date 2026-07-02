@@ -11,7 +11,7 @@ import Input from '../../widgets/Input';
 import Modal from '../../widgets/Modal';
 import OutlinedButton from '../../widgets/Button/OutlinedButton';
 import PasswordStrengthMeter from '../../widgets/PasswordStrengthMeter';
-import { RECAPTCHA_SITE_KEY } from '../../../constants/recaptchaSiteKeys';
+import { RECAPTCHA_ENABLED, RECAPTCHA_SITE_KEY } from '../../../constants/recaptchaSiteKeys';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { updatePassword } from '../../../apis/web/web.api';
 import { useHandleUnauthorizedResponse } from '../../../hooks/useAuth';
@@ -45,12 +45,12 @@ const PasswordUpdateDialog = ({
 	) => {
 		evt.preventDefault();
 
-		if (!showRecaptcha) {
+		if (RECAPTCHA_ENABLED && !showRecaptcha) {
 			setShowRecaptcha(true);
 			return;
 		}
 
-		if (!currentPassword || !password || !recaptcha) {
+		if (!currentPassword || !password || (RECAPTCHA_ENABLED && !recaptcha)) {
 			return;
 		}
 
@@ -190,24 +190,26 @@ const PasswordUpdateDialog = ({
 								/>
 							)}
 						</Grid>
-						<Grid
-							item
-							className={`mt-4 ${!showRecaptcha ? 'hide' : ''}`}
-						>
-							<ReCAPTCHA
-								className='recaptcha'
-								sitekey={RECAPTCHA_SITE_KEY}
-								ref={recaptchaRef}
-								onChange={(token) => {
-									if (token) {
-										setRecaptcha(token);
-									}
-								}}
-								onExpired={() => {
-									setRecaptcha('');
-								}}
-							/>
-						</Grid>
+						{RECAPTCHA_ENABLED && (
+							<Grid
+								item
+								className={`mt-4 ${!showRecaptcha ? 'hide' : ''}`}
+							>
+								<ReCAPTCHA
+									className='recaptcha'
+									sitekey={RECAPTCHA_SITE_KEY}
+									ref={recaptchaRef}
+									onChange={(token) => {
+										if (token) {
+											setRecaptcha(token);
+										}
+									}}
+									onExpired={() => {
+										setRecaptcha('');
+									}}
+								/>
+							</Grid>
+						)}
 						<Grid item className='mt-5 text-center'>
 							<OutlinedButton disabled={disableUpdate}>
 								<span className='btn-text'>

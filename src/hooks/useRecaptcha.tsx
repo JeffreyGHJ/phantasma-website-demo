@@ -1,5 +1,5 @@
 import ReCAPTCHA from "react-google-recaptcha";
-import { RECAPTCHA_SITE_KEY } from "../constants/recaptchaSiteKeys";
+import { RECAPTCHA_ENABLED, RECAPTCHA_SITE_KEY } from "../constants/recaptchaSiteKeys";
 import { useCallback, useRef, useState } from "react";
 
 /*
@@ -14,6 +14,7 @@ export const useRecaptcha = () => {
     const recaptchaRef = useRef<any>();
 
     const canSubmitRecaptcha = useCallback(() => {
+        if (!RECAPTCHA_ENABLED) return true;
         if (!recaptchaToken) {
             if (!showRecaptcha) {
                 setShowRecaptcha(true);
@@ -41,7 +42,7 @@ export const useRecaptcha = () => {
         (props) => {
             return (
                 <>
-                    {showRecaptcha && (
+                    {showRecaptcha && RECAPTCHA_ENABLED && (
                         <ReCAPTCHA
                             className={props.className || ""}
                             sitekey={RECAPTCHA_SITE_KEY}

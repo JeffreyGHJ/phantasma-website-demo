@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { RECAPTCHA_SITE_KEY } from "../../../../constants/recaptchaSiteKeys";
+import { RECAPTCHA_ENABLED, RECAPTCHA_SITE_KEY } from "../../../../constants/recaptchaSiteKeys";
 import { useUpdateOverlay } from "../../../../state/application/hooks";
 import { useSnackbar } from "notistack";
 import { FormEvent, useCallback, useEffect, useRef, useState } from "react";
@@ -131,20 +131,22 @@ const ForgetPasswordForm = ({
                         </Loading>
                     </div>
                 </Grid>
-                <Grid item className={`mt-4 ${!showRecaptcha ? "hide" : ""}`}>
-                    <ReCAPTCHA
-                        className="recaptcha"
-                        sitekey={RECAPTCHA_SITE_KEY}
-                        onChange={(token) => {
-                            if (token) {
-                                setRecaptcha(token);
-                            }
-                        }}
-                        onExpired={() => {
-                            setRecaptcha("");
-                        }}
-                    />
-                </Grid>
+                {RECAPTCHA_ENABLED && (
+                    <Grid item className={`mt-4 ${!showRecaptcha ? "hide" : ""}`}>
+                        <ReCAPTCHA
+                            className="recaptcha"
+                            sitekey={RECAPTCHA_SITE_KEY}
+                            onChange={(token) => {
+                                if (token) {
+                                    setRecaptcha(token);
+                                }
+                            }}
+                            onExpired={() => {
+                                setRecaptcha("");
+                            }}
+                        />
+                    </Grid>
+                )}
                 <Grid item className="mt-5">
                     <button
                         className="reset-password"
