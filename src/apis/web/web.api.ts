@@ -1,4 +1,14 @@
 import axios, { AxiosResponse } from "axios";
+import AccountItems from "../../state/application/types/AccountItems";
+import CollectionItem from "../../state/application/types/CollectionItem";
+import CommunityCollection from "../../state/community/types/CommunityCollection";
+import { GenericMetadata } from "../../constants/types/GenericMetadata";
+import LootboxSingleItem from "../../models/util_models/LootboxUtilModel/types/LootboxSingleItem";
+import RecentlySoldCollectionItem from "../../state/application/types/RecentlySoldCollectionItem";
+import { SingleCollectionItem } from "../../state/application/types/SingleCollectionItem";
+import Swap from "../../components/NftBridge/types/Swap";
+import User from "../../constants/types/User";
+import WebSettingModel from "../../models/WebSettingModel";
 
 // When REACT_APP_API is not set (e.g. demo/static deployments), Webpack's
 // DefinePlugin replaces it with undefined at build time, turning every
@@ -10,17 +20,6 @@ axios.interceptors.request.use((config) => {
     }
     return config;
 });
-
-import AccountItems from "../../state/application/types/AccountItems";
-import CollectionItem from "../../state/application/types/CollectionItem";
-import CommunityCollection from "../../state/community/types/CommunityCollection";
-import { GenericMetadata } from "../../constants/types/GenericMetadata";
-import LootboxSingleItem from "../../models/util_models/LootboxUtilModel/types/LootboxSingleItem";
-import RecentlySoldCollectionItem from "../../state/application/types/RecentlySoldCollectionItem";
-import { SingleCollectionItem } from "../../state/application/types/SingleCollectionItem";
-import Swap from "../../components/NftBridge/types/Swap";
-import User from "../../constants/types/User";
-import WebSettingModel from "../../models/WebSettingModel";
 
 export const fetchCollectionItems = async ({
     blockchain,
