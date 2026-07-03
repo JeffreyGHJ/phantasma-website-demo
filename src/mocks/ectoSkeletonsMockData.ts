@@ -2,7 +2,7 @@
 // Token images fetched from https://spookyskeletons.s3.us-west-1.amazonaws.com/metadata/{id}.json
 // token_image_ext = "png" → primary display image is image_png (no gif for ectos)
 
-const E = 'https://spookyskeletons.mypinata.cloud/ipfs/';
+const E = 'https://gateway.pinata.cloud/ipfs/';
 const ECTO_ADDR = '0x0fA48F20dDdcf6eD724a36381F66c3e905Fe7988';
 const LG_MP = 'littleGhosts';
 const PCS_MP = 'pancakeswap';

@@ -6,8 +6,8 @@ const LG_ADDR  = '0x98f606a4cdde68b9f68732d21fb9ba8b5510ee48';
 const ECTO_ADDR = '0x0fA48F20dDdcf6eD724a36381F66c3e905Fe7988';
 const LG_MARKET  = '0x12492e327c49bc2f7df86d1d96752b9af1dfe2e1';
 const PCS_MARKET = '0x17539cca21c7933df5c980172d22659b8c345c5a';
-const GG = 'https://ghosts.mypinata.cloud/ipfs/';
-const EE = 'https://spookyskeletons.mypinata.cloud/ipfs/';
+const GG = 'https://gateway.pinata.cloud/ipfs/';
+const EE = 'https://gateway.pinata.cloud/ipfs/';
 
 // Unix timestamp reference: ~Jun 1 2024, spread across 30 days prior
 const BASE_TS = 1717200000;

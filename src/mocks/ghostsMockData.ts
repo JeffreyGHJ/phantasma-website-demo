@@ -2,7 +2,7 @@
 // Token images fetched from https://littleghosts.s3.us-east-2.amazonaws.com/metadata/{id}.json
 // token_image_ext = "gif" → primary display image is image_gif
 
-const G = 'https://ghosts.mypinata.cloud/ipfs/';
+const G = 'https://gateway.pinata.cloud/ipfs/';
 const LG_ADDR = '0x98f606a4cdde68b9f68732d21fb9ba8b5510ee48';
 const LG_MP = 'littleGhosts';
 const PCS_MP = 'pancakeswap';

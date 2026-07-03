@@ -22,7 +22,9 @@ axios.interceptors.request.use((config) => {
     return config;
 });
 
-const IS_DEMO = !process.env.REACT_APP_API;
+// The original API backend is no longer running. Mock data is the permanent
+// default for this demo. Set REACT_APP_DEMO_MODE=false to connect a live backend.
+const IS_DEMO = process.env.REACT_APP_DEMO_MODE !== 'false';
 
 export const fetchCollectionItems = async ({
     blockchain,
