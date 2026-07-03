@@ -1,153 +1,56 @@
-import SubgraphCollection from '../../../constants/types/SubgraphCollection';
-import SubgraphCollectionDay from '../../../constants/types/SubgraphCollectionDay';
-import SubgraphTransaction from '../../../constants/types/SubgraphTransaction';
-import axios from 'axios';
+// The Graph API (api.thegraph.com) is no longer accessible.
+// All subgraph functions return static mock data from subgraphMockData.ts.
+
+import {
+    mock24hTransactions,
+    mockCollectionData,
+    mockDayData,
+} from '../../../mocks/subgraphMockData';
 
 type Marketplace = 'littleghosts' | 'pancakeswap';
 
-const getApi = (marketplace: Marketplace) => {
-	return marketplace === 'littleghosts'
-		? 'https://api.thegraph.com/subgraphs/name/relaxedleaf/marketplace'
-		: 'https://api.thegraph.com/subgraphs/name/pancakeswap/nft-market';
-};
-
 export const fetchCollectionData = async ({
-	marketplace,
-	collectionAddress,
+    marketplace,
+    collectionAddress,
 }: {
-	collectionAddress: string;
-	marketplace: Marketplace;
+    collectionAddress: string;
+    marketplace: Marketplace;
 }) => {
-	const api = getApi(marketplace);
-	const res = (await axios.post(api, {
-		query: `{
-                collections(where: {
-						id: "${collectionAddress}"
-					}
-				){
-					id
-					name
-					symbol
-					active
-					totalTrades
-					totalVolumeBNB
-					numberTokensListed
-					creatorAddress
-					tradingFee
-					whitelistChecker
-                }
-            }`,
-		variables: null,
-	})) as {
-		data: {
-			data: {
-				collections: Array<SubgraphCollection>;
-			};
-		};
-	};
-
-	if (res.data && res.data.data.collections.length) {
-		return res.data.data.collections[0];
-	}
-	return null;
+    const addr = collectionAddress.toLowerCase();
+    const data = mockCollectionData[marketplace]?.[addr] ?? null;
+    return data;
 };
 
 export const fetchCollectionDayData = async ({
-	marketplace,
-	collectionAddress,
-	from,
-	to,
+    marketplace,
+    collectionAddress,
+    from,
+    to,
 }: {
-	collectionAddress: string;
-	marketplace: Marketplace;
-	from: number;
-	to: number;
+    collectionAddress: string;
+    marketplace: Marketplace;
+    from: number;
+    to: number;
 }) => {
-	const api = getApi(marketplace);
-	const res = (await axios.post(api, {
-		query: `{
-				collectionDayDatas(where: {
-						collection: "${collectionAddress}"
-						date_gte: ${from}
-						date_lte: ${to}
-					}
-				){
-					id
-					date
-					dailyVolumeBNB
-					dailyTrades
-                }
-            }`,
-		variables: null,
-	})) as {
-		data: {
-			data: {
-				collectionDayDatas: Array<SubgraphCollectionDay>;
-			};
-		};
-	};
-
-	if (res.data) {
-		return res.data.data.collectionDayDatas;
-	}
-	return [];
+    const addr   = collectionAddress.toLowerCase();
+    const source = mockDayData[marketplace]?.[addr];
+    if (!source) return [];
+    const daysRange = to - from;
+    // Return 7-day data for ≤7-day windows, 30-day otherwise
+    return daysRange <= 7 * 86400 + 3600 ? source.days7 : source.days30;
 };
 
 export const fetchTransactionData = async ({
-	marketplace,
-	collectionAddress,
-	from,
-	to,
+    marketplace,
+    collectionAddress,
+    from,
+    to,
 }: {
-	collectionAddress: string;
-	marketplace: Marketplace;
-	from: number;
-	to: number;
+    collectionAddress: string;
+    marketplace: Marketplace;
+    from: number;
+    to: number;
 }) => {
-	const max = 1000;
-	const api = getApi(marketplace);
-
-	const getResult = async (skip: number) => {
-		const res = (await axios.post(api, {
-			query: `{
-				transactions(
-						first: ${max},
-						skip: ${skip},
-						where: {
-							collection: "${collectionAddress}"
-							timestamp_gte: "${from}"
-							timestamp_lte: "${to}"
-						}
-					){
-						id
-						timestamp
-						askPrice
-						netPrice
-						withBNB
-					}
-				}`,
-			variables: null,
-		})) as {
-			data: {
-				data: {
-					transactions: Array<SubgraphTransaction>;
-				};
-			};
-		};
-		return res;
-	};
-	let results = [] as Array<SubgraphTransaction>;
-	let skip = 0;
-	while (true) {
-		const res = await getResult(skip);
-		if (res.data) {
-			results = results.concat(res.data.data.transactions);
-			if (res.data.data.transactions.length === 1000) {
-				skip += max;
-				continue;
-			}
-		}
-		break;
-	}
-	return results;
+    const addr = collectionAddress.toLowerCase();
+    return mock24hTransactions[marketplace]?.[addr] ?? [];
 };

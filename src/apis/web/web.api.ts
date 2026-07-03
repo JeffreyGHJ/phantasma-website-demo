@@ -9,6 +9,7 @@ import { SingleCollectionItem } from "../../state/application/types/SingleCollec
 import Swap from "../../components/NftBridge/types/Swap";
 import User from "../../constants/types/User";
 import WebSettingModel from "../../models/WebSettingModel";
+import { getMockCollectionItems, getMockRecentlySold } from "../../mocks/mockMarketplaceService";
 
 // When REACT_APP_API is not set (e.g. demo/static deployments), Webpack's
 // DefinePlugin replaces it with undefined at build time, turning every
@@ -21,6 +22,8 @@ axios.interceptors.request.use((config) => {
     return config;
 });
 
+const IS_DEMO = !process.env.REACT_APP_API;
+
 export const fetchCollectionItems = async ({
     blockchain,
     params,
@@ -32,6 +35,13 @@ export const fetchCollectionItems = async ({
     marketplace: string;
     collection: string;
 }) => {
+    if (IS_DEMO) {
+        return getMockCollectionItems(marketplace, collection, params) as {
+            data: CollectionItem[];
+            pages: number;
+            total_rows: number;
+        };
+    }
     const res = await axios.get(
         `${process.env.REACT_APP_API}/nftmarketplace/${blockchain}/${marketplace}/collections/${collection}/items`,
         { params, withCredentials: true }
@@ -54,6 +64,13 @@ export const fetchRecentlySoldCollectionItems = async ({
     marketplace: string;
     collection: string;
 }) => {
+    if (IS_DEMO) {
+        return getMockRecentlySold(marketplace, collection, params) as unknown as {
+            data: Array<RecentlySoldCollectionItem>;
+            pages: number;
+            total_rows: number;
+        };
+    }
     const res = await axios.get(
         `${process.env.REACT_APP_API}/nftmarketplace/${blockchain}/${marketplace}/collections/${collection}/recentlySold`,
         { params }
