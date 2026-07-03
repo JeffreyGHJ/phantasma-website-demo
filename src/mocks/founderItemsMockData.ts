@@ -1,6 +1,28 @@
 // Mock items for Founder's Armory and Founder's Supply tabs
 // Uses foundersItemsContractAddress and lootboxContractAddress
-// Images are intentionally left empty → will show the default-token.png placeholder
+
+const ARMORY = '/assets/images/icons/armory/500x500';
+const GEMS   = '/assets/images/icons/gems/500x500';
+const POTIONS = '/assets/images/icons/potions/500x500';
+const RARE   = '/assets/images/icons/rare_drops/500x500';
+const ULTRA  = '/assets/images/icons/ultra_rare_drops/500x500';
+
+const ITEM_IMAGE: Record<string, string> = {
+  "Founder's Sword":   `${ARMORY}/sword.png`,
+  "Founder's Helmet":  `${ARMORY}/helmet.png`,
+  "Founder's Shield":  `${ARMORY}/shield.png`,
+  "Founder's Belt":    `${ARMORY}/belt.png`,
+  'Sapphire':          `${GEMS}/blue_gem.png`,
+  'Topaz':             `${GEMS}/yellow_gem.png`,
+  'Emerald':           `${GEMS}/green_gem.png`,
+  'Amethyst':          `${GEMS}/purple_gem.png`,
+  'Ruby':              `${GEMS}/red_gem.png`,
+  'Dreams Potion':     `${POTIONS}/blue_potion.png`,
+  'Despair Potion':    `${POTIONS}/orange_potion.png`,
+  "Founder's Lootbox": '/assets/images/lootbox.png',
+  'Nintendo Switch':   `${RARE}/nintendo_switch.png`,
+  'MacBook Pro':       `${ULTRA}/macbook_pro.png`,
+};
 
 const FI_ADDR = '0x0e1dd95fb252542e9a18730914c209194be9fa8e';
 const LB_ADDR = '0xaa34fd88eec8c667433b064806e479b1eb2d316c';
@@ -60,7 +82,7 @@ function makeFounderItem(item: any, index: number, address: string) {
     token_image_ext: 'png',
     rankable: 1,
     image_gif: '',
-    image_png: '',
+    image_png: ITEM_IMAGE[item.name] ?? '',
     image_3d: '',
     rank: item.rank,
     trait_type_value: { "Founder's Armory": item.name } as Record<string, string>,

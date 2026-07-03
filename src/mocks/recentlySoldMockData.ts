@@ -6,8 +6,10 @@ const LG_ADDR  = '0x98f606a4cdde68b9f68732d21fb9ba8b5510ee48';
 const ECTO_ADDR = '0x0fA48F20dDdcf6eD724a36381F66c3e905Fe7988';
 const LG_MARKET  = '0x12492e327c49bc2f7df86d1d96752b9af1dfe2e1';
 const PCS_MARKET = '0x17539cca21c7933df5c980172d22659b8c345c5a';
-const GG = 'https://gateway.pinata.cloud/ipfs/';
+const LG_CDN = 'https://static-nft.pancakeswap.com/mainnet/0x98F606A4cdDE68b9f68732D21fb9bA8B5510eE48';
 const EE = 'https://gateway.pinata.cloud/ipfs/';
+
+const lg = (id: number) => ({ image_gif: `${LG_CDN}/little-ghosts-${id}.png`, image_png: `${LG_CDN}/little-ghosts-${id}.png`, image_3d: '' });
 
 // Unix timestamp reference: ~Jun 1 2024, spread across 30 days prior
 const BASE_TS = 1717200000;
@@ -23,7 +25,7 @@ const recentlySoldMockData = [
     ask_price: '0.85', net_price: '0.8075',
     buyer: '0x742d35Cc6634C0532925a3b844Bc454e4438f44e', seller: '0x8894e0a0c962Cb723C1976A4421c95944Be379d8',
     collection_name: 'LittleGhosts', collection_total: 10000, token_image_ext: 'gif', rank: 1877,
-    image_gif: `${GG}QmNLr3MQXhPrCzTaLGnGJG63wAFjtA4oDpMYhx244RCzwF`, image_png: `${GG}QmbGrD8zRAi8EB8kdpMbZcPzFwc2k8Y7Yiu5ZmpDeTfXft`, image_3d: '',
+    ...lg(75),
     trait_type_value: { Background: 'Moss Green', Body: 'White Ghost', Eyes: 'Heart Eyes', Mouth: 'Big Smile', Hat: 'Teal Beanie', Prop: 'Blue Lasers', Item: 'None', Buffs: '+5 Every Bonus' },
   },
   {
@@ -34,7 +36,7 @@ const recentlySoldMockData = [
     ask_price: '1.5', net_price: '1.425',
     buyer: '0x1F5b7E9f7f24dEAb2c8C7c5f4EeA7C60B5B5A8f3', seller: '0x742d35Cc6634C0532925a3b844Bc454e4438f44e',
     collection_name: 'LittleGhosts', collection_total: 10000, token_image_ext: 'gif', rank: 1456,
-    image_gif: `${GG}QmQXjDM7FAeanQXEMeStLcJDbTjtYBMZnepEFPVKccHiGa`, image_png: `${GG}Qmf5nrK9QhWShMcYwRr6jc7QJHnP1qAtmwhckYPkDAvx7J`, image_3d: '',
+    ...lg(400),
     trait_type_value: { Background: 'Asagi', Body: 'Dark Purple Ghost', Eyes: 'Stare Eyes', Mouth: 'Smirk', Hat: 'Black Baseball Cap', Prop: 'Red Lasers', Item: 'None' },
   },
   {
@@ -45,7 +47,7 @@ const recentlySoldMockData = [
     ask_price: '2.2', net_price: '2.09',
     buyer: '0x3D4b5C6e7F8a9B0C1d2e3F4A5B6C7D8E9F0A1B2c', seller: '0x1F5b7E9f7f24dEAb2c8C7c5f4EeA7C60B5B5A8f3',
     collection_name: 'LittleGhosts', collection_total: 10000, token_image_ext: 'gif', rank: 1234,
-    image_gif: `${GG}QmYRDJY6SenhumDWnQ2ZWZx63cDkYWYZLm8BYR9Z4CBmgd`, image_png: `${GG}QmUqnnT56JAp4S7xghWPf7xyswhHR7yi5g9p9jyu5Hx2hV`, image_3d: '',
+    ...lg(7777),
     trait_type_value: { Background: 'Cool Magenta', Body: 'Friendly Ghost', Eyes: 'Friendly Eyes', Mouth: 'Friendly Mouth', Hat: 'None', Prop: 'None', Item: 'None', Buffs: '+4 Every Bonus' },
   },
   {
@@ -56,7 +58,7 @@ const recentlySoldMockData = [
     ask_price: '1.2', net_price: '1.14',
     buyer: '0x8894e0a0c962Cb723C1976A4421c95944Be379d8', seller: '0x3D4b5C6e7F8a9B0C1d2e3F4A5B6C7D8E9F0A1B2c',
     collection_name: 'LittleGhosts', collection_total: 10000, token_image_ext: 'gif', rank: 2103,
-    image_gif: `${GG}QmSq4ejbBvqhrciZM6Ysue2ujDWaYpJNeEVQznH7sFsShY`, image_png: `${GG}QmY5DhyCPLeocsvemgSMy25xj5uogofdkDWorgGztt5vh2`, image_3d: '',
+    ...lg(200),
     trait_type_value: { Background: 'Silk Bulk', Body: 'Purple Ghost', Eyes: 'Cross Eyes', Mouth: 'Wiggle Mouth', Hat: 'Teal Beanie', Prop: 'Red Lasers', Item: 'None', Buffs: '+6 Every Bonus' },
   },
   {
@@ -67,7 +69,7 @@ const recentlySoldMockData = [
     ask_price: '3.0', net_price: '2.85',
     buyer: '0x742d35Cc6634C0532925a3b844Bc454e4438f44e', seller: '0x8894e0a0c962Cb723C1976A4421c95944Be379d8',
     collection_name: 'LittleGhosts', collection_total: 10000, token_image_ext: 'gif', rank: 897,
-    image_gif: `${GG}QmTUaaZNYnFjdsCMp3fia5AydwkuCzdCQtFHG7o17LacAe`, image_png: `${GG}QmPxj3H16SPkSinVE7NyWBYM1cE1yQCgrA21jDQLNuvxKF`, image_3d: '',
+    ...lg(600),
     trait_type_value: { Background: 'Razzmic Berry', Body: 'Grey Ghost', Eyes: 'Heart Eyes', Mouth: 'Straight', Hat: 'Black Baseball Cap', Prop: 'Silver Chain', Item: 'None', Buffs: '+8 Every Bonus' },
   },
   {
@@ -78,7 +80,7 @@ const recentlySoldMockData = [
     ask_price: '0.15', net_price: '0.1425',
     buyer: '0x1F5b7E9f7f24dEAb2c8C7c5f4EeA7C60B5B5A8f3', seller: '0x3D4b5C6e7F8a9B0C1d2e3F4A5B6C7D8E9F0A1B2c',
     collection_name: 'LittleGhosts', collection_total: 10000, token_image_ext: 'gif', rank: 6234,
-    image_gif: `${GG}Qme2VkNpHufEnaoVCfzW3NUyJbGLSVKe3myNvn7r4VToyV`, image_png: `${GG}QmXGSfhfJwKH3Yq35MtQsyvavqPaCMD5v2dBF6dtaS3Mqa`, image_3d: '',
+    ...lg(50),
     trait_type_value: { Background: 'Emperor', Body: 'Blue Ghost', Eyes: 'Anime Black Eyes', Mouth: 'Wiggle Mouth', Hat: 'Purple Wizard Hat', Prop: 'None', Item: 'None' },
   },
   {
@@ -89,7 +91,7 @@ const recentlySoldMockData = [
     ask_price: '0.92', net_price: '0.874',
     buyer: '0x3D4b5C6e7F8a9B0C1d2e3F4A5B6C7D8E9F0A1B2c', seller: '0x742d35Cc6634C0532925a3b844Bc454e4438f44e',
     collection_name: 'LittleGhosts', collection_total: 10000, token_image_ext: 'gif', rank: 2831,
-    image_gif: `${GG}QmYWejm1ZE7m24GfrnzSuN7UVkEqyJZngBsaU4Y6StDK8g`, image_png: `${GG}QmZ1jT5PLhjqPvkPskaau3c3S2Dzz7gERe64gTff3kDgPa`, image_3d: '',
+    ...lg(1000),
     trait_type_value: { Background: 'Midnight Blue', Body: 'Green Glowing Ghost', Eyes: 'Ghost Sith Eyes', Mouth: 'Ghost Sith Smile', Hat: 'Ghost Sith Hoodie', Prop: 'None', Item: 'None' },
   },
   {
@@ -100,7 +102,7 @@ const recentlySoldMockData = [
     ask_price: '0.41', net_price: '0.38',
     buyer: '0x8894e0a0c962Cb723C1976A4421c95944Be379d8', seller: '0x1F5b7E9f7f24dEAb2c8C7c5f4EeA7C60B5B5A8f3',
     collection_name: 'LittleGhosts', collection_total: 10000, token_image_ext: 'gif', rank: 3455,
-    image_gif: `${GG}QmbxqjSMdd5woUM4ijzcz3dpB3uN2tyiQr5h3Hift3aigv`, image_png: `${GG}QmY9YSrozyN55oR8dVGQPym76CTuBtoQ9aML1on6wqTncp`, image_3d: '',
+    ...lg(2500),
     trait_type_value: { Background: 'Foggy Grey', Body: 'Ghostface Ghost', Eyes: 'Ghostface Eyes', Mouth: 'Ghostface Mouth', Hat: 'Ghostface Hoodie', Prop: 'None', Item: 'None' },
   },
   {
@@ -111,7 +113,7 @@ const recentlySoldMockData = [
     ask_price: '0.42', net_price: '0.399',
     buyer: '0x742d35Cc6634C0532925a3b844Bc454e4438f44e', seller: '0x3D4b5C6e7F8a9B0C1d2e3F4A5B6C7D8E9F0A1B2c',
     collection_name: 'LittleGhosts', collection_total: 10000, token_image_ext: 'gif', rank: 3612,
-    image_gif: `${GG}QmXMWTScwiZckyuvytWqy6UqqEfJ3gmsjo2tvu3LURhqad`, image_png: `${GG}QmWoVDiCsrPa7G5io92opEVf2MPGN2mYsvMFjGCY34mvtP`, image_3d: '',
+    ...lg(100),
     trait_type_value: { Background: 'Moss Green', Body: 'Purple Ghost', Eyes: 'Right Look', Mouth: 'Smirk', Hat: 'Red Backwards Hat', Prop: 'Eye Patch', Item: 'None' },
   },
   {
@@ -122,7 +124,7 @@ const recentlySoldMockData = [
     ask_price: '0.75', net_price: '0.7125',
     buyer: '0x1F5b7E9f7f24dEAb2c8C7c5f4EeA7C60B5B5A8f3', seller: '0x8894e0a0c962Cb723C1976A4421c95944Be379d8',
     collection_name: 'LittleGhosts', collection_total: 10000, token_image_ext: 'gif', rank: 2568,
-    image_gif: `${GG}Qmcfs592teoxBdzXZN7mWBBSygeeUBefwU43dAnzxRTmTY`, image_png: `${GG}Qmci91XrgX4DvFC4kY8ewck7ofcP1Yws2fHri7im6RCFrv`, image_3d: '',
+    ...lg(777),
     trait_type_value: { Background: 'Slate Blue', Body: 'Purple Ghost', Eyes: 'Evil Eyes', Mouth: 'None', Hat: 'Purple Baseball Cap', Prop: 'Halo', Item: 'None' },
   },
   {
@@ -133,7 +135,7 @@ const recentlySoldMockData = [
     ask_price: '0.32', net_price: '0.304',
     buyer: '0x3D4b5C6e7F8a9B0C1d2e3F4A5B6C7D8E9F0A1B2c', seller: '0x742d35Cc6634C0532925a3b844Bc454e4438f44e',
     collection_name: 'LittleGhosts', collection_total: 10000, token_image_ext: 'gif', rank: 4467,
-    image_gif: `${GG}QmXukwC5SPCSUZVsqkLedN754G1Xhqz961KR9HaorNYdRu`, image_png: `${GG}QmZaX6wxkkiXmh5z5fHNhdn5HJuR2A7Yc1oWQc7UV8H9Wq`, image_3d: '',
+    ...lg(20),
     trait_type_value: { Background: 'Razzmic Berry', Body: 'Grey Ghost', Eyes: 'Girly Eyes', Mouth: 'Wiggle Mouth', Hat: 'Santa Hat', Prop: 'Sunglasses', Item: 'None' },
   },
   {
@@ -144,7 +146,7 @@ const recentlySoldMockData = [
     ask_price: '0.25', net_price: '0.2375',
     buyer: '0x8894e0a0c962Cb723C1976A4421c95944Be379d8', seller: '0x1F5b7E9f7f24dEAb2c8C7c5f4EeA7C60B5B5A8f3',
     collection_name: 'LittleGhosts', collection_total: 10000, token_image_ext: 'gif', rank: 5103,
-    image_gif: `${GG}QmNWY7tAEShnHyJe5CYjVZZiXV1ntKakjdxtqB6ufcdjr6`, image_png: `${GG}QmR87vjj1uomn9VFz8EPat4wQVPM5DHhLWD2eeqgv7LApb`, image_3d: '',
+    ...lg(10),
     trait_type_value: { Background: 'Haunted Plum', Body: 'White Ghost', Eyes: 'Stoned Eyes', Mouth: 'Smirk', Hat: 'Green Backwards Hat', Prop: 'Earrings', Item: 'None' },
   },
   // ── EctoSkeletons ─────────────────────────────────────────────────────
