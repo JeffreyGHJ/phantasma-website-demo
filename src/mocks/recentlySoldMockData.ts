@@ -1,6 +1,9 @@
 // 24 recently-sold items (12 LittleGhosts, 12 EctoSkeletons)
 // ask_price is a decimal BNB string — the frontend converts it to wei for display
 // Timestamps are spread over the past 30 days from a fixed reference point
+// LittleGhost traits are derived at runtime from littleghostsTraits.json via ghostTraitsHelper.
+
+import { getGhostTraits } from './ghostTraitsHelper';
 
 const LG_ADDR  = '0x98f606a4cdde68b9f68732d21fb9ba8b5510ee48';
 const ECTO_ADDR = '0x0fA48F20dDdcf6eD724a36381F66c3e905Fe7988';
@@ -26,7 +29,7 @@ const recentlySoldMockData = [
     buyer: '0x742d35Cc6634C0532925a3b844Bc454e4438f44e', seller: '0x8894e0a0c962Cb723C1976A4421c95944Be379d8',
     collection_name: 'LittleGhosts', collection_total: 10000, token_image_ext: 'gif', rank: 1877,
     ...lg(75),
-    trait_type_value: { Background: 'Moss Green', Body: 'White Ghost', Eyes: 'Heart Eyes', Mouth: 'Big Smile', Hat: 'Teal Beanie', Prop: 'Blue Lasers', Item: 'None', Buffs: '+5 Every Bonus' },
+    trait_type_value: getGhostTraits(75),
   },
   {
     transaction_hash: '0x2b3c4d5e6f7890abcdef1234567890abcdef1234567890abcdef12345678901b',
@@ -37,7 +40,7 @@ const recentlySoldMockData = [
     buyer: '0x1F5b7E9f7f24dEAb2c8C7c5f4EeA7C60B5B5A8f3', seller: '0x742d35Cc6634C0532925a3b844Bc454e4438f44e',
     collection_name: 'LittleGhosts', collection_total: 10000, token_image_ext: 'gif', rank: 1456,
     ...lg(400),
-    trait_type_value: { Background: 'Asagi', Body: 'Dark Purple Ghost', Eyes: 'Stare Eyes', Mouth: 'Smirk', Hat: 'Black Baseball Cap', Prop: 'Red Lasers', Item: 'None' },
+    trait_type_value: getGhostTraits(400),
   },
   {
     transaction_hash: '0x3c4d5e6f7890abcdef1234567890abcdef1234567890abcdef12345678901b2c',
@@ -48,7 +51,7 @@ const recentlySoldMockData = [
     buyer: '0x3D4b5C6e7F8a9B0C1d2e3F4A5B6C7D8E9F0A1B2c', seller: '0x1F5b7E9f7f24dEAb2c8C7c5f4EeA7C60B5B5A8f3',
     collection_name: 'LittleGhosts', collection_total: 10000, token_image_ext: 'gif', rank: 1234,
     ...lg(7777),
-    trait_type_value: { Background: 'Cool Magenta', Body: 'Friendly Ghost', Eyes: 'Friendly Eyes', Mouth: 'Friendly Mouth', Hat: 'None', Prop: 'None', Item: 'None', Buffs: '+4 Every Bonus' },
+    trait_type_value: getGhostTraits(7777),
   },
   {
     transaction_hash: '0x4d5e6f7890abcdef1234567890abcdef1234567890abcdef12345678901b2c3d',
@@ -59,7 +62,7 @@ const recentlySoldMockData = [
     buyer: '0x8894e0a0c962Cb723C1976A4421c95944Be379d8', seller: '0x3D4b5C6e7F8a9B0C1d2e3F4A5B6C7D8E9F0A1B2c',
     collection_name: 'LittleGhosts', collection_total: 10000, token_image_ext: 'gif', rank: 2103,
     ...lg(200),
-    trait_type_value: { Background: 'Silk Bulk', Body: 'Purple Ghost', Eyes: 'Cross Eyes', Mouth: 'Wiggle Mouth', Hat: 'Teal Beanie', Prop: 'Red Lasers', Item: 'None', Buffs: '+6 Every Bonus' },
+    trait_type_value: getGhostTraits(200),
   },
   {
     transaction_hash: '0x5e6f7890abcdef1234567890abcdef1234567890abcdef12345678901b2c3d4e',
@@ -70,7 +73,7 @@ const recentlySoldMockData = [
     buyer: '0x742d35Cc6634C0532925a3b844Bc454e4438f44e', seller: '0x8894e0a0c962Cb723C1976A4421c95944Be379d8',
     collection_name: 'LittleGhosts', collection_total: 10000, token_image_ext: 'gif', rank: 897,
     ...lg(600),
-    trait_type_value: { Background: 'Razzmic Berry', Body: 'Grey Ghost', Eyes: 'Heart Eyes', Mouth: 'Straight', Hat: 'Black Baseball Cap', Prop: 'Silver Chain', Item: 'None', Buffs: '+8 Every Bonus' },
+    trait_type_value: getGhostTraits(600),
   },
   {
     transaction_hash: '0x6f7890abcdef1234567890abcdef1234567890abcdef12345678901b2c3d4e5f',
@@ -81,7 +84,7 @@ const recentlySoldMockData = [
     buyer: '0x1F5b7E9f7f24dEAb2c8C7c5f4EeA7C60B5B5A8f3', seller: '0x3D4b5C6e7F8a9B0C1d2e3F4A5B6C7D8E9F0A1B2c',
     collection_name: 'LittleGhosts', collection_total: 10000, token_image_ext: 'gif', rank: 6234,
     ...lg(50),
-    trait_type_value: { Background: 'Emperor', Body: 'Blue Ghost', Eyes: 'Anime Black Eyes', Mouth: 'Wiggle Mouth', Hat: 'Purple Wizard Hat', Prop: 'None', Item: 'None' },
+    trait_type_value: getGhostTraits(50),
   },
   {
     transaction_hash: '0x7890abcdef1234567890abcdef1234567890abcdef12345678901b2c3d4e5f60',
@@ -92,7 +95,7 @@ const recentlySoldMockData = [
     buyer: '0x3D4b5C6e7F8a9B0C1d2e3F4A5B6C7D8E9F0A1B2c', seller: '0x742d35Cc6634C0532925a3b844Bc454e4438f44e',
     collection_name: 'LittleGhosts', collection_total: 10000, token_image_ext: 'gif', rank: 2831,
     ...lg(1000),
-    trait_type_value: { Background: 'Midnight Blue', Body: 'Green Glowing Ghost', Eyes: 'Ghost Sith Eyes', Mouth: 'Ghost Sith Smile', Hat: 'Ghost Sith Hoodie', Prop: 'None', Item: 'None' },
+    trait_type_value: getGhostTraits(1000),
   },
   {
     transaction_hash: '0x890abcdef1234567890abcdef1234567890abcdef12345678901b2c3d4e5f6071',
@@ -103,7 +106,7 @@ const recentlySoldMockData = [
     buyer: '0x8894e0a0c962Cb723C1976A4421c95944Be379d8', seller: '0x1F5b7E9f7f24dEAb2c8C7c5f4EeA7C60B5B5A8f3',
     collection_name: 'LittleGhosts', collection_total: 10000, token_image_ext: 'gif', rank: 3455,
     ...lg(2500),
-    trait_type_value: { Background: 'Foggy Grey', Body: 'Ghostface Ghost', Eyes: 'Ghostface Eyes', Mouth: 'Ghostface Mouth', Hat: 'Ghostface Hoodie', Prop: 'None', Item: 'None' },
+    trait_type_value: getGhostTraits(2500),
   },
   {
     transaction_hash: '0x90abcdef1234567890abcdef1234567890abcdef12345678901b2c3d4e5f607182',
@@ -114,7 +117,7 @@ const recentlySoldMockData = [
     buyer: '0x742d35Cc6634C0532925a3b844Bc454e4438f44e', seller: '0x3D4b5C6e7F8a9B0C1d2e3F4A5B6C7D8E9F0A1B2c',
     collection_name: 'LittleGhosts', collection_total: 10000, token_image_ext: 'gif', rank: 3612,
     ...lg(100),
-    trait_type_value: { Background: 'Moss Green', Body: 'Purple Ghost', Eyes: 'Right Look', Mouth: 'Smirk', Hat: 'Red Backwards Hat', Prop: 'Eye Patch', Item: 'None' },
+    trait_type_value: getGhostTraits(100),
   },
   {
     transaction_hash: '0xabcdef1234567890abcdef1234567890abcdef12345678901b2c3d4e5f60718293',
@@ -125,7 +128,7 @@ const recentlySoldMockData = [
     buyer: '0x1F5b7E9f7f24dEAb2c8C7c5f4EeA7C60B5B5A8f3', seller: '0x8894e0a0c962Cb723C1976A4421c95944Be379d8',
     collection_name: 'LittleGhosts', collection_total: 10000, token_image_ext: 'gif', rank: 2568,
     ...lg(777),
-    trait_type_value: { Background: 'Slate Blue', Body: 'Purple Ghost', Eyes: 'Evil Eyes', Mouth: 'None', Hat: 'Purple Baseball Cap', Prop: 'Halo', Item: 'None' },
+    trait_type_value: getGhostTraits(777),
   },
   {
     transaction_hash: '0xbcdef1234567890abcdef1234567890abcdef12345678901b2c3d4e5f6071829304',
@@ -136,7 +139,7 @@ const recentlySoldMockData = [
     buyer: '0x3D4b5C6e7F8a9B0C1d2e3F4A5B6C7D8E9F0A1B2c', seller: '0x742d35Cc6634C0532925a3b844Bc454e4438f44e',
     collection_name: 'LittleGhosts', collection_total: 10000, token_image_ext: 'gif', rank: 4467,
     ...lg(20),
-    trait_type_value: { Background: 'Razzmic Berry', Body: 'Grey Ghost', Eyes: 'Girly Eyes', Mouth: 'Wiggle Mouth', Hat: 'Santa Hat', Prop: 'Sunglasses', Item: 'None' },
+    trait_type_value: getGhostTraits(20),
   },
   {
     transaction_hash: '0xcdef1234567890abcdef1234567890abcdef12345678901b2c3d4e5f607182930415',
@@ -147,7 +150,7 @@ const recentlySoldMockData = [
     buyer: '0x8894e0a0c962Cb723C1976A4421c95944Be379d8', seller: '0x1F5b7E9f7f24dEAb2c8C7c5f4EeA7C60B5B5A8f3',
     collection_name: 'LittleGhosts', collection_total: 10000, token_image_ext: 'gif', rank: 5103,
     ...lg(10),
-    trait_type_value: { Background: 'Haunted Plum', Body: 'White Ghost', Eyes: 'Stoned Eyes', Mouth: 'Smirk', Hat: 'Green Backwards Hat', Prop: 'Earrings', Item: 'None' },
+    trait_type_value: getGhostTraits(10),
   },
   // ── EctoSkeletons ─────────────────────────────────────────────────────
   {
