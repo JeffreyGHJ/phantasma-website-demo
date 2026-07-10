@@ -4,6 +4,7 @@
 // LittleGhost traits are derived at runtime from littleghostsTraits.json via ghostTraitsHelper.
 
 import { getGhostTraits } from './ghostTraitsHelper';
+import { getEctoTraits, getEctoImageUrl, getEctoRarityRank } from './ectoTraitsHelper';
 
 const LG_ADDR  = '0x98f606a4cdde68b9f68732d21fb9ba8b5510ee48';
 const ECTO_ADDR = '0x0fA48F20dDdcf6eD724a36381F66c3e905Fe7988';
@@ -11,7 +12,6 @@ const LG_MARKET  = '0x12492e327c49bc2f7df86d1d96752b9af1dfe2e1';
 const PCS_MARKET = '0x17539cca21c7933df5c980172d22659b8c345c5a';
 const LG_CDN      = 'https://static-nft.pancakeswap.com/mainnet/0x98F606A4cdDE68b9f68732D21fb9bA8B5510eE48';
 const LG_FALLBACK = 'https://image.rareboard.com/api?url=https%3A%2F%2Flittleghosts.s3.us-east-2.amazonaws.com%2Ffinal_images%2F';
-const EE = 'https://gateway.pinata.cloud/ipfs/';
 
 const lg = (id: number) => ({
   image_gif: `${LG_CDN}/little-ghosts-${id}.png`,
@@ -158,6 +158,7 @@ const recentlySoldMockData = [
     trait_type_value: getGhostTraits(10),
   },
   // ── EctoSkeletons ─────────────────────────────────────────────────────
+  // Traits and images derived at runtime from ectoskeletonsTraits.json via ectoTraitsHelper.
   {
     transaction_hash: '0xdef1234567890abcdef1234567890abcdef12345678901b2c3d4e5f60718293041526',
     blockchain_id: 56, nft_collection_id: 2,
@@ -165,9 +166,9 @@ const recentlySoldMockData = [
     nft_id: 42, id: 42, timestamp: ts(2),
     ask_price: '1.5', net_price: '1.425',
     buyer: '0x742d35Cc6634C0532925a3b844Bc454e4438f44e', seller: '0x3D4b5C6e7F8a9B0C1d2e3F4A5B6C7D8E9F0A1B2c',
-    collection_name: 'EctoSkeletons', collection_total: 5000, token_image_ext: 'png', rank: 1233,
-    image_gif: '', image_png: `${EE}QmTTHtaFHJfG2qNAZJG4j5theUiqvZjjHhufxXSJf1zmrx`, image_3d: '',
-    trait_type_value: { Background: 'Nebulous', Body: 'Purple Skeleton', Eyes: 'Normal Red Jewel Eyes', Mouth: 'Normal Mouth', Hat: 'Gold Crown', Top: 'None', Item: 'None', Buffs: 'HP % (Tier II)' },
+    collection_name: 'EctoSkeletons', collection_total: 2500, token_image_ext: 'png',
+    rank: getEctoRarityRank(42), image_gif: '', image_png: getEctoImageUrl(42), image_3d: '',
+    trait_type_value: getEctoTraits(42),
   },
   {
     transaction_hash: '0xef1234567890abcdef1234567890abcdef12345678901b2c3d4e5f6071829304152637',
@@ -176,9 +177,9 @@ const recentlySoldMockData = [
     nft_id: 100, id: 100, timestamp: ts(5),
     ask_price: '3.2', net_price: '3.04',
     buyer: '0x8894e0a0c962Cb723C1976A4421c95944Be379d8', seller: '0x742d35Cc6634C0532925a3b844Bc454e4438f44e',
-    collection_name: 'EctoSkeletons', collection_total: 5000, token_image_ext: 'png', rank: 988,
-    image_gif: '', image_png: `${EE}QmRxepjhymtXyLn2AA8Bv6MBm5rW3xPEVwGdYLeJ2APq2B`, image_3d: '',
-    trait_type_value: { Background: 'Lagoon', Body: 'Purple Skeleton', Eyes: 'Angry Purple Jewel Eyes', Mouth: 'Laughing Mouth', Hat: 'Blue Flaming Head', Top: 'None', Item: 'None', Buffs: 'Melee Attack % (Tier III)' },
+    collection_name: 'EctoSkeletons', collection_total: 2500, token_image_ext: 'png',
+    rank: getEctoRarityRank(100), image_gif: '', image_png: getEctoImageUrl(100), image_3d: '',
+    trait_type_value: getEctoTraits(100),
   },
   {
     transaction_hash: '0xf1234567890abcdef1234567890abcdef12345678901b2c3d4e5f607182930415263748',
@@ -187,9 +188,9 @@ const recentlySoldMockData = [
     nft_id: 600, id: 600, timestamp: ts(7),
     ask_price: '2.5', net_price: '2.375',
     buyer: '0x1F5b7E9f7f24dEAb2c8C7c5f4EeA7C60B5B5A8f3', seller: '0x8894e0a0c962Cb723C1976A4421c95944Be379d8',
-    collection_name: 'EctoSkeletons', collection_total: 5000, token_image_ext: 'png', rank: 1455,
-    image_gif: '', image_png: `${EE}QmSvDVfJfKTuinsgWzKUukDPffkwR52RUieifntxhbfECs`, image_3d: '',
-    trait_type_value: { Background: 'Vanilla', Body: 'White Skeleton', Eyes: 'Angry Purple Jewel Eyes', Mouth: 'Laughing Gold Grill Mouth', Hat: 'Jewel Crown', Top: 'None', Item: 'Knife', Buffs: 'HP % (Tier I)' },
+    collection_name: 'EctoSkeletons', collection_total: 2500, token_image_ext: 'png',
+    rank: getEctoRarityRank(600), image_gif: '', image_png: getEctoImageUrl(600), image_3d: '',
+    trait_type_value: getEctoTraits(600),
   },
   {
     transaction_hash: '0x1234567890abcdef1234567890abcdef12345678901b2c3d4e5f60718293041526374859',
@@ -198,9 +199,9 @@ const recentlySoldMockData = [
     nft_id: 250, id: 250, timestamp: ts(10),
     ask_price: '2.1', net_price: '1.995',
     buyer: '0x3D4b5C6e7F8a9B0C1d2e3F4A5B6C7D8E9F0A1B2c', seller: '0x1F5b7E9f7f24dEAb2c8C7c5f4EeA7C60B5B5A8f3',
-    collection_name: 'EctoSkeletons', collection_total: 5000, token_image_ext: 'png', rank: 1678,
-    image_gif: '', image_png: `${EE}QmW6UVmzK5HSZpT4r38yVGNK1VfF3axyVfGwaNHQjD3LKt`, image_3d: '',
-    trait_type_value: { Background: 'Pink floyd', Body: 'Red Skeleton', Eyes: 'Normal Gold Jewel Eyes', Mouth: 'Laughing Gold Grill Mouth', Hat: 'Jewel Crown', Top: 'None', Item: 'Blunt', Buffs: 'Magic Attack % (Tier II)' },
+    collection_name: 'EctoSkeletons', collection_total: 2500, token_image_ext: 'png',
+    rank: getEctoRarityRank(250), image_gif: '', image_png: getEctoImageUrl(250), image_3d: '',
+    trait_type_value: getEctoTraits(250),
   },
   {
     transaction_hash: '0x234567890abcdef1234567890abcdef12345678901b2c3d4e5f607182930415263748596a',
@@ -209,9 +210,9 @@ const recentlySoldMockData = [
     nft_id: 350, id: 350, timestamp: ts(13),
     ask_price: '0.89', net_price: '0.8455',
     buyer: '0x742d35Cc6634C0532925a3b844Bc454e4438f44e', seller: '0x3D4b5C6e7F8a9B0C1d2e3F4A5B6C7D8E9F0A1B2c',
-    collection_name: 'EctoSkeletons', collection_total: 5000, token_image_ext: 'png', rank: 2012,
-    image_gif: '', image_png: `${EE}QmZdLMyHU9pvQca79EAD5Pz8xpwxKHn1GZjzFu7iVT8hVc`, image_3d: '',
-    trait_type_value: { Background: 'Vanilla', Body: 'Red Skeleton', Eyes: 'Angry Blue Jewel Eyes', Mouth: 'Laughing Mouth', Hat: 'Blue Flaming Head', Top: 'None', Item: 'Rose' },
+    collection_name: 'EctoSkeletons', collection_total: 2500, token_image_ext: 'png',
+    rank: getEctoRarityRank(350), image_gif: '', image_png: getEctoImageUrl(350), image_3d: '',
+    trait_type_value: getEctoTraits(350),
   },
   {
     transaction_hash: '0x34567890abcdef1234567890abcdef12345678901b2c3d4e5f607182930415263748596a7b',
@@ -220,9 +221,9 @@ const recentlySoldMockData = [
     nft_id: 1, id: 1, timestamp: ts(16),
     ask_price: '0.28', net_price: '0.266',
     buyer: '0x8894e0a0c962Cb723C1976A4421c95944Be379d8', seller: '0x742d35Cc6634C0532925a3b844Bc454e4438f44e',
-    collection_name: 'EctoSkeletons', collection_total: 5000, token_image_ext: 'png', rank: 2341,
-    image_gif: '', image_png: `${EE}QmSbPTRYuU5fdvSv5kz69dDLw3mPiR519HM9SGPT57xWv1`, image_3d: '',
-    trait_type_value: { Background: 'Pisco sour', Body: 'Tan Skeleton', Eyes: 'Normal Gold Jewel Eyes', Mouth: 'Shocked Mouth Tongue', Hat: 'Beanie', Top: 'None', Item: 'Blue Balloon' },
+    collection_name: 'EctoSkeletons', collection_total: 2500, token_image_ext: 'png',
+    rank: getEctoRarityRank(1), image_gif: '', image_png: getEctoImageUrl(1), image_3d: '',
+    trait_type_value: getEctoTraits(1),
   },
   {
     transaction_hash: '0x4567890abcdef1234567890abcdef12345678901b2c3d4e5f607182930415263748596a7b8c',
@@ -231,9 +232,9 @@ const recentlySoldMockData = [
     nft_id: 150, id: 150, timestamp: ts(19),
     ask_price: '0.58', net_price: '0.551',
     buyer: '0x1F5b7E9f7f24dEAb2c8C7c5f4EeA7C60B5B5A8f3', seller: '0x8894e0a0c962Cb723C1976A4421c95944Be379d8',
-    collection_name: 'EctoSkeletons', collection_total: 5000, token_image_ext: 'png', rank: 2788,
-    image_gif: '', image_png: `${EE}QmcYJUc3ziZqsEETd6Yy7QjGzetgrnoaU9pZZU8wDGizu7`, image_3d: '',
-    trait_type_value: { Background: 'Nautical', Body: 'Red Skeleton', Eyes: 'Angry Gold Jewel Eyes', Mouth: 'Normal Mouth', Hat: 'Grey Cap', Top: 'None', Item: 'Glock' },
+    collection_name: 'EctoSkeletons', collection_total: 2500, token_image_ext: 'png',
+    rank: getEctoRarityRank(150), image_gif: '', image_png: getEctoImageUrl(150), image_3d: '',
+    trait_type_value: getEctoTraits(150),
   },
   {
     transaction_hash: '0x567890abcdef1234567890abcdef12345678901b2c3d4e5f607182930415263748596a7b8c9d',
@@ -242,9 +243,9 @@ const recentlySoldMockData = [
     nft_id: 1000, id: 1000, timestamp: ts(22),
     ask_price: '1.2', net_price: '1.14',
     buyer: '0x3D4b5C6e7F8a9B0C1d2e3F4A5B6C7D8E9F0A1B2c', seller: '0x1F5b7E9f7f24dEAb2c8C7c5f4EeA7C60B5B5A8f3',
-    collection_name: 'EctoSkeletons', collection_total: 5000, token_image_ext: 'png', rank: 3567,
-    image_gif: '', image_png: `${EE}QmTAQGdGfCFSoj32wZRp9wYnGPqGWbuSm2857BR4t2LUEG`, image_3d: '',
-    trait_type_value: { Background: 'Moonscape', Body: 'Ice King Skeleton', Eyes: 'Normal Green Jewel Eyes', Mouth: 'Laughing Green Grill Mouth', Hat: 'Silver Crown', Top: 'White Shirt', Item: 'None', Buffs: 'Archery Attack % (Tier I)' },
+    collection_name: 'EctoSkeletons', collection_total: 2500, token_image_ext: 'png',
+    rank: getEctoRarityRank(1000), image_gif: '', image_png: getEctoImageUrl(1000), image_3d: '',
+    trait_type_value: getEctoTraits(1000),
   },
   {
     transaction_hash: '0x67890abcdef1234567890abcdef12345678901b2c3d4e5f607182930415263748596a7b8c9d0e',
@@ -253,9 +254,9 @@ const recentlySoldMockData = [
     nft_id: 50, id: 50, timestamp: ts(25),
     ask_price: '0.42', net_price: '0.399',
     buyer: '0x742d35Cc6634C0532925a3b844Bc454e4438f44e', seller: '0x3D4b5C6e7F8a9B0C1d2e3F4A5B6C7D8E9F0A1B2c',
-    collection_name: 'EctoSkeletons', collection_total: 5000, token_image_ext: 'png', rank: 3102,
-    image_gif: '', image_png: `${EE}QmQrzSyNXb4ZfQeGaKcJHFdghFZHQyN79Ybaac8JxvPW2p`, image_3d: '',
-    trait_type_value: { Background: 'Pisco sour', Body: 'White Skeleton', Eyes: 'Normal Gold Jewel Eyes', Mouth: 'Laughing Rainbow Grill Mouth', Hat: 'Beanie', Top: 'None', Item: 'None' },
+    collection_name: 'EctoSkeletons', collection_total: 2500, token_image_ext: 'png',
+    rank: getEctoRarityRank(50), image_gif: '', image_png: getEctoImageUrl(50), image_3d: '',
+    trait_type_value: getEctoTraits(50),
   },
   {
     transaction_hash: '0x7890abcdef1234567890abcdef12345678901b2c3d4e5f607182930415263748596a7b8c9d0e1f',
@@ -264,9 +265,9 @@ const recentlySoldMockData = [
     nft_id: 500, id: 500, timestamp: ts(27),
     ask_price: '0.255', net_price: '0.242',
     buyer: '0x8894e0a0c962Cb723C1976A4421c95944Be379d8', seller: '0x742d35Cc6634C0532925a3b844Bc454e4438f44e',
-    collection_name: 'EctoSkeletons', collection_total: 5000, token_image_ext: 'png', rank: 3999,
-    image_gif: '', image_png: `${EE}QmYGBUBkvUW2aERjRiBWsuRFdcpF71VT9AFnhAzNzSk6js`, image_3d: '',
-    trait_type_value: { Background: 'Nebulous', Body: 'Tan Skeleton', Eyes: 'Normal Purple Jewel Eyes', Mouth: 'Normal Mouth', Hat: 'Fish Bowel', Top: 'None', Item: 'None' },
+    collection_name: 'EctoSkeletons', collection_total: 2500, token_image_ext: 'png',
+    rank: getEctoRarityRank(500), image_gif: '', image_png: getEctoImageUrl(500), image_3d: '',
+    trait_type_value: getEctoTraits(500),
   },
   {
     transaction_hash: '0x890abcdef1234567890abcdef12345678901b2c3d4e5f607182930415263748596a7b8c9d0e1f2g',
@@ -275,9 +276,9 @@ const recentlySoldMockData = [
     nft_id: 777, id: 777, timestamp: ts(29),
     ask_price: '0.75', net_price: '0.7125',
     buyer: '0x1F5b7E9f7f24dEAb2c8C7c5f4EeA7C60B5B5A8f3', seller: '0x8894e0a0c962Cb723C1976A4421c95944Be379d8',
-    collection_name: 'EctoSkeletons', collection_total: 5000, token_image_ext: 'png', rank: 2234,
-    image_gif: '', image_png: `${EE}QmbWKy8Wdmbtsc6WfJKUMJBzMaQa6HLKKMQh2H3NgjmUgn`, image_3d: '',
-    trait_type_value: { Background: 'Ghost Blue', Body: 'Green Skeleton', Eyes: 'Normal Blue Jewel Eyes', Mouth: 'Shocked Mouth', Hat: 'Halo', Top: 'Grey Hoodie Up', Item: 'None' },
+    collection_name: 'EctoSkeletons', collection_total: 2500, token_image_ext: 'png',
+    rank: getEctoRarityRank(777), image_gif: '', image_png: getEctoImageUrl(777), image_3d: '',
+    trait_type_value: getEctoTraits(777),
   },
 ];
 
