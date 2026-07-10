@@ -14,7 +14,9 @@
 
 import { getGhostTraits } from './ghostTraitsHelper';
 
-const LG_CDN  = 'https://static-nft.pancakeswap.com/mainnet/0x98F606A4cdDE68b9f68732D21fb9bA8B5510eE48';
+const LG_CDN      = 'https://static-nft.pancakeswap.com/mainnet/0x98F606A4cdDE68b9f68732D21fb9bA8B5510eE48';
+// Rareboard proxies the official S3 bucket — used as onError fallback in NftImage
+const LG_FALLBACK = 'https://image.rareboard.com/api?url=https%3A%2F%2Flittleghosts.s3.us-east-2.amazonaws.com%2Ffinal_images%2F';
 const LG_ADDR = '0x98f606a4cdde68b9f68732d21fb9ba8b5510ee48';
 const LG_MP   = 'littleGhosts';
 const PCS_MP  = 'pancakeswap';
@@ -24,8 +26,10 @@ const S3 = '0x1F5b7E9f7f24dEAb2c8C7c5f4EeA7C60B5B5A8f3';
 const S4 = '0x3D4b5C6e7F8a9B0C1d2e3F4A5B6C7D8E9F0A1B2c';
 
 function img(id: number) {
-  const url = `${LG_CDN}/little-ghosts-${id}.png`;
-  return { image_gif: url, image_png: url };
+  return {
+    image_gif: `${LG_CDN}/little-ghosts-${id}.png`,
+    image_png: `${LG_FALLBACK}${id}.png&quality=70&size=400`,
+  };
 }
 
 type Raw = {

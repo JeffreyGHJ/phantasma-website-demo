@@ -9,10 +9,15 @@ const LG_ADDR  = '0x98f606a4cdde68b9f68732d21fb9ba8b5510ee48';
 const ECTO_ADDR = '0x0fA48F20dDdcf6eD724a36381F66c3e905Fe7988';
 const LG_MARKET  = '0x12492e327c49bc2f7df86d1d96752b9af1dfe2e1';
 const PCS_MARKET = '0x17539cca21c7933df5c980172d22659b8c345c5a';
-const LG_CDN = 'https://static-nft.pancakeswap.com/mainnet/0x98F606A4cdDE68b9f68732D21fb9bA8B5510eE48';
+const LG_CDN      = 'https://static-nft.pancakeswap.com/mainnet/0x98F606A4cdDE68b9f68732D21fb9bA8B5510eE48';
+const LG_FALLBACK = 'https://image.rareboard.com/api?url=https%3A%2F%2Flittleghosts.s3.us-east-2.amazonaws.com%2Ffinal_images%2F';
 const EE = 'https://gateway.pinata.cloud/ipfs/';
 
-const lg = (id: number) => ({ image_gif: `${LG_CDN}/little-ghosts-${id}.png`, image_png: `${LG_CDN}/little-ghosts-${id}.png`, image_3d: '' });
+const lg = (id: number) => ({
+  image_gif: `${LG_CDN}/little-ghosts-${id}.png`,
+  image_png: `${LG_FALLBACK}${id}.png&quality=70&size=400`,
+  image_3d: '',
+});
 
 // Unix timestamp reference: ~Jun 1 2024, spread across 30 days prior
 const BASE_TS = 1717200000;
